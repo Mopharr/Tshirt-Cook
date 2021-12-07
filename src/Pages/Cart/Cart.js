@@ -39,7 +39,7 @@ const Cart = () => {
         <div className="cart-wrap">
           <div className="cart-placeholder">
             <div>
-              <h2>Your shopping cart</h2>
+              <h2 className="placeholder-title">Your shopping cart</h2>
               <div className="seperator">
                 <div className="dark-line"></div>
               </div>
@@ -66,56 +66,71 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="cart-content-header">
-                    <div className="">
-                      <div className="">
-                        <div className="">
-                          <div className="">
-                            <div className="">
-                              <a href="#img">
-                                <img
-                                  src="https://ih1.redbubble.net/image.437353179.6883/ssrco,mhoodie,mens,101010:01c5ca27c6,back,square_product,x600-bg,f8f8f8.1u1.jpg"
-                                  alt="hoddie"
-                                />
-                              </a>
-                            </div>
+                    <div className="cart-content-header-wrapper--1">
+                      <div className="cart-item-overlay">
+                        <div className="cart-item-image-box">
+                          <div className="cart-item-image-box-overlay">
+                            <a href="#img">
+                              <img
+                                src="https://ih1.redbubble.net/image.437353179.6883/ssrco,mhoodie,mens,101010:01c5ca27c6,back,square_product,x600-bg,f8f8f8.1u1.jpg"
+                                alt="hoddie"
+                              />
+                            </a>
                           </div>
-                          <div className="">
-                          <div className="">
-                            <h2>Hoodie (Pullover)</h2>
+                        </div>
+                        <div className="cart-item-content-box">
+                          <div className="cart-item-content-box-desc">
+                            <h2 className="title">Hoodie (Pullover)</h2>
                             <p>L.Black, Black</p>
                           </div>
-                          <div className="">
-                            <div className="">
-                                <div className="">
-                                    <span>-</span>
-                                    <input type='number' />
-                                    <span>+</span>
-                                </div>
+                          <div className="cart-item-content-count">
+                            <div className="cart-item-content-count-overlay">
+                              <div className="cart-item-content-count-inner">
+                                <span>-</span>
+                                <input type="number" />
+                                <span>+</span>
+                              </div>
                             </div>
                           </div>
-                          <div className="">
-                            <div className="">
-                                <div className="">
-                                    <span>$48.56</span>
-                                </div>
+                          <div className="price-content">
+                            <div className="price-content-inner">
+                              <span>$48.56</span>
                             </div>
                           </div>
-                          <div className="">
-                            <div className="">
-                                <span>
-                                    <FiX />
-                                </span>
+                          <div className="remove-cart">
+                            <div className="remove-cart-inner">
+                              <span className="remove-icon">
+                                <FiX />
+                              </span>
                             </div>
                           </div>
-                          </div>
-                          <div className=""></div>
                         </div>
+                        <div className=""></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </span>
+            <div className="seperator">
+                <div className="dark-line"></div>
+              </div>
+          </div>
+          <div className='carts'>
+          <ul className='cart-lists'>
+            <li>
+                <span className='prop'>1 item</span>
+                <span className='val'>$48.56</span>
+            </li>
+            <li>
+                <span className='prop'>shipping</span>
+                <span className='val'>$36.01</span>
+            </li>
+            <li>
+                <span className='prop'>subtotal</span>
+                <span className='val'>$84.57</span>
+            </li>
+          </ul>
           </div>
         </div>
       </CartSection>
@@ -171,6 +186,7 @@ const CartContainer = styled.div`
       font-size: 0;
       vertical-align: middle;
       width: 100%;
+      margin-right: 10px;
 
       .search-box {
         display: inline-block;
@@ -209,6 +225,7 @@ const CartContainer = styled.div`
         position: relative;
         vertical-align: middle;
         width: 64px;
+        font-size: 1.5rem;
       }
     }
   }
@@ -228,7 +245,7 @@ const CartSection = styled.div`
     display: flex;
     flex-direction: column;
 
-    h2 {
+    .placeholder-title {
       text-align: center;
       font-size: 1.25rem;
       font-weight: 500;
@@ -311,7 +328,187 @@ const CartSection = styled.div`
             }
           }
         }
+
+        .cart-content-header-wrapper--1 {
+          position: relative;
+          overflow: hidden;
+
+          .cart-item-overlay {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+
+            .cart-item-image-box {
+              display: flex;
+              flex: 1;
+              padding: 16px;
+
+              .cart-item-image-box-overlay {
+                display: flex;
+                justify-content: flex-start;
+                flex-grow: 1;
+                flex-direction: column;
+
+                a {
+                  transition: opacity 200ms ease-in-out;
+                  user-select: none;
+
+                  img {
+                    width: 117px;
+                    height: 117px;
+                  }
+                }
+              }
+            }
+
+            .cart-item-content-box {
+              display: flex;
+              flex: 5;
+              position: relative;
+              padding: 16px;
+
+              .cart-item-content-box-desc {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-basis: 0;
+                flex: 2;
+                align-items: flex-start;
+                justify-content: flex-start;    
+
+                .title {
+                  font-size: 1rem;
+                  color: #8c95a5;
+                  font-weight: normal;
+                  line-height: 1.4;
+                }
+
+                p {
+                  font-size: 1rem;
+                  color: #8c95a5;
+                  font-weight: normal;
+                  line-height: 1.4;
+                  padding-top: 8px;
+                }
+              }
+
+              .cart-item-content-count {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-basis: 0;
+                flex: 0 0 144px;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .cart-item-content-count-overlay {
+                  min-height: 32px;
+                  display: flex;
+                  align-items: flex-start;
+                  
+                  font-size: 1rem;
+                  text-transform: uppercase;
+                  color: #303238;
+                  font-weight: normal;
+                  line-height: 1.4;
+
+                  .cart-item-content-count-inner {
+                    display: flex;
+                    box-sizing: border-box;
+
+                    span {
+                      width: 48px;
+                      box-sizing: border-box;
+                      display: inline-block;
+                      font-size: 24px;
+                      text-decoration: none;
+                      height: 32px;
+                      text-align: center;
+                      line-height: 24px;
+                      color: #8c95a5;
+                      font-weight: 500;
+                      cursor: pointer;                      
+                    }
+
+                    input {
+                      box-sizing: border-box;
+                      width: 48px;
+                      height: 32px;
+                      text-align: center;
+                      border: 1px solid #d6dadf;
+                      border-top: 0;
+                      border-bottom: 0;
+                      border-radius: 0;
+                      cursor: text;
+                      background: transparent;
+                    }
+                  }
+                }
+              }
+              .price-content {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-basis: 0;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .price-content-inner {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                }
+              }
+
+              .remove-cart {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-basis: 0;
+                flex: 0 0 20px;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .remove-cart-inner {
+                  font-size: 1rem;
+                  text-transform: uppercase;
+                  color: #303238;
+                  font-weight: normal;
+                  line-height: 1.4;
+
+                  .remove-icon {
+                    display: flex;
+                    flex: 1;
+                    justify-content: center;
+                    align-items: flex-start;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
+  }
+
+  .carts {
+    padding: 0 12px;
+  }
+  .cart-lists {
+      margin: 0 auto;
+      max-width: 504px;
+      padding: 0 12px;
+      margin-top: 32px;
+      list-style-type: none;
+
+      li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          text-transform: uppercase;
+      }
   }
 `;
