@@ -1,8 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+// import { Link, withRouter } from "react-router-dom";
 import "../assets/register.css";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { v4 as uuid } from "uuid/";
 
-const Auth = () => {
+const Auth = ({ history }) => {
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -26,10 +29,26 @@ const Auth = () => {
   const handleChange = ({ target: { name, value } }) => {
     setFormData({ ...formData, [name]: value });
   };
+
+  const auth = getAuth();
+  const handleSubmit = () => {
+    createUserWithEmailAndPassword(auth, formData.email, formData.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+      });
+  };
+
   return (
     <div class="container" id="container">
       <div class="form-container sign-up-container">
-        <form action="#">
+        <form onSubmit={handleSubmit}>
           <h1>Create Account</h1>
           <div class="social-container">
             <a href="" class="social">
@@ -43,9 +62,27 @@ const Auth = () => {
             </a>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" name="name" onChange={handleChange} value={formData.fullname} placeholder="Name" />
-          <input type="email" name="email" onChange={handleChange} value={formData.email} placeholder="Email" />
-          <input type="password" name="password" onChange={handleChange} value={formData.password} placeholder="Password" />
+          <input
+            type="text"
+            name="name"
+            onChange={handleChange}
+            value={formData.fullname}
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={formData.password}
+            placeholder="Password"
+          />
           <button>Sign Up</button>
         </form>
       </div>
