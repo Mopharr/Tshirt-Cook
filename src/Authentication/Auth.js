@@ -1,11 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 // import { Link, withRouter } from "react-router-dom";
 import "../assets/register.css";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { v4 as uuid } from "uuid/";
+import { useAuth } from "../contexts/AuthContext";
+// import { v4 as uuid } from "uuid/";
 
-const Auth = ({ history }) => {
+const Auth = () => {
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const { signup } = useAuth();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  console.log(error, loading)
+
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -30,20 +39,17 @@ const Auth = ({ history }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const auth = getAuth();
-  const handleSubmit = () => {
-    createUserWithEmailAndPassword(auth, formData.email, formData.password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage)
-      });
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      setError("");
+      setLoading(true);
+      await signup(emailRef.current.value, passwordRef.current.value);
+    } catch {
+      setError("Failed to create an account");
+    }
+    setLoading(false);
+  }
 
   return (
     <div class="container" id="container">
@@ -65,6 +71,7 @@ const Auth = ({ history }) => {
           <input
             type="text"
             name="name"
+            ref={nameRef}
             onChange={handleChange}
             value={formData.fullname}
             placeholder="Name"
@@ -72,6 +79,7 @@ const Auth = ({ history }) => {
           <input
             type="email"
             name="email"
+            ref={emailRef}
             onChange={handleChange}
             value={formData.email}
             placeholder="Email"
@@ -79,6 +87,7 @@ const Auth = ({ history }) => {
           <input
             type="password"
             name="password"
+            ref={passwordRef}
             onChange={handleChange}
             value={formData.password}
             placeholder="Password"
