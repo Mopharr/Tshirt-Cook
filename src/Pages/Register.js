@@ -1,10 +1,10 @@
 import React from 'react'
-import Auth from '../Authentication/Auth'
+// import Auth from '../Authentication/Auth'
 
 const Register = () => {
     return (
         <div>
-            <Auth />
+            
         </div>
     )
 }

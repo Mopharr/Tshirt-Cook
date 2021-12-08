@@ -5,7 +5,7 @@ import Index from "./Pages/Index";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Cart from "./Pages/Cart/Cart";
-import createContext from "./Context";
+import createContext from "./Context"; 
 
 function App() {
    const [state, setState] = useState({});
@@ -21,10 +21,7 @@ function App() {
          </Routes>
      </BrowserRouter>
    </createContext.Provider>
-    <>
-      <Cart />
-    </>
-    </>
+   </>
   );
 }
 
