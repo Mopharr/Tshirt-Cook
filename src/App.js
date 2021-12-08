@@ -20,9 +20,6 @@ function App() {
          </Routes>
      </BrowserRouter>
    </createContext.Provider>
-    <>
-      <Cart />
-    </>
   );
 }
 
