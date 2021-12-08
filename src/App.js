@@ -5,12 +5,13 @@ import Index from "./Pages/Index";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Cart from "./Pages/Cart/Cart";
-import Context from "./Context";
+import createContext from "./Context"; 
 
 function App() {
    const [state, setState] = useState({});
   return (
-     <Context.Provider value={{ state, setState }}>
+    <>
+     <createContext.Provider value={{ state, setState }}>
        <BrowserRouter>
          <Routes>
            <Route exact path="/" element={<Index />} />
@@ -19,7 +20,8 @@ function App() {
            <Route exact path="/cart" element={<Cart />} />
          </Routes>
      </BrowserRouter>
-   </Context.Provider>
+   </createContext.Provider>
+   </>
   );
 }
 
