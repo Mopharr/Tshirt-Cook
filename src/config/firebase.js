@@ -1,14 +1,16 @@
-import * as firebase from "firebase/app";
-import "firebase/auth";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
 
-const app = firebase.initializeApp({
-  apiKey: "AIzaSyAIqe5qy1lLmFqbd_mW1RcnG10BCRypn8Y",
-  authDomain: "malhub-db.firebaseapp.com",
-  projectId: "malhub-db",
-  storageBucket: "malhub-db.appspot.com",
-  messagingSenderId: "309121821303",
-  appId: "1:309121821303:web:f9f63e7eccb34e6834f472",
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyDHg1MJebhFzbdGcFLUezrDRsAMjxX1lNA",
+  authDomain: "omd-clothing.firebaseapp.com",
+  projectId: "omd-clothing",
+  storageBucket: "omd-clothing.appspot.com",
+  messagingSenderId: "286969672722",
+  appId: "1:286969672722:web:0e7f200a3d935347a914cb",
+};
 
-export const auth = app.auth();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 export default app;
