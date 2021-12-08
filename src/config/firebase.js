@@ -1,4 +1,4 @@
-import firebase from "firebase/app"
+import firebase from "firebase"
 import "firebase/auth"
 
 const app = firebase.initializeApp({
@@ -11,4 +11,3 @@ const app = firebase.initializeApp({
 })
 
 export const auth = app.auth()
-export default app
