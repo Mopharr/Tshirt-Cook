@@ -10,7 +10,7 @@ import Context from "./Context";
 function App() {
    const [state, setState] = useState({});
   return (
-     <createContext.Provider value={{ state, setState }}>
+     <Context.Provider value={{ state, setState }}>
        <BrowserRouter>
          <Routes>
            <Route exact path="/" element={<Index />} />
@@ -19,10 +19,7 @@ function App() {
            <Route exact path="/cart" element={<Cart />} />
          </Routes>
      </BrowserRouter>
-   </createContext.Provider>
-    <>
-      <Cart />
-    </>
+   </Context.Provider>
   );
 }
 
