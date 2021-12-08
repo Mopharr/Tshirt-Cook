@@ -5,11 +5,12 @@ import Index from "./Pages/Index";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Cart from "./Pages/Cart/Cart";
-import Context from "./Context";
+import createContext from "./Context";
 
 function App() {
    const [state, setState] = useState({});
   return (
+    <>
      <createContext.Provider value={{ state, setState }}>
        <BrowserRouter>
          <Routes>
@@ -22,6 +23,7 @@ function App() {
    </createContext.Provider>
     <>
       <Cart />
+    </>
     </>
   );
 }
