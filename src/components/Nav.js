@@ -3,12 +3,13 @@ import styled from "styled-components";
 import { BsSearch } from "react-icons/bs";
 import { IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
-
 const Nav = () => {
+
+
   return (
     <MainNav>
       <Logo>
-        <label>Logo</label>
+        <label>OMD<span>Clothing</span></label>
       </Logo>
       <SearchBar>
         <input type="text" placeholder="Search designs" />
@@ -16,11 +17,11 @@ const Nav = () => {
       </SearchBar>
 
       <Auth>
-        <p>Login</p>
-        <p>SignUp</p>
+        <a href="/">Login</a>
+        <a href="/">SignUp</a>
         <IconButton aria-label="Show cart item" color="inherit">
-          <Badge badgeContent={2} color="secondary">
-            <ShoppingCart />
+          <Badge badgeContent={2}>
+            <a href = '/'><ShoppingCart /></a>
           </Badge>
         </IconButton>
       </Auth>
@@ -37,9 +38,15 @@ const MainNav = styled.div`
   align-items: center;
 `;
 const Logo = styled.div`
-  font-size: 23px;
+  font-size: 30px;
   font-weight: bold;
   font-family: monospace;
+  label {
+    color: #ff0000;
+  }
+  span{
+    color: #000;
+  }
 `;
 const SearchBar = styled.div`
   background: #f5f5f5;
@@ -61,7 +68,9 @@ const SearchBar = styled.div`
 const Auth = styled.div`
     display: flex;
     align-items: center;
-    p{
+    a{
+      text-decoration: none;
+      color: #FF0000;
       font-size: 16px;
       font-weight: bold;
       font-family: monospace;
