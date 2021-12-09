@@ -10,6 +10,7 @@ import createContext from "./Context";
 function App() {
    const [state, setState] = useState({});
   return (
+    <>
      <createContext.Provider value={{ state, setState }}>
        <BrowserRouter>
          <Routes>
@@ -20,6 +21,7 @@ function App() {
          </Routes>
      </BrowserRouter>
    </createContext.Provider>
+   </>
   );
 }
 
