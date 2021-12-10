@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 import { FiSearch, FiX } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
 import Nav from "../../components/Nav";
