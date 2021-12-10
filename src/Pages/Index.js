@@ -1,5 +1,6 @@
 import React from "react";
 import Expore from "../components/Expore";
+import Feture from "../components/Feture";
 import Header from "../components/Header";
 import Navbar from "../components/Nav";
 import Section from "../components/Section";
@@ -11,6 +12,7 @@ const Index = () => {
       <Section />
       <Header />
       <Expore />
+      <Feture />
     </>
   );};
 
