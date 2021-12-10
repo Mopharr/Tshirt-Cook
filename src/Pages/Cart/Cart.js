@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { FiSearch, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
+import Nav from "../../components/Nav";
 
 const Cart = () => {
   return (
@@ -11,30 +12,7 @@ const Cart = () => {
           <BsCart3 />
         </span>
       </header>
-      <nav>
-        <div className="logo">
-          <a href="#brand" className="nav-brand">
-            OMDClothing
-          </a>
-        </div>
-        <form>
-          <div className="search-box">
-            <input
-              type="search"
-              className="search"
-              placeholder="Search for products or designs"
-            />
-          </div>
-          <button className="search-icons">
-            <FiSearch />
-          </button>
-        </form>
-        <div className="cart-icons">
-          <span>
-            <BsCart3 />
-          </span>
-        </div>
-      </nav>
+      <Nav />
       <CartSection>
         <div className="cart-wrap">
           <div className="cart-placeholder">
