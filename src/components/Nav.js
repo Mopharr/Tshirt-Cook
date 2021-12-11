@@ -9,7 +9,9 @@ const Nav = () => {
   return (
     <MainNav>
       <Logo>
-        <label>OMD<span>Clothing</span></label>
+        <label>
+          OMD<span>Clothing</span>
+        </label>
       </Logo>
       <SearchBar>
         <input type="text" placeholder="Search designs" />
@@ -20,8 +22,10 @@ const Nav = () => {
         <a href="/">Login</a>
         <a href="/">SignUp</a>
         <IconButton aria-label="Show cart item" color="inherit">
-          <Badge badgeContent={2}>
-            <a href = '/'><ShoppingCart /></a>
+          <Badge badgeContent={2} color = 'secondary'>
+            <a href="/">
+              <ShoppingCart />
+            </a>
           </Badge>
         </IconButton>
       </Auth>
@@ -70,7 +74,7 @@ const Auth = styled.div`
     align-items: center;
     a{
       text-decoration: none;
-      color: #FF0000;
+      color: #000;
       font-size: 16px;
       font-weight: bold;
       font-family: monospace;

@@ -10,6 +10,7 @@ import wrap6 from "../assets/leaf.svg";
 
 const Expore = () => {
     return (
+    <>
       <Main>
         <Text>
           <p>Find a Perfectly Them Gift</p>
@@ -34,31 +35,43 @@ const Expore = () => {
             </button>
           </Wrapper>
         </FirstWrap>
-
+      </Main>
         <SecondWarp>
           <InnerWrap>
-            <img src={wrap4} alt="" />
+            <img
+              src={wrap4}
+              style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
+              alt=""
+            />
             <div>
               <p>Weirdly meaningful art</p>
               <span>Millions of designs on over 70 high quality products.</span>
             </div>
           </InnerWrap>
           <InnerWrap>
-            <img src={wrap5} alt="" />
+            <img
+              src={wrap5}
+              style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
+              alt=""
+            />
             <div>
               <p>Weirdly meaningful art</p>
               <span>Millions of designs on over 70 high quality products.</span>
             </div>
           </InnerWrap>
           <InnerWrap>
-            <img src={wrap6} alt="" />
+            <img
+              src={wrap6}
+              style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
+              alt=""
+            />
             <div>
               <p>Weirdly meaningful art</p>
               <span>Millions of designs on over 70 high quality products.</span>
             </div>
           </InnerWrap>
         </SecondWarp>
-      </Main>
+      </>
     );
 }
 
@@ -71,7 +84,7 @@ const Main = styled.div`
 `
 const Text = styled.div`
   p {
-    font-size: 30px;
+    font-size: 35px;
     margin: 1em 0;
     font-family: monospace;
     color: #ff6600;
@@ -123,16 +136,24 @@ const SecondWarp = styled.div`
   margin-bottom: 1.5em;
   width: 100%;
   margin: 3em 0;
+  background: #f5f5f5;
+
 `;
 const InnerWrap = styled.div`
   display: flex;
-  justify-content: space-around;
-  div{
-    text-align: right;
-  }
-  p{
+  width: 400px;
+  padding: 1.5em;
+  p {
     font-size: 17px;
     font-family: monospace;
     font-weight: bold;
+  }
+  span {
+    font-size: 17px;
+    font-family: monospace;
+    font-weight: 500;
+    display: flex;
+    width: 60%;
+    margin-right: auto;
   }
 `;
