@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "config/firebase";
 import { useNavigate } from "react-router-dom";
-import UserContext from "Context";
+import UserContext from "../Context";
 
 const LoginForm = () => {
   const { state, setState } = useContext(UserContext);

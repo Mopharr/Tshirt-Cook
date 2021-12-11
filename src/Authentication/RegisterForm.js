@@ -4,7 +4,7 @@ import "assets/register.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "config/firebase";
 import { useNavigate } from "react-router-dom";
-import UserContext from "Context";
+import UserContext from "../Context";
 
 const RegisterForm = () => {
   const { state, setState } = useContext(UserContext);
