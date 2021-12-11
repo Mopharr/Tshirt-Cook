@@ -1,15 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import wrap1 from '../assets/pic1.jpg'
+import React from "react";
+import styled from "styled-components";
+import wrap1 from "../assets/pic1.jpg";
 import wrap2 from "../assets/pic2.jpg";
 import wrap3 from "../assets/pic3.jpg";
 import wrap4 from "../assets/art.svg";
 import wrap5 from "../assets/hand.svg";
 import wrap6 from "../assets/leaf.svg";
 
-
 const Expore = () => {
-    return (
+  return (
     <>
       <Main>
         <Text>
@@ -36,52 +35,51 @@ const Expore = () => {
           </Wrapper>
         </FirstWrap>
       </Main>
-        <SecondWarp>
-          <InnerWrap>
-            <img
-              src={wrap4}
-              style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
-              alt=""
-            />
-            <div>
-              <p>Weirdly meaningful art</p>
-              <span>Millions of designs on over 70 high quality products.</span>
-            </div>
-          </InnerWrap>
-          <InnerWrap>
-            <img
-              src={wrap5}
-              style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
-              alt=""
-            />
-            <div>
-              <p>Weirdly meaningful art</p>
-              <span>Millions of designs on over 70 high quality products.</span>
-            </div>
-          </InnerWrap>
-          <InnerWrap>
-            <img
-              src={wrap6}
-              style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
-              alt=""
-            />
-            <div>
-              <p>Weirdly meaningful art</p>
-              <span>Millions of designs on over 70 high quality products.</span>
-            </div>
-          </InnerWrap>
-        </SecondWarp>
-      </>
-    );
-}
+      <SecondWarp>
+        <InnerWrap>
+          <img
+            src={wrap4}
+            style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
+            alt=""
+          />
+          <div>
+            <p>Weirdly meaningful art</p>
+            <span>Millions of designs on over 70 high quality products.</span>
+          </div>
+        </InnerWrap>
+        <InnerWrap>
+          <img
+            src={wrap5}
+            style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
+            alt=""
+          />
+          <div>
+            <p>Weirdly meaningful art</p>
+            <span>Millions of designs on over 70 high quality products.</span>
+          </div>
+        </InnerWrap>
+        <InnerWrap>
+          <img
+            src={wrap6}
+            style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
+            alt=""
+          />
+          <div>
+            <p>Weirdly meaningful art</p>
+            <span>Millions of designs on over 70 high quality products.</span>
+          </div>
+        </InnerWrap>
+      </SecondWarp>
+    </>
+  );
+};
 
-export default Expore
+export default Expore;
 
 const Main = styled.div`
-    width: 80%;
-    margin: auto;
-   
-`
+  width: 80%;
+  margin: auto;
+`;
 const Text = styled.div`
   p {
     font-size: 35px;
@@ -137,7 +135,6 @@ const SecondWarp = styled.div`
   width: 100%;
   margin: 3em 0;
   background: #f5f5f5;
-
 `;
 const InnerWrap = styled.div`
   display: flex;
@@ -147,13 +144,14 @@ const InnerWrap = styled.div`
     font-size: 17px;
     font-family: monospace;
     font-weight: bold;
+    margin: 0 ;
   }
   span {
     font-size: 17px;
     font-family: monospace;
     font-weight: 500;
     display: flex;
-    width: 60%;
+    width: 70%;
     margin-right: auto;
   }
 `;

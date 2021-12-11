@@ -1,12 +1,14 @@
-import React from 'react'
-// import Auth from '../Authentication/Auth'
+import React from "react";
+import RegisterForm from "../Authentication/RegisterForm";
+import NavBar from "../components/NavBar";
 
 const Register = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <div>
+      <NavBar />
+      <RegisterForm />
+    </div>
+  );
+};
 
-export default Register
+export default Register;
