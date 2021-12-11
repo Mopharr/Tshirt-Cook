@@ -1,5 +1,7 @@
+/* eslint-disable import/no-anonymous-default-export */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+// import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDHg1MJebhFzbdGcFLUezrDRsAMjxX1lNA",

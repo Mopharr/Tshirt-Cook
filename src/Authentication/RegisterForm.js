@@ -1,34 +1,32 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "assets/register.css";
-//import { useAuth } from "contexts/AuthContext";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import app from "config/firebase";
+import { useNavigate } from "react-router-dom";
+import UserContext from "Context";
 
 const RegisterForm = () => {
-  //const { signup } = useAuth();
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const { state, setState } = useContext(UserContext);
 
-  console.log(error, loading);
-
-  const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    password: "",
-  });
+  const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
-    setFormData({ ...formData, [name]: value });
+    setState({ ...state, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      setError("");
-      setLoading(true);
-    } catch {
-      setError("Failed to create an account");
-    }
-    setLoading(false);
+    const auth = getAuth(app);
+    createUserWithEmailAndPassword(auth, state.email, state.password)
+      .then(() => {
+        navigate("/login");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(`error code: ${errorCode} error message: ${errorMessage}`);
+      });
   };
   return (
     <div className="container" id="container">
@@ -51,21 +49,21 @@ const RegisterForm = () => {
             type="text"
             name="name"
             onChange={handleChange}
-            value={formData.fullname}
+            value={state.fullname}
             placeholder="Name"
           />
           <input
             type="email"
             name="email"
             onChange={handleChange}
-            value={formData.email}
+            value={state.email}
             placeholder="Email"
           />
           <input
             type="password"
             name="password"
             onChange={handleChange}
-            value={formData.password}
+            value={state.password}
             placeholder="Password"
           />
           <button>Sign Up</button>
