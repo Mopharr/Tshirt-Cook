@@ -4,12 +4,12 @@ import { BsSearch } from "react-icons/bs";
 import { IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 const Nav = () => {
-
-
   return (
     <MainNav>
       <Logo>
-        <label>OMD<span>Clothing</span></label>
+        <label>
+          OMD<span>Clothing</span>
+        </label>
       </Logo>
       <SearchBar>
         <input type="text" placeholder="Search designs" />
@@ -21,7 +21,9 @@ const Nav = () => {
         <a href="/">SignUp</a>
         <IconButton aria-label="Show cart item" color="inherit">
           <Badge badgeContent={2}>
-            <a href = '/'><ShoppingCart /></a>
+            <a href="/">
+              <ShoppingCart />
+            </a>
           </Badge>
         </IconButton>
       </Auth>
@@ -37,6 +39,7 @@ const MainNav = styled.div`
   justify-content: space-around;
   align-items: center;
 `;
+
 const Logo = styled.div`
   font-size: 30px;
   font-weight: bold;
@@ -44,36 +47,35 @@ const Logo = styled.div`
   label {
     color: #ff0000;
   }
-  span{
+  span {
     color: #000;
   }
 `;
 const SearchBar = styled.div`
   background: #f5f5f5;
-    width: 50%;
-    padding: 15px;
-    display: flex;
-    border-radius: 15px;
-    justify-content: space-between;
-    align-items: center;
-    input{
-      border: none;
-      outline: none;
-      background: transparent;
-      padding: 10px;
-      font-size: 19px;;
-    }
-
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 19px;
+  }
 `;
 const Auth = styled.div`
-    display: flex;
-    align-items: center;
-    a{
-      text-decoration: none;
-      color: #FF0000;
-      font-size: 16px;
-      font-weight: bold;
-      font-family: monospace;
-      margin: 0 8px;
-    }
+  display: flex;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: monospace;
+    margin: 0 8px;
+  }
 `;
