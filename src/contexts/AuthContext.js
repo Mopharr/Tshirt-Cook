@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from "react"
-import { auth } from "../config/firebase"
+import React, { useContext } from "react"
+import app from "../config/firebase"
 
 const AuthContext = React.createContext()
 export function useAuth() {
@@ -7,55 +7,55 @@ export function useAuth() {
 }
 
 export function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState()
-  const [loading, setLoading] = useState(true)
+  // const [currentUser, setCurrentUser] = useState()
+  // const [loading, setLoading] = useState(true)
 
   function signup(email, password) {
-    return auth.createUserWithEmailAndPassword(email, password)
+    return app.auth.createUserWithEmailAndPassword(email, password)
   }
 
   function login(email, password) {
-    return auth.signInWithEmailAndPassword(email, password)
+    return app.auth.signInWithEmailAndPassword(email, password)
   }
 
   function logout() {
-    return auth.signOut()
+    return app.auth.signOut()
   }
 
   function resetPassword(email) {
-    return auth.sendPasswordResetEmail(email)
+    return app.auth.sendPasswordResetEmail(email)
   }
 
-  function updateEmail(email) {
-    return currentUser.updateEmail(email)
-  }
+  // function updateEmail(email) {
+  //   return currentUser.updateEmail(email)
+  // }
 
-  function updatePassword(password) {
-    return currentUser.updatePassword(password)
-  }
+  // function updatePassword(password) {
+  //   return currentUser.updatePassword(password)
+  // }
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
-      setCurrentUser(user)
-      setLoading(false)
-    })
+  // useEffect(() => {
+  //   const unsubscribe = app.auth.onAuthStateChanged(user => {
+  //     setCurrentUser(user)
+  //     setLoading(false)
+  //   })
 
-    return unsubscribe
-  }, [])
+  //   return unsubscribe
+  // }, [])
 
   const value = {
-    currentUser,
+    // currentUser,
     login,
     signup,
     logout,
     resetPassword,
-    updateEmail,
-    updatePassword
+    // updateEmail,
+    // updatePassword
   }
 
   return (
     <AuthContext.Provider value={value}>
-      {!loading && children}
+      {children}
     </AuthContext.Provider>
   )
 }
