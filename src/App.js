@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from "react";
 import "index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "Pages/Index";
-import Login from "Pages/Login";
-import Register from "Pages/Register";
-import Cart from "Pages/Cart/Cart";
-import UserContext from "Context";
+import Index from "./Pages/Index";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import Cart from "./Pages/Cart/Cart";
+import UserContext from "./Context";
 import { getAuth } from "firebase/auth";
 import app from "config/firebase";
 

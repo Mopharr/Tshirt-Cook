@@ -1,6 +1,6 @@
 import React from "react";
-import RegisterForm from "Authentication/RegisterForm";
-import NavBar from "components/NavBar";
+import RegisterForm from "../Authentication/RegisterForm";
+import NavBar from "../components/NavBar";
 
 const Register = () => {
   return (

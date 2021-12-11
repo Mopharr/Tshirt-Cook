@@ -37,21 +37,21 @@ const Expore = () => {
 
         <SecondWarp>
           <InnerWrap>
-            <img src={wrap4} alt="" />
+            <img src={wrap4} alt="" className='expolre-icon' />
             <div>
               <p>Weirdly meaningful art</p>
               <span>Millions of designs on over 70 high quality products.</span>
             </div>
           </InnerWrap>
           <InnerWrap>
-            <img src={wrap5} alt="" />
+            <img src={wrap5} alt="" className='expolre-icon' />
             <div>
               <p>Weirdly meaningful art</p>
               <span>Millions of designs on over 70 high quality products.</span>
             </div>
           </InnerWrap>
           <InnerWrap>
-            <img src={wrap6} alt="" />
+            <img src={wrap6} alt="" className='expolre-icon' />
             <div>
               <p>Weirdly meaningful art</p>
               <span>Millions of designs on over 70 high quality products.</span>
@@ -123,13 +123,30 @@ const SecondWarp = styled.div`
   margin-bottom: 1.5em;
   width: 100%;
   margin: 3em 0;
+
+  @media(max-width: 568px) {
+    flex-direction: column;
+  }
 `;
 const InnerWrap = styled.div`
   display: flex;
-  justify-content: space-around;
-  div{
-    text-align: right;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1em;
+
+  @media(max-width: 568px) {
+    margin-bottom: 2em;
   }
+
+  .explore-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+div {
+  text-align: center;
+}  
   p{
     font-size: 17px;
     font-family: monospace;
