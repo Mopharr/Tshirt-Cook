@@ -48,7 +48,7 @@ const Title = styled.div`
   p {
     font-size: 35px;
     margin: 1em 0;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     color: #ff6600;
     font-weight: bold;
   }
@@ -60,7 +60,7 @@ const Comment = styled.div`
 const Left = styled.div`
   margin: 2em 0;
   h2 {
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     margin: 2em 0;
     font-size: 25px;
   }

@@ -102,7 +102,7 @@ const Menu = styled.div`
     margin: 2em 0;
     p{
         font-size: 25px;
-        font-family: monospace;
+        font-family: 'Nunito', sans-serif;;
         font-weight: bold;
         margin-bottom: 1em;
     }
@@ -113,7 +113,7 @@ const Menu = styled.div`
     li{
         font-size: 18px;
         list-style: none;
-        font-family: monospace;
+        font-family: 'Nunito', sans-serif;;
         margin: 1em 0;
 
     }
@@ -123,7 +123,7 @@ const Copy = styled.div`
   p {
     text-align: center;
     margin: 1em 0;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     font-size: 18px;
   }
 `;

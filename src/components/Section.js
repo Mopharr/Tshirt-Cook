@@ -39,7 +39,7 @@ const Main = styled.div`
   li{
       list-style: none;
       font-size:16px;
-      font-family: monospace;
+      font-family: 'Nunito', sans-serif;;
       font-weight: 500;
   }
   hr{

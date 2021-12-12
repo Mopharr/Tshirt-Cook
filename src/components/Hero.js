@@ -5,8 +5,8 @@ import hero from "../assets/paint.jpg"
 const Hero = () => {
   return (
     <HeroContainer>
-      {/* <Text>Gift the Very Thing</Text>
-      <Text2>Super-specific gifts for super-specific people. Shop now, relax later.</Text2> */}
+      <Text>Gift the Very Thing</Text>
+      <Text2><p>Super-specific gifts for super-specific people. Shop now, relax later.</p></Text2>
     </HeroContainer>
   );
 };
@@ -14,10 +14,9 @@ const Hero = () => {
 export default Hero;
 
 const HeroContainer = styled.div`
-  width: 100%;
+  width: 80%;
   height: 40vh;
-  margin: 1em 0;
-  box-sizing: border-box;
+  margin: 1em auto;
   background-image: url(${hero});
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,35 +31,31 @@ const HeroContainer = styled.div`
   }
 `;
 
-// const Text = styled.h1`
-//   font-size: 40px;
-//   font-weight: 700;
-//   color: #fff;
-//   width: 202px;
-//   height: 48px;
-//   font-family: Inter;
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 40px;
-//   line-height: 48px;
-//   text-align: center;
-//   @media only screen and (max-width: 768px) {
-//     font-size: 30px;
-//   }
-// `;
-// const Text2 = styled.h1`
-//   font-size: 40px;
-//   font-weight: 700;
-//   color: #fff;
-//   width: 202px;
-//   height: 48px;
-//   font-family: Inter;
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 40px;
-//   letter-spacing: -0.01em;
-//   text-align: center;
-//   @media only screen and (max-width: 768px) {
-//     font-size: 30px;
-//   }
-// `;
+const Text = styled.h1`
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  height: 48px;
+  font-family: 'Nunito', sans-serif;;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+`;
+const Text2 = styled.p`
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+`;

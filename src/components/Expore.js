@@ -84,7 +84,7 @@ const Text = styled.div`
   p {
     font-size: 35px;
     margin: 1em 0;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     color: #ff6600;
     font-weight: bold;
   }
@@ -142,13 +142,13 @@ const InnerWrap = styled.div`
   padding: 1.5em;
   p {
     font-size: 17px;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     font-weight: bold;
     margin: 0 ;
   }
   span {
     font-size: 17px;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     font-weight: 500;
     display: flex;
     width: 70%;

@@ -80,14 +80,14 @@ const Title = styled.div`
   p {
     font-size: 35px;
     margin: 1em 0;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     color: #ff6600;
     font-weight: bold;
   }
   a {
     text-decoration: none;
     color: #ff6600;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     font-size: 20px;
     padding-right: 3em;
     cursor: pointer;
@@ -126,12 +126,12 @@ const Wrap = styled.div`
 const Text = styled.div`
   margin-left: 20px;
   h3 {
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     font-size: 20px;
     margin: 1em 0 0.5em;
   }
   p {
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     font-size: 16px;
   }
 `;

@@ -1,17 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
-import { BsCart3 } from "react-icons/bs";
 import Nav from "../../components/Nav";
 
 const Cart = () => {
   return (
     <CartContainer>
-      <header>
-        <span>
-          <BsCart3 />
-        </span>
-      </header>
       <Nav />
       <CartSection>
         <div className="cart-wrap">
@@ -216,7 +210,7 @@ const Cart = () => {
                         className="trust-signal-support-link"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://www.redbubble.com/social-responsibility/sustainability/carbon-offset/"
+                        href="/"
                       >
                         Learn more
                       </a>
@@ -267,7 +261,7 @@ const Cart = () => {
                         className="trust-signal-support-link"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://help.redbubble.com/hc/en/articles/203024315"
+                        href="/"
                       >
                         Learn more
                       </a>
@@ -317,7 +311,7 @@ const Cart = () => {
                         className="trust-signal-support-link"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://help.redbubble.com/hc/en/articles/206337916"
+                        href="/"
                       >
                         Learn more
                       </a>
@@ -386,6 +380,7 @@ export default Cart;
 const CartContainer = styled.div`
   display: flex;
   flex-direction: column;
+  font-family: "Nunito", sans-serif;
 
   header {
     height: 60px;
@@ -446,7 +441,7 @@ const CartContainer = styled.div`
           box-sizing: border-box;
           color: #40354e;
           display: block;
-          font-family: inherit;
+          font-family: "Nunito", sans-serif;
           font-size: 16px;
           font-weight: 500;
           line-height: 18px;
@@ -733,7 +728,7 @@ const CartSection = styled.div`
     margin-bottom: 20px;
 
     .payment-headline {
-text-transform: capitalize;
+      text-transform: capitalize;
       text-align: center;
       font-size: 1.25rem;
       font-weight: 500;
@@ -779,7 +774,7 @@ text-transform: capitalize;
       .trust-signal-heading {
         color: #40354e;
         font-size: 1rem;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Nunito", sans-serif;
         font-weight: 800;
         margin: 8px 0;
       }
@@ -931,11 +926,11 @@ text-transform: capitalize;
     }
     #or {
       background-color: #fff;
-    z-index: 2;
-    font-size: 1rem;
-    font-weight: normal;
-    padding-left: 16px;
-    padding-right: 16px;
+      z-index: 2;
+      font-size: 1rem;
+      font-weight: normal;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 `;

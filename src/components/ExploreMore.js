@@ -8,27 +8,27 @@ const ExploreMore = () => {
       <Main>
         <div>
           <img src={wrap1} alt="" />
-          <button>Check out Clothing</button>
+          <button>Shop now</button>
         </div>
         <div>
           <img src={wrap1} alt="" />
-          <button>Check out Clothing</button>
+          <button>Shop now</button>
         </div>
         <div>
           <img src={wrap1} alt="" />
-          <button>Check out Clothing</button>
+          <button>Shop now</button>
         </div>
         <div>
           <img src={wrap1} alt="" />
-          <button>Check out Clothing</button>
+          <button>Shop now</button>
         </div>
         <div>
           <img src={wrap1} alt="" />
-          <button>Check out Clothing</button>
+          <button>Shop now</button>
         </div>
         <div>
           <img src={wrap1} alt="" />
-          <button>Check out Clothing</button>
+          <button>Shop now</button>
         </div>
       </Main>
     );
@@ -57,14 +57,14 @@ const Main = styled.div`
   button {
     position: absolute;
     z-index: 1;
-    left: 30%;
-    bottom: 10%;
+    left: 33%;
+    bottom: 15%;
     padding: 10px 20px;
     border: none;
     outline: none;
     background: #ff6600;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 9px;
   }
 `;

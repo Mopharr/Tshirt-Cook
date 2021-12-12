@@ -114,7 +114,7 @@ const SearchContainer = styled.div`
 
 const ListContainer = styled.ul`
   list-style: none;
-  font-family: Inter;
+  font-family: 'Nunito', sans-serif;;
   display: flex;
   align-items: center;
   justify-content: space-around;

@@ -35,12 +35,12 @@ const Main = styled.div`
 const Title = styled.div`
   font-size: 40px;
   margin: 1em 0;
-  font-family: monospace;
+  font-family: 'Nunito', sans-serif;;
   font-weight: bold;
 `;
 const Sub = styled.div`
   font-size: 20px;
   width: 40%;
   margin: auto;
-  font-family: monospace;
+  font-family: 'Nunito', sans-serif;;
 `;

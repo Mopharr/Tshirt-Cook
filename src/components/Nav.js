@@ -7,9 +7,9 @@ const Nav = () => {
   return (
     <MainNav>
       <Logo>
-        <label>
+        <a href = '/'>
           OMD<span>Clothing</span>
-        </label>
+        </a>
       </Logo>
       <SearchBar>
         <input type="text" placeholder="Search designs" />
@@ -43,9 +43,11 @@ const MainNav = styled.div`
 const Logo = styled.div`
   font-size: 30px;
   font-weight: bold;
-  font-family: monospace;
-  label {
+  font-family: "Nunito", sans-serif;
+  a {
     color: #ff0000;
+    font-size: 30px;
+    font-weight: bold;
   }
   span {
     font-size: 30px;
@@ -55,6 +57,7 @@ const Logo = styled.div`
 const SearchBar = styled.div`
   background: #f5f5f5;
   width: 50%;
+  height: 70px;
   padding: 15px;
   display: flex;
   border-radius: 15px;
@@ -76,7 +79,7 @@ const Auth = styled.div`
     color: #000;
     font-size: 16px;
     font-weight: bold;
-    font-family: monospace;
+    font-family: 'Nunito', sans-serif;;
     margin: 0 8px;
   }
 `;
