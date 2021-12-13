@@ -277,6 +277,7 @@ const Main = styled.div`
   .dropdown {
     display: block;
     position: relative;
+    
   }
 
   .subnav-list-items .dropdown-menu {
@@ -296,6 +297,19 @@ const Main = styled.div`
     margin-top: 2rem;
   }
 
+  .subnav-link {
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    padding: 3rem 1rem;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .subnav-list-items .subnav-link:hover {
+    border-bottom: 1px solid white;
+  }
+
   .subnav-list-items:hover .dropdown-menu {
     display: block;
   }
@@ -309,6 +323,7 @@ const Main = styled.div`
     text-decoration: none;
     color: #493b3b;
     font-weight: bold;
+    cursor: pointer;
   }
 
   hr {

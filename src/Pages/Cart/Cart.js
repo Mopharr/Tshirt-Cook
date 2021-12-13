@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
 
 const Cart = () => {
+  const [count, setCount] = useState(0)
+  const increment = () => setCount(count + 1)
+  const decrement = () => setCount(count - 1)
   return (
     <CartContainer>
       <Nav />
@@ -58,9 +61,9 @@ const Cart = () => {
                           <div className="cart-item-content-count">
                             <div className="cart-item-content-count-overlay">
                               <div className="cart-item-content-count-inner">
-                                <span>-</span>
-                                <input type="number" />
-                                <span>+</span>
+                                <span onClick={decrement}>-</span>
+                                <span>{count}</span>
+                                <span onClick={increment}>+</span>
                               </div>
                             </div>
                           </div>

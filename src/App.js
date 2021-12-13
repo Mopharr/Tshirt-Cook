@@ -12,7 +12,7 @@ import app from "./config/firebase";
 
 function App() {
   const [state, setState] = useState({
-    fullname: "",
+    fullname: "", 
     email: "",
     password: "",
     currentUser: "",
