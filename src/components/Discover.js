@@ -3,6 +3,7 @@ import wrapPic from "../assets/music.jpg";
 import wrapPic1 from "../assets/lion.jpg";
 import styled from "styled-components";
 import { AiOutlineHeart } from "react-icons/ai";
+import { Fade } from "react-reveal";
 
 const Discover = () => {
   return (
@@ -12,56 +13,66 @@ const Discover = () => {
         <a href="/">View More</a>
       </Title>
       <Wrap>
-        <div>
-          <img src={wrapPic} alt="" />
-          <button>
-            <AiOutlineHeart />
-          </button>
-          <Text>
-            <h3>Music</h3>
-            <p>40 product</p>
-          </Text>
-        </div>
-        <div>
-          <img src={wrapPic} alt="" />
-          <button>
-            <AiOutlineHeart />
-          </button>
-          <Text>
-            <h3>Music</h3>
-            <p>40 product</p>
-          </Text>
-        </div>
-        <div>
-          <img src={wrapPic} alt="" />
-          <button>
-            <AiOutlineHeart />
-          </button>
-          <Text>
-            <h3>Music</h3>
-            <p>40 product</p>
-          </Text>
-        </div>
-        <div>
-          <img src={wrapPic1} alt="" />
-          <button>
-            <AiOutlineHeart />
-          </button>
-          <Text>
-            <h3>Music</h3>
-            <p>40 product</p>
-          </Text>
-        </div>
-        <div>
-          <img src={wrapPic1} alt="" />
-          <button>
-            <AiOutlineHeart />
-          </button>
-          <Text>
-            <h3>Music</h3>
-            <p>40 product</p>
-          </Text>
-        </div>
+        <Fade>
+          <div>
+            <img src={wrapPic} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic1} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic1} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
       </Wrap>
     </Main>
   );

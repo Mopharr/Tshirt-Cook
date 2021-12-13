@@ -85,8 +85,10 @@ const Left = styled.div`
 const Right = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding-left: 1.5em;
+  @media (max-width: 608px){
+      width: 100%
+   }
   @media (max-width: 768px){
     padding: 0;
   }

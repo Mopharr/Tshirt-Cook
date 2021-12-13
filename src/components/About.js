@@ -1,13 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from "react-reveal";
+
 
 const About = () => {
     return (
       <Main>
         <Title>
+          <Fade buttom>
           <h5>What We Do</h5>
+          </Fade>
         </Title>
         <Sub>
+           <Fade buttom>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
             eget ornare est. Praesent id hendrerit risus. Aliquam nulla lectus,
@@ -17,6 +22,7 @@ const About = () => {
             venenatis. Sed vehicula turpis non neque laoreet, eget ultricies leo
             congue. Sed eget ante sit amet metus dictum cursus.
           </p>
+          </Fade>
         </Sub>
       </Main>
     );

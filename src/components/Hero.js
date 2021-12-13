@@ -1,12 +1,17 @@
 import React from "react";
+import Fade from 'react-reveal'
 import styled from "styled-components";
 import hero from "../assets/paint.jpg"
 
 const Hero = () => {
   return (
     <HeroContainer>
+      <Fade >
       <Text>Gift the Very Thing</Text>
-      <Text2><p>Super-specific gifts for super-specific people. Shop now, relax later.</p></Text2>
+      </Fade>
+      <Fade >
+      <Text2>Super-specific gifts for super-specific people. Shop now, relax later.</Text2>
+      </Fade>
     </HeroContainer>
   );
 };
@@ -49,7 +54,7 @@ const Text = styled.h1`
     font-size: 30px;
   }
 `;
-const Text2 = styled.p`
+const Text2 = styled.div`
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -59,6 +64,6 @@ const Text2 = styled.p`
   font-size: 40px;
   text-align: center;
   @media only screen and (max-width: 768px) {
-    font-size: 30px;
+    font-size: 20px;
   }
 `;

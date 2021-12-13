@@ -6,6 +6,8 @@ import wrap3 from "../assets/pic3.jpg";
 import wrap4 from "../assets/art.svg";
 import wrap5 from "../assets/hand.svg";
 import wrap6 from "../assets/leaf.svg";
+import Fade from "react-reveal";
+
 
 const Expore = () => {
   return (
@@ -15,27 +17,34 @@ const Expore = () => {
           <p>Find a Perfectly Them Gift</p>
         </Text>
         <FirstWrap>
+          <Fade left>
           <Wrapper>
             <img src={wrap1} alt="" />
             <button>
               <a href="/">Shop Gift Cards</a>
             </button>
           </Wrapper>
+          </Fade>
+          <Fade>
           <Wrapper>
             <img src={wrap2} alt="" />
             <button>
               <a href="/">Shop Gift Cards</a>
             </button>
           </Wrapper>
+          </Fade>
+          <Fade right>
           <Wrapper>
             <img src={wrap3} alt="" />
             <button>
               <a href="/">Shop Gift Cards</a>
             </button>
           </Wrapper>
+          </Fade>
         </FirstWrap>
       </Main>
       <SecondWarp>
+        <Fade left>
         <InnerWrap>
           <img
             src={wrap4}
@@ -47,6 +56,8 @@ const Expore = () => {
             <span>Millions of designs on over 70 high quality products.</span>
           </div>
         </InnerWrap>
+        </Fade>
+        <Fade>
         <InnerWrap>
           <img
             src={wrap5}
@@ -58,6 +69,8 @@ const Expore = () => {
             <span>Millions of designs on over 70 high quality products.</span>
           </div>
         </InnerWrap>
+        </Fade>
+        <Fade right>
         <InnerWrap>
           <img
             src={wrap6}
@@ -69,6 +82,7 @@ const Expore = () => {
             <span>Millions of designs on over 70 high quality products.</span>
           </div>
         </InnerWrap>
+        </Fade>
       </SecondWarp>
     </>
   );
