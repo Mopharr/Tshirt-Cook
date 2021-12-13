@@ -255,10 +255,17 @@ const Main = styled.div`
   padding: 1em 0;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
   ul {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      display: none;
+    }
   }
   li {
     list-style: none;
