@@ -9,6 +9,7 @@ import Cart from "./Pages/Cart/Cart";
 import UserContext from "./Context";
 import { getAuth } from "firebase/auth";
 import app from "./config/firebase";
+import Clothing from "Pages/Clothing";
 
 function App() {
   const [state, setState] = useState({
@@ -40,6 +41,7 @@ function App() {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/clothing" element={<Clothing />} />
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
