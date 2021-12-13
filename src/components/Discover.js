@@ -72,31 +72,46 @@ export default Discover;
 const Main = styled.div`
   width: 80%;
   margin: 1.5em auto;
+  @media only screen and (max-width: 768px) {
+    width: 98%;
+  }
 `;
 const Title = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   p {
-    font-size: 35px;
+    font-size: 30px;
     margin: 1em 0;
-    font-family: 'Nunito', sans-serif;;
+    font-family: "Nunito", sans-serif;
     color: #ff6600;
     font-weight: bold;
+    @media only screen and (max-width: 768px) {
+      font-size: 25px;
+    }
   }
   a {
     text-decoration: none;
     color: #ff6600;
-    font-family: 'Nunito', sans-serif;;
+    font-family: "Nunito", sans-serif;
     font-size: 20px;
     padding-right: 3em;
     cursor: pointer;
+    @media only screen and (max-width: 768px) {
+      padding-right: 10px;
+      font-size: 16px;
+    }
   }
 `;
 const Wrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @media (max-width: 485px) {
+    overflow-x: scroll;
+    flex-wrap: noWrap;
+    justify-content: flex-start;
+  }
   div {
     position: relative;
   }
@@ -121,14 +136,12 @@ const Wrap = styled.div`
     padding: 4px;
     cursor: pointer;
   }
-  
 `;
 const Text = styled.div`
   margin-left: 20px;
   h3 {
     font-family: 'Nunito', sans-serif;;
     font-size: 20px;
-    margin: 1em 0 0.5em;
   }
   p {
     font-family: 'Nunito', sans-serif;;

@@ -79,14 +79,20 @@ export default Expore;
 const Main = styled.div`
   width: 80%;
   margin: auto;
+  @media only screen and (max-width: 425px) {
+    width: 98%;
+  }
 `;
 const Text = styled.div`
   p {
-    font-size: 35px;
+    font-size: 30px;
     margin: 1em 0;
-    font-family: 'Nunito', sans-serif;;
+    font-family: "Nunito", sans-serif;
     color: #ff6600;
     font-weight: bold;
+    @media only screen and (max-width: 768px) {
+      font-size: 25px;
+    }
   }
 `;
 const FirstWrap = styled.div`
@@ -106,10 +112,13 @@ const Wrapper = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     cursor: pointer;
     transition: all 0.3s ease;
+    @media only screen and (max-width: 1024px) {
+      width: 300px;
+    }
   }
-  img:hover {
-    transform: scale(1.1);
-  }
+  // img:hover {
+  //   transform: scale(1.1);
+  // }
   button {
     position: absolute;
     z-index: 1;
@@ -122,6 +131,9 @@ const Wrapper = styled.div`
     color: #fff;
     font-size: 18px;
     border-radius: 9px;
+    @media only screen and (max-width: 1024px) {
+      left: 25%;
+    }
   }
   a {
     color: #fff;
@@ -135,11 +147,20 @@ const SecondWarp = styled.div`
   width: 100%;
   margin: 3em 0;
   background: #f5f5f5;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+  }
 `;
 const InnerWrap = styled.div`
   display: flex;
   width: 400px;
   padding: 1.5em;
+  @media (max-width: 1024px){
+    width: 100%
+  }
   p {
     font-size: 17px;
     font-family: 'Nunito', sans-serif;;

@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
 import styled from 'styled-components';
 
 const Footer = () => {
@@ -6,74 +7,16 @@ const Footer = () => {
       <Container>
         <Menu>
           <Wrap>
-            <p>Shop</p>
-            <ul>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-              <a href="/">
-                <li>Gift Guild</li>
-              </a>
-            </ul>
-          </Wrap>
-          <Wrap>
-            <p>Help</p>
-            <ul>
-              <a href="/">
-                <li>Delivery</li>
-              </a>
-              <a href="/">
-                <li>Delivery</li>
-              </a>
-              <a href="/">
-                <li>Delivery</li>
-              </a>
-              <a href="/">
-                <li>Delivery</li>
-              </a>
-              <a href="/">
-                <li>Delivery</li>
-              </a>
-              <a href="/">
-                <li>Delivery</li>
-              </a>
-              <a href="/">
-                <li>Delivery</li>
-              </a>
-            </ul>
-          </Wrap>
-          <Wrap>
             <p>Social</p>
             <ul>
               <a href="/">
-                <li>Instagram</li>
+                <BsInstagram /><li>Instagram</li>
               </a>
               <a href="/">
-                <li>Instagram</li>
+               <BsTwitter /><li>Twitter</li>
               </a>
               <a href="/">
-                <li>Instagram</li>
-              </a>
-              <a href="/">
-                <li>Instagram</li>
+                <BsFacebook /><li>Facebook</li>
               </a>
             </ul>
           </Wrap>
@@ -97,9 +40,12 @@ const Container = styled.div`
 const Menu = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content space-around;
+    justify-content flex-start;
     aling-items: center;
     margin: 2em 0;
+    @media (max-width: 425px){
+      flex-direction: column;
+    }
     p{
         font-size: 25px;
         font-family: 'Nunito', sans-serif;;
@@ -109,6 +55,9 @@ const Menu = styled.div`
     a{
         text-decoration: none;
         color: #fff;
+        display:  flex;
+        align-items: center;
+        justify-content: space-around;
     }
     li{
         font-size: 18px;
@@ -117,7 +66,7 @@ const Menu = styled.div`
         margin: 1em 0;
 
     }
-`
+`;
 const Wrap = styled.div``
 const Copy = styled.div`
   p {

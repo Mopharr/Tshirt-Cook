@@ -53,6 +53,9 @@ const Main = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     cursor: pointer;
     transition: all 0.3s ease;
+    @media only screen and (max-width: 1024px) {
+      width: 300px;
+    }
   }
   button {
     position: absolute;

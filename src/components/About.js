@@ -42,5 +42,13 @@ const Sub = styled.div`
   font-size: 20px;
   width: 40%;
   margin: auto;
-  font-family: 'Nunito', sans-serif;;
+  font-family: "Nunito", sans-serif;
+  @media only screen and (max-width: 768px) {
+    width: 70%;
+    padding: 0 10px;
+  }
+  @media only screen and (max-width: 425px) {
+    width: 100%;
+    padding: 0 10px;
+  }
 `;

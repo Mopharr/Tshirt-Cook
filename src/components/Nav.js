@@ -2,32 +2,54 @@ import React from "react";
 import styled from "styled-components";
 import { BsSearch } from "react-icons/bs";
 import { IconButton, Badge } from "@material-ui/core";
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { ShoppingCart } from "@material-ui/icons";
 const Nav = () => {
   return (
-    <MainNav>
-      <Logo>
-        <a href = '/'>
-          OMD<span>Clothing</span>
-        </a>
-      </Logo>
-      <SearchBar>
-        <input type="text" placeholder="Search designs" />
-        <BsSearch style={{ fontSize: "19px" }} />
-      </SearchBar>
+    <>
+      <MainNav>
+        <Logo>
+          <a href="/">
+            OMD<span>Clothing</span>
+          </a>
+        </Logo>
+        <SearchBar>
+          <input type="text" placeholder="Search designs" />
+          <BsSearch style={{ fontSize: "19px" }} />
+        </SearchBar>
 
-      <Auth>
-        <a href="/">Login</a>
-        <a href="/">SignUp</a>
+        <Auth>
+          <a href="/login">Login</a>
+          <a href="/signup">SignUp</a>
+          <IconButton aria-label="Show cart item" color="inherit">
+            <Badge badgeContent={2} color="secondary">
+              <a href="/cart">
+                <ShoppingCart />
+              </a>
+            </Badge>
+          </IconButton>
+        </Auth>
+      </MainNav>
+
+      <MobileNav>
+        <Hide>
+          <GiHamburgerMenu style={{ fontSize: "25px", marginRight: "10px" }} />
+          <BsSearch style={{ fontSize: "20px" }} />
+        </Hide>
+        <Logo>
+          <a href="/">
+            OMD<span>Clothing</span>
+          </a>
+        </Logo>
         <IconButton aria-label="Show cart item" color="inherit">
-          <Badge badgeContent={2} color = 'secondary'>
-            <a href="/">
+          <Badge badgeContent={2} color="secondary">
+            <a href="/cart">
               <ShoppingCart />
             </a>
           </Badge>
         </IconButton>
-      </Auth>
-    </MainNav>
+      </MobileNav>
+    </>
   );
 };
 
@@ -38,6 +60,9 @@ const MainNav = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 1024px){
+    display: none;
+  }
 `;
 
 const Logo = styled.div`
@@ -48,10 +73,18 @@ const Logo = styled.div`
     color: #ff0000;
     font-size: 30px;
     font-weight: bold;
+    text-decoration: none;
+    margin: 0;
+    @media (max-width: 425px) {
+      font-size: 20px;
+    }
   }
   span {
     font-size: 30px;
     color: #000;
+    @media (max-width: 425px) {
+      font-size: 20px;
+    }
   }
 `;
 const SearchBar = styled.div`
@@ -83,3 +116,19 @@ const Auth = styled.div`
     margin: 0 8px;
   }
 `;
+const MobileNav = styled.div`
+  display: none;
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+  }
+  @media (max-width: 375px) {
+    padding: 1em; 
+  }
+`;
+const Hide = styled.div`
+  display: flex;
+  align-items: center;  
+`

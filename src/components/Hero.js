@@ -29,6 +29,9 @@ const HeroContainer = styled.div`
   @media only screen and (max-width: 768px) {
     height: 30vh;
   }
+  @media only screen and (max-width: 425px) {
+    width: 90%
+  }
 `;
 
 const Text = styled.h1`
