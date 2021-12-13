@@ -1,11 +1,11 @@
 import React from "react";
 import RegisterForm from "../Authentication/RegisterForm";
-import NavBar from "../components/NavBar";
+import Nav from "../components/Nav";
 
 const Register = () => {
   return (
     <div>
-      <NavBar />
+      <Nav />
       <RegisterForm />
     </div>
   );
