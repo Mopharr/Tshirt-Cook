@@ -23,7 +23,7 @@ const Nav = () => {
           <a href="/signup">SignUp</a>
           <IconButton aria-label="Show cart item" color="inherit">
             <Badge badgeContent={2} color="secondary">
-              <a href="/cart">
+              <a style={{color: '#000'}} href="/cart">
                 <ShoppingCart />
               </a>
             </Badge>
@@ -90,7 +90,7 @@ const Logo = styled.div`
 const SearchBar = styled.div`
   background: #f5f5f5;
   width: 50%;
-  height: 70px;
+  height: 50px;
   padding: 15px;
   display: flex;
   border-radius: 15px;
