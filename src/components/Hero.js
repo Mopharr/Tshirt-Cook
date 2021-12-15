@@ -58,7 +58,6 @@ const Left = styled.div`
 const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
-  padding-top: 1em;
 `;
 const Sub = styled.div`
   font-size: 18px;

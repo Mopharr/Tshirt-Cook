@@ -6,7 +6,6 @@ import UserContext from "../Context";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Footer from "../components/Footer";
-import ExploreMore from "../components/ExploreMore";
 import Discover from "../components/Discover";
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
       <Hero />
       <About />
       <Expore />
-      <ExploreMore />
       <Discover />
       <Contact />
       <Footer />
