@@ -10,7 +10,7 @@ const Nav = () => {
       <MainNav>
         <Logo>
           <a href="/">
-            OMD<span>Clothing</span>
+            Tshirt<span>Cooking</span>
           </a>
         </Logo>
         <SearchBar>
@@ -38,7 +38,7 @@ const Nav = () => {
         </Hide>
         <Logo>
           <a href="/">
-            OMD<span>Clothing</span>
+            Tshirt<span>Cooking</span>
           </a>
         </Logo>
         <IconButton aria-label="Show cart item" color="inherit">

@@ -1,60 +1,11 @@
 import React from 'react'
-import Fade from 'react-reveal';
 import styled from 'styled-components';
-import wrap1 from "../assets/pic1.jpg";
 
 
 const ExploreMore = () => {
     return (
       <Main>
-        <Fade>
-          <div>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <button>Shop now</button>
-            </Fade>
-          </div>
-        </Fade>
-        <Fade>
-          <div>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <button>Shop now</button>
-            </Fade>
-          </div>
-        </Fade>
-        <Fade>
-          <div>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <button>Shop now</button>
-            </Fade>
-          </div>
-        </Fade>
-        <Fade>
-          <div>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <button>Shop now</button>
-            </Fade>
-          </div>
-        </Fade>
-        <Fade>
-          <div>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <button>Shop now</button>
-            </Fade>
-          </div>
-        </Fade>
-        <Fade>
-          <div>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <button>Shop now</button>
-            </Fade>
-          </div>
-        </Fade>
+        
       </Main>
     );
 }
