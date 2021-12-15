@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import app from "config/firebase";
+import app from "../config/firebase";
 import { useNavigate } from "react-router-dom";
-import UserContext from "Context";
+import UserContext from "../Context";
 
 const LoginForm = () => {
   const { state, setState } = useContext(UserContext);

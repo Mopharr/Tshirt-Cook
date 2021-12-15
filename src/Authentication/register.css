@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 * {
   box-sizing: border-box;
 }
-/* 
+
 body {
   background: #f6f5f7;
   display: flex;
@@ -13,12 +13,12 @@ body {
   font-family: "Montserrat", sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
-} */
-/* 
+}
+
 h1 {
   font-weight: bold;
   margin: 0;
-} */
+} 
 
 p {
   font-size: 14px;
@@ -176,4 +176,4 @@ footer i {
 footer a {
   color: #3c97bf;
   text-decoration: none;
-}
+} */

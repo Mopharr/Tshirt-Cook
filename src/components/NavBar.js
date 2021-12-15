@@ -1,6 +1,4 @@
 import React from "react";
-import { BsSearch } from "react-icons/bs";
-import { IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import styled from "styled-components";
 
@@ -116,7 +114,7 @@ const SearchContainer = styled.div`
 
 const ListContainer = styled.ul`
   list-style: none;
-  font-family: Inter;
+  font-family: 'Nunito', sans-serif;;
   display: flex;
   align-items: center;
   justify-content: space-around;

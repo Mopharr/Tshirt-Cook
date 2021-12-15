@@ -1,26 +1,27 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import "index.css";
+import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "Pages/Index";
-import Login from "Pages/Login";
-import Register from "Pages/Register";
-import Cart from "Pages/Cart/Cart";
-import UserContext from "Context";
+import Index from "./Pages/Index";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import Cart from "./Pages/Cart/Cart";
+import UserContext from "./Context";
 import { getAuth } from "firebase/auth";
 import app from "config/firebase";
 import { commerce } from "Commerce"
 
 function App() {
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
   const [product, setProduct] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [state, setState] = useState({
     fullname: "",
     email: "",
     password: "",
     currentUser: "",
     loading: true,
+    cart: [],
   });
 
   useEffect(() => {
@@ -37,30 +38,29 @@ function App() {
 
   const addToCart = async (productId, quantity) => {
     const { cart } = await commerce.cart.add(productId, quantity);
-    setCart(cart);
+    setState({...state, cart: cart});
   };
 
   const updateCartQty = async (productId, quantity) => {
     const { cart } = await commerce.cart.update(productId, { quantity });
-    setCart(cart);
+    setState({...state, cart: cart});
   };
 
   const removeCart = async (productId) => {
     const { cart } = await commerce.cart.remove(productId);
-    setCart(cart);
+    setState({...state, cart: cart});
   };
 
   const emptyCart = async () => {
     const { cart } = await commerce.cart.empty();
-    setCart(cart);
+    setState({...state, cart: cart});
   };
 
   useEffect(() => {
     let subscribe = false;
     commerce.cart.retrieve().then((cart) => {
       if (!subscribe) {
-        setCart(cart);
-        setLoading(false);
+        setState({...state, cart: cart, loading: false});
       }
     });
     return () => {
@@ -79,7 +79,7 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{ state, setState }}>
+      <UserContext.Provider value={{ state, setState, addToCart, updateCartQty, removeCart, emptyCart, product }}>
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Index />} />

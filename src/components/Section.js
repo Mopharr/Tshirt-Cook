@@ -30,16 +30,23 @@ const Main = styled.div`
   margin: auto;
   padding: 1em 0;
   display: flex;
-  justify-content: space-arounf;
+  justify-content: space-around;
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
   ul {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      display: none;
+    }
   }
   li{
       list-style: none;
       font-size:16px;
-      font-family: monospace;
+      font-family: 'Nunito', sans-serif;;
       font-weight: 500;
   }
   hr{
