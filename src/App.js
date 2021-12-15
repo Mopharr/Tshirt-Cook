@@ -10,6 +10,7 @@ import UserContext from "./Context";
 import { getAuth } from "firebase/auth";
 import app from "./config/firebase";
 import Clothing from "Pages/Clothing";
+import { commerce } from "Commerce";
 
 function App() {
   // const [cart, setCart] = useState([]);
@@ -38,29 +39,29 @@ function App() {
 
   const addToCart = async (productId, quantity) => {
     const { cart } = await commerce.cart.add(productId, quantity);
-    setState({...state, cart: cart});
+    setState({ ...state, cart: cart });
   };
 
   const updateCartQty = async (productId, quantity) => {
     const { cart } = await commerce.cart.update(productId, { quantity });
-    setState({...state, cart: cart});
+    setState({ ...state, cart: cart });
   };
 
   const removeCart = async (productId) => {
     const { cart } = await commerce.cart.remove(productId);
-    setState({...state, cart: cart});
+    setState({ ...state, cart: cart });
   };
 
   const emptyCart = async () => {
     const { cart } = await commerce.cart.empty();
-    setState({...state, cart: cart});
+    setState({ ...state, cart: cart });
   };
 
   useEffect(() => {
     let subscribe = false;
     commerce.cart.retrieve().then((cart) => {
       if (!subscribe) {
-        setState({...state, cart: cart, loading: false});
+        setState({ ...state, cart: cart, loading: false });
       }
     });
     return () => {
@@ -79,7 +80,17 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{ state, setState, addToCart, updateCartQty, removeCart, emptyCart, product }}>
+      <UserContext.Provider
+        value={{
+          state,
+          setState,
+          addToCart,
+          updateCartQty,
+          removeCart,
+          emptyCart,
+          product,
+        }}
+      >
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Index />} />
