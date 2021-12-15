@@ -1,0 +1,69 @@
+.card-div{
+    width: 20em;
+    min-height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--card-main-color);
+    margin: 0.6em;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* ======== General styling of all cards and heart divs ========== */
+.img-div{
+    width: 100%;
+    height: 8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+}
+
+.img-div img{
+    transform-origin: bottom;
+    transform: translateY(7.5%);
+    transition: transform 0.3s ease-in-out
+}
+
+/* === Styling the like Icon ==== */
+.like-icon-div{
+    padding: 1em 1em 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 1.5em;
+    color: var(--heart-icon-color);
+    border-radius:10px 10px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.like-icon-div-child{
+    /* background-color: yellow; */
+    width: 1em;
+    height: 1em;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.heart-empty{
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+.heart-fill{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
+}
