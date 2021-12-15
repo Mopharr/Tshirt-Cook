@@ -8,7 +8,7 @@ const Section = () => {
         <ul>
           <li className="subnav-list-items dropdown">
             <a
-              href="#cloth"
+              href="/Clothing"
               className="
             subnav-link"
             >
@@ -17,17 +17,27 @@ const Section = () => {
             <ul className="dropdown-menu">
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  All Clothing
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Dresses
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Hoodies & Sweatshit
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Sock
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  T-Shirt
                 </a>
               </li>
             </ul>
@@ -38,22 +48,27 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Clothing
+              Wall Art
             </a>
             <ul className="dropdown-menu">
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  All Art
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Frame Print
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Poster
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Canva Print
                 </a>
               </li>
             </ul>
@@ -64,22 +79,32 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Clothing
+              Stationaries
             </a>
             <ul className="dropdown-menu">
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  All Stationaries
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Greeting Card
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Hardcover Jounal
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Mouse Pad
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Postcard
                 </a>
               </li>
             </ul>
@@ -90,22 +115,27 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Clothing
+              Stickers
             </a>
             <ul className="dropdown-menu">
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  All Stickers
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Car Stickers
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Hedro Stickers
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Laptop Sticker
                 </a>
               </li>
             </ul>
@@ -116,22 +146,27 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Clothing
+              Babies & Kids
             </a>
             <ul className="dropdown-menu">
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  All kids clothing
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Baby One-piece
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Baby T-shirt
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Baby Pullover Hoodies
                 </a>
               </li>
             </ul>
@@ -142,22 +177,42 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Clothing
+              Home and Living
             </a>
             <ul className="dropdown-menu">
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  All Home & Living
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Bath mat
                 </a>
               </li>
               <li>
                 <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
+                  Clock
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Coster
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Duvet cover
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Floor Pillow
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Mug
                 </a>
               </li>
             </ul>
@@ -168,77 +223,8 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Clothing
+              Explore More
             </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Clothing
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Clothing
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Cloth items
-                </a>
-              </li>
-            </ul>
           </li>
         </ul>
       </Main>
@@ -267,6 +253,10 @@ const Main = styled.div`
       display: none;
     }
   }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
   li {
     list-style: none;
     font-size: 16px;
@@ -283,6 +273,7 @@ const Main = styled.div`
   .subnav-list-items .dropdown-menu {
     display: none;
     border: none;
+    width: 200px;
     position: absolute;
     z-index: 1000;
     min-width: 208px;
@@ -294,7 +285,7 @@ const Main = styled.div`
     background-color: #fff;
     background-clip: padding-box;
     border-radius: 0.25rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .subnav-link {
