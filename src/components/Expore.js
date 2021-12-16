@@ -31,7 +31,7 @@ const Expore = () => {
                 <img src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/gow-figurine.png?raw=true" alt="god-of-war-figurine" />
             </div>
             <div class="text-container">
-                <h2 class="item-name">Kratos and Artreus Statue - God Of War</h2>
+                <h4 class="item-name">Kratos and Artreus Statue - God Of War</h4>
                 <p class="date"> Departure date: 31/03/2021 </p>
                 <div class="pricing-and-cart">
                     <div class="pricing">
@@ -116,6 +116,11 @@ const FirstWrap = styled.div`
   justify-content: center;
   margin-bottom: 1.5em;
   width: 100%;
+
+  .text-container {
+    text-align: center;
+    padding: 0 2rem;
+  }
 // `;
 // const Wrapper = styled.div`
 //   position: relative;
