@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-// import wrap1 from "../assets/pic1.jpg";
+import wrap1 from "../assets/clear.png";
 // import wrap2 from "../assets/pic2.jpg";
 // import wrap3 from "../assets/pic3.jpg";
 // import wrap4 from "../assets/art.svg";
@@ -28,7 +28,7 @@ const Expore = () => {
 
             <div class="gow-img-div img-div">
               <img
-                src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/gow-figurine.png?raw=true"
+                src={wrap1}
                 alt="god-of-war-figurine"
               />
             </div>
