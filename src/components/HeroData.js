@@ -3,11 +3,7 @@ export const HeroData = [
         id: 1, 
         image: 'https://demo.w3layouts.com/demos_new/template_demo/18-03-2021/study-course-starter-demo_Free/1612283260/web/assets/images/banner1.jpg',
         title: 'Clothing', 
-        description: `T-shirts, hoodies, tops, dresses, skirts, hats, and more in a huge
-                  range of styles, colors, and sizes (XS - plus size). Whether you wear
-                  women's clothing or men's clothing you’ll find the original artwork
-                  that’s perfect for you. Every purchase supports the independent artist
-                  who designed it, and that’s pretty cool`
+        description: `T-shirts, hoodies, tops, dresses, skirts, hats, and more in a huge`
     },
     {
         id: 2, 

@@ -1,6 +1,4 @@
 import Nav from 'components/Nav'
-import Section from 'components/Section'
-import  ClothHero from "components/Clothing/ClothHero";
 import React from 'react'
 import styled from 'styled-components'
 import ClothExplore from 'components/Clothing/ClothExplore';
@@ -12,8 +10,6 @@ const Clothing = () => {
     return (
         <Main>
             <Nav />
-            <Section />
-            <ClothHero />
             <ClothExplore />
             <Shop />
             <Details />
