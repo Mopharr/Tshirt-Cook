@@ -349,16 +349,15 @@
     font-family: "Poppins", Sans-serif;
     font-size: 40px;
     font-weight: 300;
-    line-height: 80px;
+    line-height: 1.2;
   }
   
   .slider-info-big p {
     color: #fff;
     font-size: 20px;
-    line-height: 1.7;
+    line-height: 1.5;
     max-width: 800px;
     opacity: 0.9;
-    margin-top: 1rem;
     text-align: left;
   }
   
@@ -374,7 +373,6 @@
     border-radius: 25px;
     background-color: #ff6600;
     border-color: #fe79a2;
-    margin-top: 1rem;
     margin-right: 0.5rem;
   }
   
