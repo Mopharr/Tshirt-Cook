@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import wrap1 from "../assets/clear.png";
-// import wrap2 from "../assets/pic2.jpg";
-// import wrap3 from "../assets/pic3.jpg";
-// import wrap4 from "../assets/art.svg";
-// import wrap5 from "../assets/hand.svg";
-// import wrap6 from "../assets/leaf.svg";
-// import Fade from "react-reveal";
+import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
+import wrap1 from "../assets/paint.jpg";
+import wrap2 from "../assets/clearr2.png";
+import wrap3 from "../assets/clearr3.png";
+import wrap4 from "../assets/clearr4.png";
 
 
 const Expore = () => {
@@ -27,19 +24,17 @@ const Expore = () => {
             </div>
 
             <div class="gow-img-div img-div">
-              <img
-                src={wrap1}
-                alt="god-of-war-figurine"
-              />
+              <img src={wrap1} alt="" />
             </div>
             <div class="text-container">
-              <h2 class="item-name">Kratos and Artreus Statue - God Of War</h2>
+              <h2 class="item-name">Nathan Drake Statue </h2>
               <div class="pricing-and-cart">
                 <div class="pricing">
-                  <p class="previous-price">$999</p>
                   <p class="current-price">$599</p>
                 </div>
-                <i class="fas fa-shopping-cart"></i>
+                <AiOutlineShoppingCart
+                  style={{ fontSize: "1.4em", cursor: "pointer" }}
+                />
               </div>
             </div>
           </div>
@@ -52,21 +47,17 @@ const Expore = () => {
               </label>
             </div>
             <div class="sekiro-img-div img-div">
-              <img
-                src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/sekiro-figurine.png?raw=true"
-                alt="sekiro-figurine"
-              />
+              <img src={wrap2} alt="" />
             </div>
             <div class="text-container">
-              <h2 class="item-name">
-                Sekiro Statue - Sekiro: Shadows Die Twice
-              </h2>
+              <h2 class="item-name">Nathan Drake Statue</h2>
               <div class="pricing-and-cart">
                 <div class="pricing">
-                  <p class="previous-price">$50</p>
                   <p class="current-price">$799</p>
                 </div>
-                <i class="fas fa-shopping-cart"></i>
+                <AiOutlineShoppingCart
+                  style={{ fontSize: "1.4em", cursor: "pointer" }}
+                />
               </div>
             </div>
           </div>
@@ -79,21 +70,17 @@ const Expore = () => {
               </label>
             </div>
             <div class="dazai-img-div img-div">
-              <img
-                src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/dazai-figurine.png?raw=true"
-                alt="sekiro-figurine"
-              />
+              <img src={wrap3} alt="" />
             </div>
             <div class="text-container">
-              <h2 class="item-name">
-                Osamu Dazai Funko Pop - Bungou Stray Dogs
-              </h2>
+              <h2 class="item-name">Nathan Drake Statue</h2>
               <div class="pricing-and-cart">
                 <div class="pricing">
-                  <p class="previous-price">$449</p>
                   <p class="current-price">$279</p>
                 </div>
-                <i class="fas fa-shopping-cart"></i>
+                <AiOutlineShoppingCart
+                  style={{ fontSize: "1.4em", cursor: "pointer" }}
+                />
               </div>
             </div>
           </div>
@@ -106,67 +93,22 @@ const Expore = () => {
               </label>
             </div>
             <div class="u4-img-div img-div">
-              <img
-                src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/u4-figurine.png?raw=true"
-                alt="u4-figurine"
-              />
+              <img src={wrap4} alt="" />
             </div>
             <div class="text-container">
-              <h2 class="item-name">
-                Nathan Drake Statue - Uncharted 4: A Thief's End
-              </h2>
+              <h2 class="item-name">Nathan Drake Statue</h2>
               <div class="pricing-and-cart">
                 <div class="pricing">
-                  <p class="previous-price">$759</p>
                   <p class="current-price">$499</p>
                 </div>
-                <i class="fas fa-shopping-cart"></i>
+                <AiOutlineShoppingCart
+                  style={{ fontSize: "1.4em", cursor: "pointer" }}
+                />
               </div>
             </div>
           </div>
         </div>
       </Main>
-      {/* <SecondWarp>
-        <Fade left>
-        <InnerWrap>
-          <img
-            src={wrap4}
-            style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
-            alt=""
-          />
-          <div>
-            <p>Weirdly meaningful art</p>
-            <span>Millions of designs on over 70 high quality products.</span>
-          </div>
-        </InnerWrap>
-        </Fade>
-        <Fade>
-        <InnerWrap>
-          <img
-            src={wrap5}
-            style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
-            alt=""
-          />
-          <div>
-            <p>Weirdly meaningful art</p>
-            <span>Millions of designs on over 70 high quality products.</span>
-          </div>
-        </InnerWrap>
-        </Fade>
-        <Fade right>
-        <InnerWrap>
-          <img
-            src={wrap6}
-            style={{ marginRight: "1.5em", alignSelf: "flex-start" }}
-            alt=""
-          />
-          <div>
-            <p>Weirdly meaningful art</p>
-            <span>Millions of designs on over 70 high quality products.</span>
-          </div>
-        </InnerWrap>
-        </Fade>
-      </SecondWarp> */}
     </>
   );
 };
@@ -192,6 +134,7 @@ const Text = styled.div`
     }
   }
 `;
+
 const FirstWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -278,3 +221,4 @@ const FirstWrap = styled.div`
 //     margin-right: auto;
 //   }
 // `;
+
