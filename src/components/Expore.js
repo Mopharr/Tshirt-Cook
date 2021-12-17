@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import wrap1 from "../assets/pic1.jpg";
-import wrap2 from "../assets/pic2.jpg";
-import wrap3 from "../assets/pic3.jpg";
-import wrap4 from "../assets/art.svg";
-import wrap5 from "../assets/hand.svg";
-import wrap6 from "../assets/leaf.svg";
-import Fade from "react-reveal";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+// import wrap1 from "../assets/pic1.jpg";
+// import wrap2 from "../assets/pic2.jpg";
+// import wrap3 from "../assets/pic3.jpg";
+// import wrap4 from "../assets/art.svg";
+// import wrap5 from "../assets/hand.svg";
+// import wrap6 from "../assets/leaf.svg";
+// import Fade from "react-reveal";
 
 
 const Expore = () => {
@@ -14,36 +15,36 @@ const Expore = () => {
     <>
       <Main>
         <Text>
-          <p>Find a Perfectly Them Gift</p>
+          <p>Explore Item</p>
         </Text>
         <FirstWrap>
-          <Fade left>
-          <Wrapper>
-            <img src={wrap1} alt="" />
-            <button>
-              <a href="/">Shop Gift Cards</a>
-            </button>
-          </Wrapper>
-          </Fade>
-          <Fade>
-          <Wrapper>
-            <img src={wrap2} alt="" />
-            <button>
-              <a href="/">Shop Gift Cards</a>
-            </button>
-          </Wrapper>
-          </Fade>
-          <Fade right>
-          <Wrapper>
-            <img src={wrap3} alt="" />
-            <button>
-              <a href="/">Shop Gift Cards</a>
-            </button>
-          </Wrapper>
-          </Fade>
+          <div class="card-1 card-div">
+            <div class="like-icon-div">
+                <label for="card-1-like" class="like-icon-div-child">
+                    <input type="checkbox" id="card-1-like" />
+                    <AiOutlineHeart />
+                    < AiFillHeart />
+                </label>
+            </div>
+            
+            <div class="gow-img-div img-div">
+                <img src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/gow-figurine.png?raw=true" alt="god-of-war-figurine" />
+            </div>
+            <div class="text-container">
+                <h2 class="item-name">Kratos and Artreus Statue - God Of War</h2>
+                <p class="date"> Departure date: 31/03/2021 </p>
+                <div class="pricing-and-cart">
+                    <div class="pricing">
+                        <p class="previous-price">$999</p>
+                        <p class="current-price">$599</p>
+                    </div>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </div>
         </FirstWrap>
       </Main>
-      <SecondWarp>
+      {/* <SecondWarp>
         <Fade left>
         <InnerWrap>
           <img
@@ -83,7 +84,7 @@ const Expore = () => {
           </div>
         </InnerWrap>
         </Fade>
-      </SecondWarp>
+      </SecondWarp> */}
     </>
   );
 };
@@ -115,78 +116,78 @@ const FirstWrap = styled.div`
   justify-content: center;
   margin-bottom: 1.5em;
   width: 100%;
-`;
-const Wrapper = styled.div`
-  position: relative;
-  img {
-    height: 400px;
-    width: 400px;
-    margin: 10px;
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    cursor: pointer;
-    transition: all 0.3s ease;
-    @media only screen and (max-width: 1024px) {
-      width: 300px;
-    }
-  }
-  // img:hover {
-  //   transform: scale(1.1);
-  // }
-  button {
-    position: absolute;
-    z-index: 1;
-    bottom: 50px;
-    left: 30%;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    background: #ff6600;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 9px;
-    @media only screen and (max-width: 1024px) {
-      left: 25%;
-    }
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-`;
-const SecondWarp = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5em;
-  width: 100%;
-  margin: 3em 0;
-  background: #f5f5f5;
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-  }
-`;
-const InnerWrap = styled.div`
-  display: flex;
-  width: 400px;
-  padding: 1.5em;
-  @media (max-width: 1024px){
-    width: 100%
-  }
-  p {
-    font-size: 17px;
-    font-family: 'Nunito', sans-serif;;
-    font-weight: bold;
-    margin: 0 ;
-  }
-  span {
-    font-size: 17px;
-    font-family: 'Nunito', sans-serif;;
-    font-weight: 500;
-    display: flex;
-    width: 70%;
-    margin-right: auto;
-  }
-`;
+// `;
+// const Wrapper = styled.div`
+//   position: relative;
+//   img {
+//     height: 400px;
+//     width: 400px;
+//     margin: 10px;
+//     position: relative;
+//     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+//     cursor: pointer;
+//     transition: all 0.3s ease;
+//     @media only screen and (max-width: 1024px) {
+//       width: 300px;
+//     }
+//   }
+//   // img:hover {
+//   //   transform: scale(1.1);
+//   // }
+//   button {
+//     position: absolute;
+//     z-index: 1;
+//     bottom: 50px;
+//     left: 30%;
+//     padding: 10px 20px;
+//     border: none;
+//     outline: none;
+//     background: #ff6600;
+//     color: #fff;
+//     font-size: 18px;
+//     border-radius: 9px;
+//     @media only screen and (max-width: 1024px) {
+//       left: 25%;
+//     }
+//   }
+//   a {
+//     color: #fff;
+//     text-decoration: none;
+//   }
+// `;
+// const SecondWarp = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 1.5em;
+//   width: 100%;
+//   margin: 3em 0;
+//   background: #f5f5f5;
+//   @media only screen and (max-width: 768px) {
+//     width: 100%;
+//     flex-direction: column;
+//     margin: auto;
+//     align-items: center;
+//   }
+// `;
+// const InnerWrap = styled.div`
+//   display: flex;
+//   width: 400px;
+//   padding: 1.5em;
+//   @media (max-width: 1024px){
+//     width: 100%
+//   }
+//   p {
+//     font-size: 17px;
+//     font-family: 'Nunito', sans-serif;;
+//     font-weight: bold;
+//     margin: 0 ;
+//   }
+//   span {
+//     font-size: 17px;
+//     font-family: 'Nunito', sans-serif;;
+//     font-weight: 500;
+//     display: flex;
+//     width: 70%;
+//     margin-right: auto;
+//   }
+// `;
