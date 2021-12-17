@@ -8,6 +8,8 @@ import { ShoppingCart } from "@material-ui/icons";
 
 const Nav = () => {
   const [openSearch, setOpenSearch] = useState(false);
+  const [openNav, setOpenNav] = useState(false);
+  const handleNav = () => setOpenNav(!openNav);
   const handleSearch = () => setOpenSearch(!openSearch);
 
   return (
@@ -38,7 +40,15 @@ const Nav = () => {
 
       <MobileNav>
         <Hide>
-          <GiHamburgerMenu style={{ fontSize: "25px", marginRight: "10px" }} />
+          <span onClick={handleNav}>
+            {openNav ? (
+              <FiX />
+            ) : (
+              <GiHamburgerMenu
+                style={{ fontSize: "25px", marginRight: "10px" }}
+              />
+            )}
+          </span>
           <div className="search-bar">
             <div className="search-form search-form-popup">
               <a onClick={handleSearch} href="#search">
@@ -91,6 +101,16 @@ const Nav = () => {
             </a>
           </Badge>
         </IconButton>
+        <div className={openNav ? "navbar-list active" : "navbar-list"}>
+          <ul>
+            <li>
+              <a href="/login">Login</a>
+            </li>
+            <li>
+              <a href="/signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
       </MobileNav>
     </>
   );
@@ -168,11 +188,32 @@ const MobileNav = styled.div`
     padding: 0em 2em;
   }
   @media (max-width: 375px) {
-
-  }
-  @media (max-width: 375px) {
     padding: 1em;
-    padding: 0em 1em; 
+    padding: 0em 1em;
+  }
+
+  .navbar-list {
+    display: none;
+    ul {
+      list-style: none;
+    }
+  }
+  .navbar-list.active {
+    @media (max-width: 568px) {
+      display: block;
+      position: absolute;
+      width: 100vw;
+      left: 0;
+      top: 15%;
+      background: #fff;
+      z-index: 10;
+      border-top: 1px solid rgba(0,0,0,.1);
+      padding: 1rem;
+    }
+
+    .navbar-list-items {
+      padding: 0.5rem;
+    }
   }
 `;
 const Hide = styled.div`
