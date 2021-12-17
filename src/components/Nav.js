@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { BsSearch } from "react-icons/bs";
+import { FiX } from "react-icons/fi";
 import { IconButton, Badge } from "@material-ui/core";
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { GiHamburgerMenu } from "react-icons/gi";
 import { ShoppingCart } from "@material-ui/icons";
+
 const Nav = () => {
+  const [openSearch, setOpenSearch] = useState(false);
+  const handleSearch = () => setOpenSearch(!openSearch);
+
   return (
     <>
       <MainNav>
@@ -23,7 +28,7 @@ const Nav = () => {
           <a href="/signup">SignUp</a>
           <IconButton aria-label="Show cart item" color="inherit">
             <Badge badgeContent={2} color="secondary">
-              <a style={{color: '#000'}} href="/cart">
+              <a style={{ color: "#000" }} href="/cart">
                 <ShoppingCart />
               </a>
             </Badge>
@@ -34,7 +39,45 @@ const Nav = () => {
       <MobileNav>
         <Hide>
           <GiHamburgerMenu style={{ fontSize: "25px", marginRight: "10px" }} />
-          <BsSearch style={{ fontSize: "20px" }} />
+          <div className="search-bar">
+            <div className="search-form search-form-popup">
+              <a onClick={handleSearch} href="#search">
+                {openSearch ? (
+                  <FiX />
+                ) : (
+                  <BsSearch style={{ fontSize: "20px" }} />
+                )}
+              </a>
+              <div
+                className={
+                  openSearch
+                    ? "search-form-wrap show-popup show"
+                    : "search-form-wrap show-popup"
+                }
+              >
+                <form
+                  method="get"
+                  data-button-text="Search"
+                  class="searchform search-ajax"
+                  role="search"
+                >
+                  <input
+                    type="search"
+                    className="searchinput"
+                    autocomplete="off"
+                    placeholder="Search and hit enter..."
+                  />
+                  <input
+                    type="submit"
+                    className="searchsubmit"
+                    name="submit"
+                    value="Search"
+                  />
+                </form>
+                <div class="searchform-result"></div>
+              </div>
+            </div>
+          </div>
         </Hide>
         <Logo>
           <a href="/">
@@ -60,7 +103,7 @@ const MainNav = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
@@ -112,7 +155,7 @@ const Auth = styled.div`
     color: #000;
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Nunito', sans-serif;;
+    font-family: "Nunito", sans-serif;
     margin: 0 8px;
   }
 `;
@@ -125,10 +168,107 @@ const MobileNav = styled.div`
     padding: 1em 2em;
   }
   @media (max-width: 375px) {
-    padding: 1em; 
+
+  }
+  @media (max-width: 375px) {
+    padding: 1em;
   }
 `;
 const Hide = styled.div`
   display: flex;
-  align-items: center;  
-`
+  align-items: center;
+
+  .search-bar {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .search-bar .search-form {
+    padding: 0px 15px;
+    z-index: 1;
+  }
+
+  .search-bar .search-form .search-form-popup {
+    position: relative;
+  }
+
+  .search-bar .search-form-wrap {
+    color: #545454;
+    text-align: left;
+    line-height: normal;
+  }
+
+  .search-bar .search-form-wrap.show-popup {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    z-index: 1000;
+    background: #fff;
+    margin: 0;
+    display: none;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 20%);
+  }
+
+  .search-bar .search-form-wrap.show-popup.show {
+    animation: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s normal none 1
+      search_pop;
+  }
+
+  .show {
+    display: block !important;
+  }
+
+  .search-form-wrap.show-popup .searchform {
+    position: relative;
+    margin: 8px;
+    padding: 0;
+  }
+
+  .search-form-wrap.show-popup .searchinput {
+    width: 250px;
+    height: 34px;
+    border: 1px solid #eaeaea;
+    margin: 0;
+    background: #f5f5f5;
+    font-size: 12px;
+    outline: none;
+  }
+
+  .search-form-wrap.show-popup .searchsubmit {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 3%;
+    font-size: 13px;
+    padding: 8px 16px;
+    background: #ff0000;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    outline: none;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .navbar-search .search-form-wrap.show-popup.show .searchform-result {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .searchform-result {
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    -webkit-box-shadow: 0 5px 6px rgb(0 0 0 / 51%);
+    -moz-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.51);
+    box-shadow: 0 5px 6px rgb(0 0 0 / 51%);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+`;

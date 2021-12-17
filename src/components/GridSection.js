@@ -50,6 +50,10 @@ const GridContainer = styled.div`
   @media only screen and (max-width: 979px) {
     width: 734px;
   }
+
+  @media (max-width: 568px) {
+    width: 100%;
+  }
 `;
 
 const GridWrap = styled.div`
@@ -83,4 +87,8 @@ const GridItems = styled.div`
 const GridInnerItems = styled.div`
   color: #fff;
   font-size: 14px;
+
+  .view-more {
+
+  }
 `;
