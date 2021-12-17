@@ -388,6 +388,12 @@
     line-height: 15px;
     border-radius: 50%;
   }
+
+  @media(max-width: 768px) {
+    .controls-theme {
+      display: none;
+    }
+  }
   
   .prev {
     left: 30px;

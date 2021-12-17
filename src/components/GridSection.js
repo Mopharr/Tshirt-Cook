@@ -103,4 +103,8 @@ const GridItems = styled.div`
 const GridInnerItems = styled.div`
   color: #fff;
   font-size: 14px;
+
+  .view-more {
+
+  }
 `;
