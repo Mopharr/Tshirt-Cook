@@ -14,62 +14,77 @@ const Discover = () => {
       </Title>
       <Wrap>
         <Fade>
-          <div>
+          <div className="discovery">
             <img src={wrapPic} alt="" />
             <button>
               <AiOutlineHeart />
             </button>
             <Text>
               <h3>Music</h3>
-              <p>40 product</p>
+              <div className="tag">
+                <p>40 product</p>
+                <p>$100</p>
+              </div>
             </Text>
           </div>
         </Fade>
         <Fade>
-          <div>
+          <div className="discovery">
             <img src={wrapPic} alt="" />
             <button>
               <AiOutlineHeart />
             </button>
             <Text>
               <h3>Music</h3>
-              <p>40 product</p>
+              <div className="tag">
+                <p>40 product</p>
+                <p>$100</p>
+              </div>
             </Text>
           </div>
         </Fade>
         <Fade>
-          <div>
+          <div className="discovery">
             <img src={wrapPic} alt="" />
             <button>
               <AiOutlineHeart />
             </button>
             <Text>
               <h3>Music</h3>
-              <p>40 product</p>
+              <div className="tag">
+                <p>40 product</p>
+                <p>$100</p>
+              </div>
             </Text>
           </div>
         </Fade>
         <Fade>
-          <div>
+          <div className="discovery">
             <img src={wrapPic1} alt="" />
             <button>
               <AiOutlineHeart />
             </button>
             <Text>
               <h3>Music</h3>
-              <p>40 product</p>
+              <div className="tag">
+                <p>40 product</p>
+                <p>$100</p>
+              </div>
             </Text>
           </div>
         </Fade>
         <Fade>
-          <div>
+          <div className="discovery">
             <img src={wrapPic1} alt="" />
             <button>
               <AiOutlineHeart />
             </button>
             <Text>
               <h3>Music</h3>
-              <p>40 product</p>
+              <div className="tag">
+                <p>40 product</p>
+                <p>$100</p>
+              </div>
             </Text>
           </div>
         </Fade>
@@ -118,17 +133,19 @@ const Wrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media (max-width: 485px) {
-    overflow-x: scroll;
-    flex-wrap: noWrap;
-    justify-content: flex-start;
-  }
-  div {
+  .discovery {
     position: relative;
+    width: 17em;
+    background-color: var(--card-main-color);
+    margin: 0.6em;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    transition: transform 0.2s ease-in-out;
   }
   img {
     position: relative;
-    width: 200px;
+    width: 90%;
     height: 300px;
     margin: 1em;
   }
@@ -153,9 +170,13 @@ const Text = styled.div`
   h3 {
     font-family: 'Nunito', sans-serif;;
     font-size: 20px;
+    text-align: left;
   }
-  p {
-    font-family: 'Nunito', sans-serif;;
-    font-size: 16px;
+  .tag{
+    display: flex;
+    align-item: center;
+    justify-content: space-between;
+    padding-right: 1em;
   }
+
 `;

@@ -122,10 +122,10 @@ const MobileNav = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    padding: 0em 2em;
   }
   @media (max-width: 375px) {
-    padding: 1em; 
+    padding: 0em 1em; 
   }
 `;
 const Hide = styled.div`
