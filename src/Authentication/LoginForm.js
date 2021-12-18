@@ -4,6 +4,8 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../config/firebase";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../Context";
+import { BsFacebook, BsGoogle, BsLinkedin } from "react-icons/bs";
+
 
 const LoginForm = () => {
   const { state, setState } = useContext(UserContext);
@@ -37,16 +39,16 @@ const LoginForm = () => {
           <h1>Sign in</h1>
           <div className="social-container">
             <a href="" className="social">
-              <i className="fab fa-facebook-f"></i>
+              <BsFacebook />
             </a>
             <a href="#" className="social">
-              <i className="fab fa-google-plus-g"></i>
+              <BsGoogle/>
             </a>
             <a href="#" className="social">
-              <i className="fab fa-linkedin-in"></i>
+              <BsLinkedin />
             </a>
           </div>
-          <span>or use your account</span>
+          <span>need an account? <a className="signup" href = '/register'>signUp</a></span>
           <input
             type="email"
             name="email"

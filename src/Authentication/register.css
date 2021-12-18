@@ -66,38 +66,42 @@ button.ghost {
 }
 
 form {
-  background-color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   padding: 0 50px;
   height: 100%;
   text-align: center;
 }
+.signup{
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+form span{
+  font-size: 18px;
+  margin-bottom: 3em;
+}
 
 input {
-  background-color: #eee;
+  border-bottom: 1px solid #d6dadf !important;
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+  outline: none;
 }
 
 .container {
-  background-color: #fff;
-  border-radius: 10px;
   margin: 0 auto;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
   display: flex;
   top: 70px;
   justify-content: center;
   align-items: center;
-  width: 368px;
-  max-width: 100%;
-  min-height: 400px;
+  width: 450px;
+  min-height: 600px;
 }
 
 .form-container {
