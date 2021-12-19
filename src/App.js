@@ -21,6 +21,7 @@ function App() {
     email: "",
     password: "",
     currentUser: "",
+    test: "TEST",
     loading: true,
     cart: [],
   });
@@ -32,7 +33,7 @@ function App() {
       setState({
         ...state,
         currentUser: userData,
-        loading: false,
+        // loading: false,
       });
     }
   }, []);
@@ -94,7 +95,7 @@ function App() {
       >
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Index products={product} />} />
+            <Route exact path="/" element={<Index />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/cart" element={<Cart />} />
