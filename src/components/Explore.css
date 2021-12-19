@@ -1,3 +1,23 @@
+
+.containers input{
+    display: none;
+}
+
+.containers{
+    max-width: 100em;
+    /* background-color: lightgreen; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    margin: auto;
+    min-height: 30em;
+    padding: 3em 1em 1em 1em;
+    box-sizing: border-box;
+}
+
+/* Card Styling */
 .card-div{
     width: 20em;
     min-height: 20em;
@@ -67,3 +87,396 @@
     transform: scale(0);
     transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
 }
+
+
+/* God of war image and heart-background*/
+.gow-img-div{
+    background-color: var(--card-1-secondary-color);
+}
+
+.gow-img-div img{
+    width: 65%;
+    transform: translateY(7.5%);
+    /* background-color: whitesmoke; */
+}
+
+.card-1 .like-icon-div{
+    background-color: var(--card-1-secondary-color);
+}
+
+
+/* Sekiro image and heart-background */
+.sekiro-img-div{
+    background-color: var(--card-2-secondary-color);
+}
+
+.sekiro-img-div img{
+    width: 45%;
+    transform: translateY(7.5%);
+}
+
+.card-2 .like-icon-div{
+    background-color: var(--card-2-secondary-color);
+}
+
+
+/* Dazai image and heart-background */
+.dazai-img-div{
+    background-color: var(--card-3-secondary-color);
+}
+
+.dazai-img-div img{
+    width: 80%;
+    transform: translateY(7.5%);
+}
+
+.card-3 .like-icon-div{
+    background-color: var(--card-3-secondary-color);
+    
+}
+
+/* U4 image and heart-background*/
+.u4-img-div{
+    background-color: var(--card-4-secondary-color);
+}
+
+.u4-img-div img{
+    width: 50%;
+    transform: translateY(7.5%);
+}
+
+.card-4 .like-icon-div{
+    background-color: var(--card-4-secondary-color);
+}
+
+/* ======== text Container Styling general ======== */
+
+.text-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    padding: 0 1.5em;
+    padding-top: 7em;
+    padding-bottom: 1em;
+    box-sizing: border-box;
+}
+
+.text-container .item-name,
+.text-container .date{
+    margin: 0.25em 0;
+    text-align: center;
+}
+
+.text-container .item-name{
+    font-size: 1.2em;
+    font-weight: var(--title-font-weight);
+    color: var(--heading-color);
+}
+
+.text-container .date{
+    font-size: 0.9em;
+    font-weight: var(--date-font-weight);
+    color: var(--date-text-color);
+}
+
+/* === Pricing and cart div  ===== */
+.pricing-and-cart{
+    /* background-color: wheat; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.25em 0 1em 0;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.previous-price{
+    font-size: 0.8rem;
+    font-weight: var(--pricing-font-weight);
+    color: var(--previous-price-text-color);
+    text-decoration: line-through;
+    /* background-color: whitesmoke; */
+    text-align: left;
+}
+
+.current-price{
+    color: var(--current-price-text-color);
+    font-size: 1.3rem;
+    font-weight: var(--pricing-font-weight);
+    /* background-color: yellow; */
+    margin: 0;
+}
+
+.pricing-and-cart{
+    width: 100%;
+}
+
+.fa-shopping-cart{
+    font-size: 1.3rem;
+    top: 0;
+    transform: translateY(50%);
+}
+
+
+/* ====== Hover effects ======= */
+.card-div:hover .img-div img{
+    transform: translateY(7.5%) scale(1.2);
+}
+
+.card-div:hover{
+    transform: translate(0, -10px);
+}
+
+.like-icon-div-child:hover .heart-fill{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.like-icon-div-child:hover .heart-empty{
+    transition-delay: 0.25s;
+    opacity: 0;
+}
+
+#card-1-like:checked ~ .heart-empty,
+#card-2-like:checked ~ .heart-empty,
+#card-3-like:checked ~ .heart-empty,
+#card-4-like:checked ~ .heart-empty{ 
+        opacity: 0;
+}
+
+#card-1-like:checked ~ .heart-fill,
+#card-2-like:checked ~ .heart-fill,
+#card-3-like:checked ~ .heart-fill,
+#card-4-like:checked ~ .heart-fill{
+    animation: like-animation 0.25s ease-in-out forwards;
+}
+
+#card-1-like:not(:checked) ~ .heart-fill,
+#card-2-like:not(:checked) ~ .heart-fill,
+#card-3-like:not(:checked) ~ .heart-fill,
+#card-4-like:not(:checked) ~ .heart-fill{
+    animation: unlike-animation 0.25s ease-in-out ;
+}
+
+
+@keyframes like-animation{
+    0%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    
+    50%{
+        opacity: 1;
+        color: var(--liked-heart-icon-color);
+        transform: scale(0.5);
+    }
+
+    100%{
+        opacity: 1;
+        color: var(--liked-heart-icon-color);
+        transform: scale(1.0);
+    }
+}
+
+@keyframes unlike-animation{
+    0%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    
+    50%{
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    100%{
+        opacity: 1;
+        color: var(--heart-icon-color);
+        transform: scale(1.0);
+    }
+}
+
+.slider {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    align-items: center;
+    padding: 3em 0;
+    transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  .slider::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: #ff6600;
+    opacity: 0.85;
+    transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
+
+  }
+
+  .slider-container {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .slider-info-big {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: left;
+  }
+  
+  .slider-info-big h5 {
+    color: #fff;
+    font-family: "Poppins", Sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  
+  .slider-info-big p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 800px;
+    opacity: 0.9;
+    text-align: left;
+  }
+  
+  .slider-info-big a {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in;
+    border-radius: 25px;
+    background-color: #ff6600;
+    border-color: #fe79a2;
+    margin-right: 0.5rem;
+  }
+  
+  .controls-theme {
+    position: absolute;
+    bottom: 50%;
+    color: #fff;
+    font-size: 20px;
+    margin: 0px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    line-height: 15px;
+    border-radius: 50%;
+  }
+
+  @media(max-width: 768px) {
+    .controls-theme {
+      display: none;
+    }
+  }
+  
+  .prev {
+    left: 30px;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  .controls-theme span {
+    background: rgba(255, 255, 255, 0.21);
+    padding: 0.5rem;
+  }
+  
+  .indicators {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .indicators > button {
+      margin: 5px;
+  }
+  
+  @media (min-width: 992px) {
+    .slider {
+      min-height: 600px;
+    }
+  
+    .container {
+      max-width: 960px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  
+  @media (max-width: 568px) {
+    .slider {
+      min-height: 500px;
+    }
+  
+    .slider-info-big {
+      margin-top: 70px;
+    }
+  
+    .slider-info-big h5 {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slider-info-big h5 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+  
+    .slider-info-big {
+      margin-top: 50px;
+    }
+  }
+  
+  @media (max-width: 415px) {
+    .slider-info-big {
+      margin-top: 30px;
+    }
+  
+    .slider-info-big h5 {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+  
+  @media (max-width: 384px) {
+    .slider {
+      min-height: 480px;
+    }
+  
+    .slider-info-big {
+      margin-top: 60px;
+    }
+  
+    .slider-info-big h5 {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+  

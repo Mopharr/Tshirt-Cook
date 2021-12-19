@@ -35,28 +35,30 @@ const About = () => {
           </Fade>
         </Title>
         <Subt>
-          <Fade buttom>
-            <div>
+            <div className="content">
               <img src={Design} alt="" style={{ background: "transparent" }} />
               <p>Design</p>
             </div>
-            <div>
+            <div className="content">
               <img src={Order} alt="" style={{ background: "transparent" }} />
               <p>Order</p>
             </div>
-            <div>
-              <img src={location} alt="" style={{ background: "transparent" }} />
+            <div className="content">
+              <img
+                src={location}
+                alt=""
+                style={{ background: "transparent" }}
+              />
               <p>Location</p>
             </div>
-            <div>
+            <div className="content">
               <img src={payment} alt="" style={{ background: "transparent" }} />
               <p>Payment</p>
             </div>
-            <div>
+            <div className="content">
               <img src={deliver} alt="" style={{ background: "transparent" }} />
               <p>Deliver</p>
             </div>
-          </Fade>
         </Subt>
       </Main>
     );
@@ -89,6 +91,7 @@ const Sub = styled.div`
     width: 100%;
     padding: 0 10px;
   }
+  
 `;
 const Subt = styled.div`
   margin: auto;
@@ -96,7 +99,13 @@ const Subt = styled.div`
   justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  img{
+  img {
     width: 50px;
   }
-`
+  @media (max-width: 435px) {
+    .content {
+      width: 50%;
+      margin: 1em auto;
+    }
+  }
+`;

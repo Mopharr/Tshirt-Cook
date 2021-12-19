@@ -17,7 +17,7 @@ function App() {
   const [product, setProduct] = useState([]);
   // const [loading, setLoading] = useState(true);
   const [state, setState] = useState({
-    fullname: "",
+    fullname: "", 
     email: "",
     password: "",
     currentUser: "",

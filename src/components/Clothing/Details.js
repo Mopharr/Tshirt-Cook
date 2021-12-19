@@ -225,41 +225,39 @@ const Container = styled.div`
   padding: 2em 0;
 `;
 const Main = styled.div`
-  width: 70%;
+  width: 80%;
   margin: auto;
   @media (max-width: 1024px) {
     width: 97%;
   }
-  svg {
-    width: 100px;
-  }
-  .shipping {
-    text-align: center;
+  .trust-signal{
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2em 1em;
     justify-content: space-around;
     background: #fff;
-    margin: auto;
-    padding: 2em 1em;
-    margin-bottom: 2em;
-    @media (max-width: 1024px) {
-      flex-direction: column;
-    }
   }
-  .trust-signal-heading {
-    font-weight: bold;
+  .cap{
+    margin: 1em;
+  }
+
+`;
+const Top = styled.div`
+img{
+  width: 70px;
+  justify-self: center;
+}
+  p{
+    text-align: center;
+    margin: 10px 0 !important;
     font-size: 20px;
   }
-  .trust-signal-text {
-    font-weight: 500;
-    font-size: 17px;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-    margin: 1em 0;
+  a:hover{
+    text-decoration: underline;
+    color: #000;
   }
 `;
-const Top = styled.div``;
 const Bottom = styled.div`
   padding: 1em 0;
   width: 60%;
