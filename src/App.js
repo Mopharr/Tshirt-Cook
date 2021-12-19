@@ -17,11 +17,20 @@ function App() {
   const [product, setProduct] = useState([]);
   // const [loading, setLoading] = useState(true);
   const [state, setState] = useState({
-    fullname: "", 
+    fullname: "",
     email: "",
     password: "",
     currentUser: "",
-    test: "TEST",
+    test: [
+      {
+        id: 1,
+        name: "quadri",
+      },
+      {
+        id: 2,
+        name: "mubash",
+      },
+    ],
     loading: true,
     cart: [],
   });
@@ -79,31 +88,29 @@ function App() {
     fetchProducts();
   }, []);
 
-  console.log(product)
+  console.log(product);
   return (
-    <>
-      <UserContext.Provider
-        value={{
-          state,
-          setState,
-          addToCart,
-          updateCartQty,
-          removeCart,
-          emptyCart,
-          product,
-        }}
-      >
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/" element={<Index />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/register" element={<Register />} />
-            <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/clothing" element={<Clothing />} />
-          </Routes>
-        </BrowserRouter>
-      </UserContext.Provider>
-    </>
+    <UserContext.Provider
+      value={{
+        state,
+        setState,
+        addToCart,
+        updateCartQty,
+        removeCart,
+        emptyCart,
+        product,
+      }}
+    >
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Index />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/clothing" element={<Clothing />} />
+        </Routes>
+      </BrowserRouter>
+    </UserContext.Provider>
   );
 }
 

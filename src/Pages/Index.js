@@ -10,7 +10,7 @@ import Discover from "../components/Discover";
 import UserContext from "Context"
 
 const Index = () => {
-  const { state, setState } = useContext(UserContext)
+  const { state, setState, product } = useContext(UserContext)
   console.log("test " + state.test);
   console.log("cart " + state.cart);
   console.log("loading " + state.loading);
