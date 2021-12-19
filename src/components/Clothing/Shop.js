@@ -1,84 +1,84 @@
-import React from 'react'
-import Fade from 'react-reveal';
+import React from "react";
+import Fade from "react-reveal";
 import { AiOutlineHeart } from "react-icons/ai";
 import styled from "styled-components";
 import wrapPic from "../../assets/music.jpg";
 import wrapPic1 from "../../assets/lion.jpg";
 
 const Shop = () => {
-    return (
-      <Main>
-        <Title>
-          <p>Shop by theme</p>
-          <a href="/">View More</a>
-        </Title>
-        <Wrap>
-          <Fade>
-            <div>
-              <img src={wrapPic} alt="" />
-              <button>
-                <AiOutlineHeart />
-              </button>
-              <Text>
-                <h3>Music</h3>
-                <p>40 product</p>
-              </Text>
-            </div>
-          </Fade>
-          <Fade>
-            <div>
-              <img src={wrapPic} alt="" />
-              <button>
-                <AiOutlineHeart />
-              </button>
-              <Text>
-                <h3>Music</h3>
-                <p>40 product</p>
-              </Text>
-            </div>
-          </Fade>
-          <Fade>
-            <div>
-              <img src={wrapPic} alt="" />
-              <button>
-                <AiOutlineHeart />
-              </button>
-              <Text>
-                <h3>Music</h3>
-                <p>40 product</p>
-              </Text>
-            </div>
-          </Fade>
-          <Fade>
-            <div>
-              <img src={wrapPic1} alt="" />
-              <button>
-                <AiOutlineHeart />
-              </button>
-              <Text>
-                <h3>Music</h3>
-                <p>40 product</p>
-              </Text>
-            </div>
-          </Fade>
-          <Fade>
-            <div>
-              <img src={wrapPic1} alt="" />
-              <button>
-                <AiOutlineHeart />
-              </button>
-              <Text>
-                <h3>Music</h3>
-                <p>40 product</p>
-              </Text>
-            </div>
-          </Fade>
-        </Wrap>
-      </Main>
-    );
-}
+  return (
+    <Main>
+      <Title>
+        <p>Shop by theme</p>
+        <a href="/">View More</a>
+      </Title>
+      <Wrap>
+        <Fade>
+          <div>
+            <img src={wrapPic} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic1} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+        <Fade>
+          <div>
+            <img src={wrapPic1} alt="" />
+            <button>
+              <AiOutlineHeart />
+            </button>
+            <Text>
+              <h3>Music</h3>
+              <p>40 product</p>
+            </Text>
+          </div>
+        </Fade>
+      </Wrap>
+    </Main>
+  );
+};
 
-export default Shop
+export default Shop;
 
 const Main = styled.div`
   width: 80%;

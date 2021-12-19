@@ -1,65 +1,64 @@
-import React from 'react'
-import styled from 'styled-components'
-import Fade from 'react-reveal'
-import wrap1 from '../../assets/mens.jpg'
+import React from "react";
+import styled from "styled-components";
+import Fade from "react-reveal";
+import wrap1 from "../../assets/mens.jpg";
 
 const ClothExplore = () => {
-    return (
-      <Main>
-        <Fade>
-          <Wrap>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <p>Mens clothing</p>
-            </Fade>
-          </Wrap>
-        </Fade>
-        <Fade>
-          <Wrap>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <p>Womens clothing</p>
-            </Fade>
-          </Wrap>
-        </Fade>
-        <Fade>
-          <Wrap>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <p>T-shirt and Tops</p>
-            </Fade>
-          </Wrap>
-        </Fade>
-        <Fade>
-          <Wrap>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <p>Hoodies</p>
-            </Fade>
-          </Wrap>
-        </Fade>
-        <Fade>
-          <Wrap>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <p>Socks</p>
-            </Fade>
-          </Wrap>
-        </Fade>
-        <Fade>
-          <Wrap>
-            <img src={wrap1} alt="" />
-            <Fade buttom>
-              <p>Dresses</p>
-            </Fade>
-          </Wrap>
-        </Fade>
-      </Main>
-    );
-}
+  return (
+    <Main>
+      <Fade>
+        <Wrap>
+          <img src={wrap1} alt="" />
+          <Fade buttom>
+            <p>Mens clothing</p>
+          </Fade>
+        </Wrap>
+      </Fade>
+      <Fade>
+        <Wrap>
+          <img src={wrap1} alt="" />
+          <Fade buttom>
+            <p>Womens clothing</p>
+          </Fade>
+        </Wrap>
+      </Fade>
+      <Fade>
+        <Wrap>
+          <img src={wrap1} alt="" />
+          <Fade buttom>
+            <p>T-shirt and Tops</p>
+          </Fade>
+        </Wrap>
+      </Fade>
+      <Fade>
+        <Wrap>
+          <img src={wrap1} alt="" />
+          <Fade buttom>
+            <p>Hoodies</p>
+          </Fade>
+        </Wrap>
+      </Fade>
+      <Fade>
+        <Wrap>
+          <img src={wrap1} alt="" />
+          <Fade buttom>
+            <p>Socks</p>
+          </Fade>
+        </Wrap>
+      </Fade>
+      <Fade>
+        <Wrap>
+          <img src={wrap1} alt="" />
+          <Fade buttom>
+            <p>Dresses</p>
+          </Fade>
+        </Wrap>
+      </Fade>
+    </Main>
+  );
+};
 
-export default ClothExplore
-
+export default ClothExplore;
 
 const Main = styled.div`
   width: 80%;
@@ -78,10 +77,10 @@ const Main = styled.div`
   }
 `;
 const Wrap = styled.div`
-    transition: all 0.3s ease;
-    p{
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-    }
-`
+  transition: all 0.3s ease;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+`;
