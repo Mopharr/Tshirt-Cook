@@ -10,12 +10,6 @@ import Footer from "../components/Footer";
 import Discover from "../components/Discover";
 
 const Index = () => {
-  const {
-    state,
-    addToCart,
-    product,
-  } = useContext(UserContext);
-  console.log(state.currentUser);
   return (
     <>
       <Navbar />

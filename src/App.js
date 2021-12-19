@@ -78,6 +78,7 @@ function App() {
     fetchProducts();
   }, []);
 
+  console.log(product)
   return (
     <>
       <UserContext.Provider
