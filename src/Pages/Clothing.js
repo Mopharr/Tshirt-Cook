@@ -7,13 +7,9 @@ import ClothExplore from "components/Clothing/ClothExplore";
 import Shop from "components/Clothing/Shop";
 import Details from "components/Clothing/Details";
 import Footer from "components/Footer";
-import UserContext from "COntext"
+import UserContext from "Context"
 
 const Clothing = () => {
-  const {
-    addToCart,
-    product,
-  } = useContext(UserContext);
   return (
     <Main>
       <Nav />
