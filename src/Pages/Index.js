@@ -10,7 +10,11 @@ import Footer from "../components/Footer";
 import Discover from "../components/Discover";
 
 const Index = () => {
-  const state = useContext(UserContext);
+  const {
+    state,
+    addToCart,
+    product,
+  } = useContext(UserContext);
   console.log(state.currentUser);
   return (
     <>

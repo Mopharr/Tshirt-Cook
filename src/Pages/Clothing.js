@@ -1,14 +1,19 @@
 import Nav from "components/Nav";
 import Section from "components/Section";
 import ClothHero from "components/Clothing/ClothHero";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import ClothExplore from "components/Clothing/ClothExplore";
 import Shop from "components/Clothing/Shop";
 import Details from "components/Clothing/Details";
 import Footer from "components/Footer";
+import UserContext from "COntext"
 
 const Clothing = () => {
+  const {
+    addToCart,
+    product,
+  } = useContext(UserContext);
   return (
     <Main>
       <Nav />
