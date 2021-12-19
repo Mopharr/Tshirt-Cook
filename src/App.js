@@ -94,7 +94,7 @@ function App() {
       >
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Index />} />
+            <Route exact path="/" element={<Index products={product} />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/cart" element={<Cart />} />
