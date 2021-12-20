@@ -27,7 +27,7 @@ const Nav = () => {
 
         <Auth>
           <a href="/login">Login</a>
-          <a href="/signup">SignUp</a>
+          <a href="/register">SignUp</a>
           <IconButton aria-label="Show cart item" color="inherit">
             <Badge badgeContent={2} color="secondary">
               <a style={{ color: "#000" }} href="/cart">
@@ -94,6 +94,7 @@ const Nav = () => {
             Tshirt<span>Cooking</span>
           </a>
         </Logo>
+        <Auth>
         <IconButton aria-label="Show cart item" color="inherit">
           <Badge badgeContent={2} color="secondary">
             <a href="/cart">
@@ -101,13 +102,14 @@ const Nav = () => {
             </a>
           </Badge>
         </IconButton>
+        </Auth>
         <div className={openNav ? "navbar-list active" : "navbar-list"}>
           <ul>
             <li>
               <a href="/login">Login</a>
             </li>
             <li>
-              <a href="/signup">Sign Up</a>
+              <a href="/register">Sign Up</a>
             </li>
           </ul>
         </div>

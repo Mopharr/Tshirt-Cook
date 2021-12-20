@@ -8,7 +8,8 @@ import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import UserContext from "Context";
 
 const Expore = () => {
-  const { state, setState, product } = useContext(UserContext);
+  //  state, setState, 
+  const {product } = useContext(UserContext);
   return (
     <>
       <Main>
@@ -16,7 +17,7 @@ const Expore = () => {
           <p>Explore Item</p>
         </Text>
         <div class="containers">
-          {product.map((item) => {
+          {product.map((item) => (
             <div class="card-1 card-div">
               <div class="like-icon-div">
                 <label for="card-1-like" class="like-icon-div-child">
@@ -39,8 +40,8 @@ const Expore = () => {
                   />
                 </div>
               </div>
-            </div>;
-          })}
+            </div>
+          ))}
 
           {/* <div class="card-2 card-div">
             <div class="like-icon-div">
