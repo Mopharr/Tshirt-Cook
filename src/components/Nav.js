@@ -206,11 +206,12 @@ const MobileNav = styled.div`
       position: absolute;
       width: 100vw;
       left: 0;
-      top: 15%;
+      top: 6%;
       background: #fff;
       z-index: 10;
       border-top: 1px solid rgba(0,0,0,.1);
       padding: 1rem;
+      height: 200px
     }
 
     .navbar-list-items {
