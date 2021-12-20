@@ -24,7 +24,7 @@ const Footer = () => {
 
         <hr />
         <Copy>
-          <p>© OMDClothing. All Rights Reserved</p>
+          <p>© TshirtClothing. All Rights Reserved</p>
         </Copy>
       </Container>
     );
