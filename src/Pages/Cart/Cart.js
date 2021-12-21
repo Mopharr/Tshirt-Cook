@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useContext } from "react";
 import UserContext from "Context";
 import styled from "styled-components";
@@ -39,7 +40,7 @@ const Cart = () => {
                       </div>
                     </div>
                   </div>
-                  {state.cart.line_items.map((item) => (
+                  {state.cart.line_items.map((item) => {
                     <div className="cart-content-header">
                       <div className="cart-content-header-wrapper--1">
                         <div className="cart-item-overlay">
@@ -98,7 +99,7 @@ const Cart = () => {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  })}
                 </div>
               </div>
             </span>
