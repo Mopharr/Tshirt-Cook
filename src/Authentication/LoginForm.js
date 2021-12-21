@@ -63,7 +63,13 @@ const LoginForm = () => {
             value={state.password}
             placeholder="Password"
           />
-          <a href="#">Forgot your password?</a>
+          <div className="forget">
+            <div className="forgetCap">
+              <input type = 'checkbox' />
+              <p>RememberMe</p>
+            </div>
+            <a href="#">Forgot your password?</a>
+          </div>
           <button>Sign In</button>
         </form>
       </div>

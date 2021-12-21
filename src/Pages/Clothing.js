@@ -1,24 +1,27 @@
-import Nav from 'components/Nav'
-import React from 'react'
-import styled from 'styled-components'
-import ClothExplore from 'components/Clothing/ClothExplore';
-import Details from 'components/Clothing/Details';
-import Footer from 'components/Footer';
-import Hero from 'components/Hero';
-import Discover from 'components/Discover';
+import Nav from "components/Nav";
+import Section from "components/Section";
+import ClothHero from "components/Clothing/ClothHero";
+import React from "react";
+import styled from "styled-components";
+import ClothExplore from "components/Clothing/ClothExplore";
+import Shop from "components/Clothing/Shop";
+import Details from "components/Clothing/Details";
+import Footer from "components/Footer";
+// import UserContext from "Context"
 
 const Clothing = () => {
-    return (
-        <Main>
-            <Nav />
-            <Hero />
-            <ClothExplore />
-            <Discover />
-            <Details />
-            <Footer />
-        </Main>
-    )
-}
+  return (
+    <Main>
+      <Nav />
+      <Section />
+      <ClothHero />
+      <ClothExplore />
+      <Shop />
+      <Details />
+      <Footer />
+    </Main>
+  );
+};
 
-export default Clothing
-const Main = styled.div``
+export default Clothing;
+const Main = styled.div``;

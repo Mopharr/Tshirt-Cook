@@ -4,21 +4,15 @@
   box-sizing: border-box;
 }
 
-/* body {
-  background: #f6f5f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  margin: -20px 0 50px;
+body {
+  overflow-x: hidden;
 }
 
 h1 {
   font-weight: bold;
   margin: 0;
-}  */
+  font-size: 2em;
+}
 
 p {
   font-size: 14px;
@@ -47,6 +41,9 @@ button {
   border: 1px solid #ff4b2b;
   background-color: #ff4b2b;
   color: #ffffff;
+  width: 100%;
+
+  margin: 3em 0 1em;
   font-size: 12px;
   font-weight: bold;
   padding: 12px 45px;
@@ -76,12 +73,11 @@ form {
   height: 100%;
   text-align: center;
 }
-.signup{
+.signup {
   font-size: 20px;
-  font-weight: bold;
-  margin-left: 10px;
+  font-weight: 700;
 }
-form span{
+form span {
   font-size: 18px;
   margin-bottom: 3em;
 }
@@ -95,7 +91,7 @@ input {
   outline: none;
 }
 
-.container {
+/* .container {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -112,16 +108,17 @@ input {
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
+} */
+.form-container {
+  width: 450px;
+  margin: auto;
+  padding: 7em 0;
 }
 
-.sign-in-container {
-  left: 0;
-  width: 100%;
-}
-
-.sign-up-container {
-  left: 0;
-  width: 100%;
+@media (max-width: 435px) {
+  .form-container {
+    width: 100%;
+  }
 }
 
 .container.right-panel-active .sign-up-container {
@@ -158,6 +155,16 @@ input {
   margin: 0 5px;
   height: 40px;
   width: 40px;
+}
+.forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.forgetCap {
+  display: flex;
+  align-items: center;
 }
 
 footer {

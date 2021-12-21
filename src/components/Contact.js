@@ -14,7 +14,7 @@ const Contact = () => {
             Address: <span>Lagos Nigeria</span>
           </h2>
           <h2>
-            Email:<span>omdcontact@gmail.com</span>
+            Email:<span>tshirtcooking@gmail.com</span>
           </h2>
           <h2>
             Num:<span>+234-802-333-444</span>
