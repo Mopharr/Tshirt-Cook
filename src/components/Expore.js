@@ -1,15 +1,10 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
-// import wrap1 from "../assets/paint.jpg";
-// import wrap2 from "../assets/clearr2.png";
-// import wrap3 from "../assets/clearr3.png";
-// import wrap4 from "../assets/clearr4.png";
 import UserContext from "Context";
 
 const Expore = () => {
-  //  state, setState, 
-  const {product } = useContext(UserContext);
+  const { addToCart, product } = useContext(UserContext);
   return (
     <>
       <Main>
@@ -33,84 +28,18 @@ const Expore = () => {
                 <h2 class="item-name">{item.name}</h2>
                 <div class="pricing-and-cart">
                   <div class="pricing">
-                    <p class="current-price">$599</p>
+                    <p class="current-price">
+                      {item.price.formatted_with_symbol}
+                    </p>
                   </div>
                   <AiOutlineShoppingCart
                     style={{ fontSize: "1.4em", cursor: "pointer" }}
+                    onClick={addToCart(item.id, 1)}
                   />
                 </div>
               </div>
             </div>
           ))}
-
-          {/* <div class="card-2 card-div">
-            <div class="like-icon-div">
-              <label for="card-2-like" class="like-icon-div-child">
-                <input type="checkbox" id="card-2-like" />
-                <AiOutlineHeart />
-              </label>
-            </div>
-            <div class="sekiro-img-div img-div">
-              <img src={wrap2} alt="" />
-            </div>
-            <div class="text-container">
-              <h2 class="item-name">Nathan Drake Statue</h2>
-              <div class="pricing-and-cart">
-                <div class="pricing">
-                  <p class="current-price">$799</p>
-                </div>
-                <AiOutlineShoppingCart
-                  style={{ fontSize: "1.4em", cursor: "pointer" }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="card-3 card-div">
-            <div class="like-icon-div">
-              <label for="card-3-like" class="like-icon-div-child">
-                <input type="checkbox" id="card-3-like" />
-                <AiOutlineHeart />
-              </label>
-            </div>
-            <div class="dazai-img-div img-div">
-              <img src={wrap3} alt="" />
-            </div>
-            <div class="text-container">
-              <h2 class="item-name">Nathan Drake Statue</h2>
-              <div class="pricing-and-cart">
-                <div class="pricing">
-                  <p class="current-price">$279</p>
-                </div>
-                <AiOutlineShoppingCart
-                  style={{ fontSize: "1.4em", cursor: "pointer" }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="card-4 card-div">
-            <div class="like-icon-div">
-              <label for="card-4-like" class="like-icon-div-child">
-                <input type="checkbox" id="card-4-like" />
-                <AiOutlineHeart />
-              </label>
-            </div>
-            <div class="u4-img-div img-div">
-              <img src={wrap4} alt="" />
-            </div>
-            <div class="text-container">
-              <h2 class="item-name">Nathan Drake Statue</h2>
-              <div class="pricing-and-cart">
-                <div class="pricing">
-                  <p class="current-price">$499</p>
-                </div>
-                <AiOutlineShoppingCart
-                  style={{ fontSize: "1.4em", cursor: "pointer" }}
-                />
-              </div>
-            </div>
-          </div> */}
         </div>
       </Main>
     </>
