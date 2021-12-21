@@ -1,15 +1,10 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
-// import wrap1 from "../assets/paint.jpg";
-// import wrap2 from "../assets/clearr2.png";
-// import wrap3 from "../assets/clearr3.png";
-// import wrap4 from "../assets/clearr4.png";
 import UserContext from "Context";
 
 const Expore = () => {
-  //  state, setState, 
-  const {addToCart, product } = useContext(UserContext);
+  const { addToCart, product } = useContext(UserContext);
   return (
     <>
       <Main>
@@ -33,7 +28,9 @@ const Expore = () => {
                 <h2 class="item-name">{item.name}</h2>
                 <div class="pricing-and-cart">
                   <div class="pricing">
-                    <p class="current-price">$599</p>
+                    <p class="current-price">
+                      {item.price.formatted_with_symbol}
+                    </p>
                   </div>
                   <AiOutlineShoppingCart
                     style={{ fontSize: "1.4em", cursor: "pointer" }}
