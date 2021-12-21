@@ -144,7 +144,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">Checkout $84.57</span>
+                    <span className="checkout-link-text">{`Checkput ${state.cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
@@ -167,7 +167,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">Checkout $84.57</span>
+                    <span className="checkout-link-text">{`Checkput ${state.cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
