@@ -6,81 +6,124 @@ const Footer = () => {
   return (
     <Container>
       <Menu>
-      <div class="footer-widget first-widget">
-      <div class="title-outer">
-      <h3 class="widget-title">Information</h3>
-    </div>
-    <div class="contact_wrapper">
-					<div class="address">
-						<div class="address_content">						
-							<div class="contact_address">60, 29th Street #343, San Francisco, CA 94110, United States of America</div>	
-						</div>	
-					</div>
-					<div class="phone"><div class="contact_phone">+01 2222 365  /  +91 1256 789</div></div>
-					<div class="email">							
-													<div class="contact_email"><a href="mailto:#">
-								support@templatmela.com</a>
-							</div>
-											</div>
-				</div>
-          <ul>
-            <a href="/">
-              <BsInstagram />
-              <li>Instagram</li>
-            </a>
-            <a href="/">
-              <BsTwitter />
-              <li>Twitter</li>
-            </a>
-            <a href="/">
-              <BsFacebook />
-              <li>Facebook</li>
-            </a>
+        <div class="footer-widget first-widget">
+          <div class="title-outer">
+            <h3 class="widget-title">Quick Information</h3>
+          </div>
+          <div class="contact_wrapper">
+            <div class="address">Lagos State University, Ojo, Lagos</div>
+            <div class="phone">
+              <div class="contact_phone">+2349027647320</div>
+            </div>
+            <div class="email">
+              <div class="contact_email">
+                <a
+                  href="mailto:#"
+                  className="
+                email"
+                >
+                  support@templatmela.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <ul className="footer-social-icons">
+            <li className="footer-social-icons-list">
+              <a href="/#instagram" className="social-icons">
+                <BsInstagram />
+              </a>
+              <a href="/" className="social-icons">
+                <BsTwitter />
+              </a>
+              <a href="/" className="social-icons">
+                <BsFacebook />
+              </a>
+            </li>
           </ul>
         </div>
+
         <div class="footer-widget second-widget">
-            <div class="title-outer">
-              <h3 class="widget-title">Information</h3>
-            </div>
-            <ul class="toggle-block">
-              <li>
-                <div class="static-links-list">
-                  <span>
-                    <a href="#about">
-                      About Us
-                    </a>
-                  </span>
+          <div class="title-outer">
+            <h3 class="widget-title">Information</h3>
+          </div>
+          <ul class="toggle-block">
+            <li>
+              <div class="static-links-list">
+                <span>
+                  <a href="#about" className="link-list-item">
+                    About Us
+                  </a>
+                </span>
 
-                  <span>
-                    <a href="#contact">
-                      Contact Us
-                    </a>
-                  </span>
+                <span>
+                  <a href="#contact" className="link-list-item">
+                    Contact Us
+                  </a>
+                </span>
 
-                  <span>
-                    <a href="#terms_conditions">
-                      Terms &amp; Conditions
-                    </a>
-                  </span>
+                <span>
+                  <a href="#terms_conditions" className="link-list-item">
+                    Terms &amp; Conditions
+                  </a>
+                </span>
 
-                  <span>
-                    <a href="#returns_exchanges">
-                      Returns &amp; Exchanges
-                    </a>
-                  </span>
-                  <span>
-                    <a href="#ship_delivery">
-                      Shipping &amp; Delivery
-                    </a>
-                  </span>
-                  <span>
-                    <a href="#privacy">
-                      Privacy Policy
-                    </a>
-                  </span>
-                </div>
-              </li>
-            </ul>
+                <span>
+                  <a href="#returns_exchanges" className="link-list-item">
+                    Returns &amp; Exchanges
+                  </a>
+                </span>
+                <span>
+                  <a href="#ship_delivery" className="link-list-item">
+                    Shipping &amp; Delivery
+                  </a>
+                </span>
+                <span>
+                  <a href="#privacy" className="link-list-item">
+                    Privacy Policy
+                  </a>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-widget third-widget">
+          <div class="title-outer">
+            <h3 class="widget-title">Need Help?</h3>
+          </div>
+          <ul class="toggle-block">
+            <li>
+              <div class="static-links-list">
+                <span>
+                  <a href="#about" className="link-list-item">
+                   Your Account
+                  </a>
+                </span>
+
+                <span>
+                  <a href="#contact" className="link-list-item">
+                    Returns Center
+                  </a>
+                </span>
+
+                <span>
+                  <a href="#terms_conditions" className="link-list-item">
+                    Purchase
+                  </a>
+                </span>
+
+                <span>
+                  <a href="#returns_exchanges" className="link-list-item">
+                    App Download
+                  </a>
+                </span>
+                <span>
+                  <a href="#ship_delivery" className="link-list-item">
+                    Help
+                  </a>
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </Menu>
 
@@ -129,7 +172,7 @@ const Menu = styled.div`
     margin: 1em 0;
   }
 
-.footer-widget {
+  .footer-widget {
     float: none;
     box-sizing: border-box;
     min-height: 210px;
@@ -138,17 +181,59 @@ const Menu = styled.div`
     width: 22%;
     display: inline-block;
     vertical-align: top;
-}
+  }
 
-.first-widget.footer-widget {
+  .first-widget.footer-widget {
     width: 28%;
     padding-inline-start: 0;
-}
+  }
 
-.title-outer {
-  position: relative;
-  cursor: pointer;
-}
+  .title-outer {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .address {
+    margin-bottom: 20px;
+  }
+
+  .phone {
+    margin-bottom: 20px;
+  }
+
+  .email {
+    display: block;
+  }
+
+  .footer-social-icons {
+    padding-left: 0;
+  }
+
+  .footer-social-icons-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icons {
+    background-color: #f0f0f0;
+    color: #222222;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    margin: 0 1px;
+    display: inline-block;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link-list-item {
+    justify-content: flex-start;
+    margin: 10px 0;
+  }
 `;
 const Copy = styled.div`
   p {
