@@ -7,6 +7,7 @@ import Nav from "../../components/Nav";
 
 const Cart = () => {
   const { state, updateCartQty, removeCart } = useContext(UserContext);
+  console.log(state.cart);
   return (
     <CartContainer>
       <Nav />
@@ -40,7 +41,8 @@ const Cart = () => {
                       </div>
                     </div>
                   </div>
-                  {state.cart.line_items.map((item) => (
+                  {state.cart.map((item) => (
+                    
                     <div className="cart-content-header">
                       <div className="cart-content-header-wrapper--1">
                         <div className="cart-item-overlay">
@@ -110,7 +112,7 @@ const Cart = () => {
           <div className="carts">
             <ul className="cart-lists">
               <li>
-                <span className="prop">{`${state.cart.total_unique_items} items`}</span>
+                <span className="prop">{`${state.cart} items`}</span>
                 <span className="val">$48.56</span>
               </li>
               <li>
