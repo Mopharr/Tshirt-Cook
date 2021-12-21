@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { BsSearch } from "react-icons/bs";
 import { FiX } from "react-icons/fi";
 import { IconButton, Badge } from "@material-ui/core";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ShoppingCart } from "@material-ui/icons";
+import UserContext from "Context";
 
 const Nav = () => {
+  const {state } = useContext(UserContext);
   const [openSearch, setOpenSearch] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const handleNav = () => setOpenNav(!openNav);
   const handleSearch = () => setOpenSearch(!openSearch);
 
+  console.log("cart no " + state.cart.total_unique_items)
   return (
     <>
       <MainNav>
         <Logo>
           <a href="/">
-            Tshirt<span>Cooking</span>
+            Tshirt<span>cook</span>
           </a>
         </Logo>
         <SearchBar>
@@ -91,12 +94,12 @@ const Nav = () => {
         </Hide>
         <Logo>
           <a href="/">
-            Tshirt<span>Cooking</span>
+            Tshirt<span>Cook</span>
           </a>
         </Logo>
         <Auth>
         <IconButton aria-label="Show cart item" color="inherit">
-          <Badge badgeContent={2} color="secondary">
+          <Badge badgeContent={state.cart.total_unique_items} color="secondary">
             <a href="/cart">
               <ShoppingCart />
             </a>

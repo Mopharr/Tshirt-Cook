@@ -41,7 +41,7 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className="cart-content-header">
-                    <div className="cart-content-header-wrapper--1">
+                    <dziv className="cart-content-header-wrapper--1">
                       <div className="cart-item-overlay">
                         <div className="cart-item-image-box">
                           <div className="cart-item-image-box-overlay">
@@ -82,7 +82,7 @@ const Cart = () => {
                         </div>
                         <div className=""></div>
                       </div>
-                    </div>
+                    </dziv>
                   </div>
                 </div>
               </div>
