@@ -13,24 +13,12 @@ import Clothing from "Pages/Clothing";
 import { commerce } from "Commerce";
 
 function App() {
-  // const [cart, setCart] = useState([]);
   const [product, setProduct] = useState([]);
-  // const [loading, setLoading] = useState(true);
   const [state, setState] = useState({
     fullname: "",
     email: "",
     password: "",
     currentUser: "",
-    test: [
-      {
-        id: 1,
-        name: "quadri",
-      },
-      {
-        id: 2,
-        name: "mubash",
-      },
-    ],
     loading: true,
     cart: [],
   });
@@ -42,7 +30,7 @@ function App() {
       setState({
         ...state,
         currentUser: userData,
-        // loading: false,
+        loading: false,
       });
     }
   }, []);

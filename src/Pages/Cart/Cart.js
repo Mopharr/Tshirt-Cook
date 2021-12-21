@@ -40,7 +40,7 @@ const Cart = () => {
                       </div>
                     </div>
                   </div>
-                  {state.cart.line_items.map((item) => {
+                  {state.cart.line_items.map((item) => (
                     <div className="cart-content-header">
                       <div className="cart-content-header-wrapper--1">
                         <div className="cart-item-overlay">
@@ -99,7 +99,7 @@ const Cart = () => {
                         </div>
                       </div>
                     </div>
-                  })}
+                  ))}
                 </div>
               </div>
             </span>
