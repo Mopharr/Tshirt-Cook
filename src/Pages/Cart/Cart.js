@@ -7,6 +7,8 @@ import Nav from "../../components/Nav";
 
 const Cart = () => {
   const { state, updateCartQty, removeCart } = useContext(UserContext);
+
+   if (state.loading) return <h1>Loading...</h1>;
   return (
     <CartContainer>
       <Nav />

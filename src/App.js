@@ -23,6 +23,8 @@ function App() {
     cart: [],
   });
 
+  console.log(state.cart)
+
   useEffect(() => {
     const auth = getAuth(app);
     const userData = auth.currentUser;
