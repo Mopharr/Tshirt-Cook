@@ -84,6 +84,7 @@ function App() {
 
   useEffect(() => {
     fetchProducts();
+    fetchCart();
   }, []);
 
   console.log(product);
