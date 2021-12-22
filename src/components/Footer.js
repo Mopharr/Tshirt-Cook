@@ -146,8 +146,6 @@ const Menu = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
-  margin: 2em 0;
 
   @media (max-width: 425px) {
     flex-direction: column;
@@ -181,11 +179,19 @@ const Menu = styled.div`
     width: 22%;
     display: inline-block;
     vertical-align: top;
+
+    @media (max-width: 568px) {
+      width: 100%;
+    }
   }
 
   .first-widget.footer-widget {
     width: 28%;
     padding-inline-start: 0;
+
+    @media (max-width: 568px) {
+      width: 100%;
+    }
   }
 
   .title-outer {
@@ -228,6 +234,10 @@ const Menu = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .toggle-block {
+    padding: 0;
   }
 
   .link-list-item {
