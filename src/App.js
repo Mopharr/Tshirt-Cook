@@ -32,7 +32,7 @@ function App() {
       setState({
         ...state,
         currentUser: userData,
-        loading: false,
+        //loading: false,
       });
     }
   }, []);
