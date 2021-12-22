@@ -62,19 +62,19 @@ const Cart = () => {
                               <div className="cart-item-content-count-overlay">
                                 <div className="cart-item-content-count-inner">
                                   <span
-                                    onClick={updateCartQty(
+                                    onClick={()=> {updateCartQty(
                                       item.id,
                                       item.quantity - 1
-                                    )}
+                                    )}}
                                   >
                                     -
                                   </span>
                                   <span>{item.quantity}</span>
                                   <span
-                                    onClick={updateCartQty(
+                                    onClick={()=> {updateCartQty(
                                       item.id,
                                       item.quantity + 1
-                                    )}
+                                    )}}
                                   >
                                     +
                                   </span>
@@ -90,7 +90,7 @@ const Cart = () => {
                               <div className="remove-cart-inner">
                                 <span
                                   className="remove-icon"
-                                  onClick={removeCart(item.id)}
+                                  onClick={()=> {removeCart(item.id)}}
                                 >
                                   <FiX />
                                 </span>
