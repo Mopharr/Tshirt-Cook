@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
-import "./register.css";
+import "style/register.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "../config/firebase";
 import { useNavigate } from "react-router-dom";
