@@ -62,10 +62,10 @@ const Cart = () => {
                               <div className="cart-item-content-count-overlay">
                                 <div className="cart-item-content-count-inner">
                                   <span
-                                    onClick={()=> {updateCartQty(
+                                    onClick={()=>updateCartQty(
                                       item.id,
                                       item.quantity - 1
-                                    )}}
+                                    )}
                                   >
                                     -
                                   </span>

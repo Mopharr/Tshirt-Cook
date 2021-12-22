@@ -20,7 +20,7 @@ const Nav = () => {
       <MainNav>
         <Logo>
           <a href="/">
-            Tshirt<span>Cooking</span>
+            Tshirt<span>cook</span>
           </a>
         </Logo>
         <SearchBar>
@@ -94,7 +94,7 @@ const Nav = () => {
         </Hide>
         <Logo>
           <a href="/">
-            Tshirt<span>Cooking</span>
+            Tshirt<span>Cook</span>
           </a>
         </Logo>
         <Auth>

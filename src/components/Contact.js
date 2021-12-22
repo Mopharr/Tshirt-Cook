@@ -50,34 +50,32 @@ const Main = styled.div`
 `;
 const Title = styled.div`
   p {
-    font-size: 30px;
+    font-size: 18px;
     margin: 1em 0;
     font-family: "Nunito", sans-serif;
     color: #ff6600;
     font-weight: bold;
     @media only screen and (max-width: 768px) {
-      font-size: 25px;
+      font-size: 16px;
     }
   }
 `;
 const Comment = styled.div`
   display: flex;
-  justify-content: space-around;
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
-    align-items: center;
   }
 `;
 const Left = styled.div`
-  margin: 2em 0;
+margin-right: 3rem;
   h2 {
     font-family: "Nunito", sans-serif;
-    margin: 2em 0;
-    font-size: 25px;
+    margin: 1em 0;
+    font-size: 20px;
   }
   span {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     margin-left: 10px;
   }
@@ -85,7 +83,7 @@ const Left = styled.div`
 const Right = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 1.5em;
+
   @media (max-width: 608px){
       width: 100%
    }
@@ -93,8 +91,6 @@ const Right = styled.div`
     padding: 0;
   }
   input {
-    padding: 1.3em;
-    margin: 2em 0;
     border: none;
     outline: none;
     border-radius: 9px;
@@ -111,6 +107,7 @@ const Right = styled.div`
     border: none;
     outline: none;
     border-radius: 9px;
+    margin: 8px 0;
   }
   button {
     width: 200px;
