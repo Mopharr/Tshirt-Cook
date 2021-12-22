@@ -4,10 +4,11 @@ import UserContext from "Context";
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Cart = () => {
-  const { state, updateCartQty, removeCart, cart } = useContext(UserContext);
-  if (state.loading) return <h1>Loading</h1>;
+  const { updateCartQty, removeCart, cart } = useContext(UserContext);
   return (
     <CartContainer>
       <Nav />
@@ -48,13 +49,13 @@ const Cart = () => {
                           <div className="cart-item-image-box">
                             <div className="cart-item-image-box-overlay">
                               <a href="#img">
-                                <img src={item.media.source} alt="hoddie" />
+                                <img src={item.media.source || <Skeleton /> } alt="hoddie" />
                               </a>
                             </div>
                           </div>
                           <div className="cart-item-content-box">
                             <div className="cart-item-content-box-desc">
-                              <h2 className="title">{item.name}</h2>
+                              <h2 className="title">{item.name || <Skeleton />}</h2>
                               <p>L.Black, Black</p>
                             </div>
                             <div className="cart-item-content-count">
@@ -80,7 +81,7 @@ const Cart = () => {
                             </div>
                             <div className="price-content">
                               <div className="price-content-inner">
-                                <span>{item.price.formatted_with_code}</span>
+                                <span>{item.price.formatted_with_code || <Skeleton />}</span>
                               </div>
                             </div>
                             <div className="remove-cart">
@@ -111,7 +112,7 @@ const Cart = () => {
           <div className="carts">
             <ul className="cart-lists">
               <li>
-                <span className="prop">{`${cart.total_unique_items} items`}</span>
+                <span className="prop">{`${cart.total_unique_items || <Skeleton />} items`}</span>
                 <span className="val">$48.56</span>
               </li>
               <li>
@@ -120,7 +121,7 @@ const Cart = () => {
               </li>
               <li>
                 <span className="prop">subtotal</span>
-                <span className="val">{`${cart.subtotal.formatted_with_symbol}`}</span>
+                <span className="val">{`${cart.subtotal.formatted_with_symbol}` || <Skeleton />}</span>
               </li>
             </ul>
           </div>
@@ -145,7 +146,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}`}</span>
+                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}` || <Skeleton />}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
@@ -168,7 +169,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}`}</span>
+                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}` || <Skeleton />}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping

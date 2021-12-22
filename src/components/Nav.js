@@ -32,7 +32,7 @@ const Nav = () => {
           <a href="/login">Login</a>
           <a href="/register">SignUp</a>
           <IconButton aria-label="Show cart item" color="inherit">
-            <Badge badgeContent={2} color="secondary">
+            <Badge badgeContent={cart.total_unique_items} color="secondary">
               <a style={{ color: "#000" }} href="/cart">
                 <ShoppingCart />
               </a>
