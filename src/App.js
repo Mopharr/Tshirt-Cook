@@ -74,6 +74,7 @@ function App() {
   const fetchCart = async () => {
     await commerce.cart.retrieve().then((cart) => {
       setCart(cart);
+      setState({ ...state, loading: false });
     });
   }
 
