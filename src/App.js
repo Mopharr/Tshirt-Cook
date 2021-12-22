@@ -39,22 +39,22 @@ function App() {
 
   const addToCart = async (productId, quantity) => {
     const { cart } = await commerce.cart.add(productId, quantity);
-    setCart({ cart });
+    setCart(cart);
   };
 
   const updateCartQty = async (productId, quantity) => {
     const { cart } = await commerce.cart.update(productId, { quantity });
-    setCart({ cart });
+    setCart(cart);
   };
 
   const removeCart = async (productId) => {
     const { cart } = await commerce.cart.remove(productId);
-    setCart({ cart });
+    setCart(cart);
   };
 
   const emptyCart = async () => {
     const { cart } = await commerce.cart.empty();
-    setCart({ cart });
+    setCart(cart);
   };
 
 /*
@@ -73,7 +73,7 @@ function App() {
 
   const fetchCart = async () => {
     await commerce.cart.retrieve().then((cart) => {
-      setCart({ cart });
+      setCart(cart);
     });
   }
 
