@@ -8,7 +8,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const Cart = () => {
-  const { updateCartQty, removeCart, cart } = useContext(UserContext);
+  const { state, updateCartQty, removeCart, cart } = useContext(UserContext);
   return (
     <CartContainer>
       <Nav />
@@ -42,20 +42,20 @@ const Cart = () => {
                       </div>
                     </div>
                   </div>
-                  {cart.line_items.map((item) => (
+                  {state.loading ? <Skeleton /> : cart.line_items.map((item) => (
                     <div className="cart-content-header">
                       <div className="cart-content-header-wrapper--1">
                         <div className="cart-item-overlay">
                           <div className="cart-item-image-box">
                             <div className="cart-item-image-box-overlay">
                               <a href="#img">
-                                <img src={item.media.source || <Skeleton /> } alt="hoddie" />
+                                <img src={state.loading ? <Skeleton /> : item.media.source } alt="hoddie" />
                               </a>
                             </div>
                           </div>
                           <div className="cart-item-content-box">
                             <div className="cart-item-content-box-desc">
-                              <h2 className="title">{item.name || <Skeleton />}</h2>
+                              <h2 className="title">{state.loading ? <Skeleton /> : item.name}</h2>
                               <p>L.Black, Black</p>
                             </div>
                             <div className="cart-item-content-count">
@@ -68,7 +68,7 @@ const Cart = () => {
                                   >
                                     -
                                   </span>
-                                  <span>{item.quantity}</span>
+                                  <span>{state.loading ? <Skeleton /> : item.quantity}</span>
                                   <span
                                     onClick={() => {
                                       updateCartQty(item.id, item.quantity + 1);
@@ -81,7 +81,7 @@ const Cart = () => {
                             </div>
                             <div className="price-content">
                               <div className="price-content-inner">
-                                <span>{item.price.formatted_with_code || <Skeleton />}</span>
+                                <span>{state.loading ? <Skeleton /> : item.price.formatted_with_code }</span>
                               </div>
                             </div>
                             <div className="remove-cart">
@@ -112,7 +112,7 @@ const Cart = () => {
           <div className="carts">
             <ul className="cart-lists">
               <li>
-                <span className="prop">{`${cart.total_unique_items || <Skeleton />} items`}</span>
+                <span className="prop">{`${state.loading ? <Skeleton /> : cart.total_unique_items} items`}</span>
                 <span className="val">$48.56</span>
               </li>
               <li>
@@ -121,7 +121,7 @@ const Cart = () => {
               </li>
               <li>
                 <span className="prop">subtotal</span>
-                <span className="val">{`${cart.subtotal.formatted_with_symbol}` || <Skeleton />}</span>
+                <span className="val">{`${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
               </li>
             </ul>
           </div>
@@ -146,7 +146,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}` || <Skeleton />}</span>
+                    <span className="checkout-link-text">{`Checkput ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
@@ -169,7 +169,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}` || <Skeleton />}</span>
+                    <span className="checkout-link-text">{`Checkput ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
