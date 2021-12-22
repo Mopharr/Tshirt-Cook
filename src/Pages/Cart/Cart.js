@@ -6,7 +6,9 @@ import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
 
 const Cart = () => {
-  const { updateCartQty, removeCart, cart } = useContext(UserContext)
+
+  const { state, updateCartQty, removeCart, cart } = useContext(UserContext)
+  if (state.loading) return <h1>Loading</h1>
   return (
     <CartContainer>
       <Nav />
