@@ -6,9 +6,8 @@ import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
 
 const Cart = () => {
-
-  const { state, updateCartQty, removeCart, cart } = useContext(UserContext)
-  if (state.loading) return <h1>Loading</h1>
+  const { state, updateCartQty, removeCart, cart } = useContext(UserContext);
+  if (state.loading) return <h1>Loading</h1>;
   return (
     <CartContainer>
       <Nav />
@@ -62,19 +61,17 @@ const Cart = () => {
                               <div className="cart-item-content-count-overlay">
                                 <div className="cart-item-content-count-inner">
                                   <span
-                                    onClick={()=>updateCartQty(
-                                      item.id,
-                                      item.quantity - 1
-                                    )}
+                                    onClick={() =>
+                                      updateCartQty(item.id, item.quantity - 1)
+                                    }
                                   >
                                     -
                                   </span>
                                   <span>{item.quantity}</span>
                                   <span
-                                    onClick={()=> {updateCartQty(
-                                      item.id,
-                                      item.quantity + 1
-                                    )}}
+                                    onClick={() => {
+                                      updateCartQty(item.id, item.quantity + 1);
+                                    }}
                                   >
                                     +
                                   </span>
@@ -90,7 +87,9 @@ const Cart = () => {
                               <div className="remove-cart-inner">
                                 <span
                                   className="remove-icon"
-                                  onClick={()=> {removeCart(item.id)}}
+                                  onClick={() => {
+                                    removeCart(item.id);
+                                  }}
                                 >
                                   <FiX />
                                 </span>
