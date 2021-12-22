@@ -14,13 +14,13 @@ import { commerce } from "Commerce";
 
 function App() {
   const [product, setProduct] = useState([]);
+  const [cart, setCart] = useState([]);
   const [state, setState] = useState({
     fullname: "",
     email: "",
     password: "",
     currentUser: "",
     loading: true,
-    cart: [],
   });
 
   console.log(state.cart)
@@ -39,22 +39,22 @@ function App() {
 
   const addToCart = async (productId, quantity) => {
     const { cart } = await commerce.cart.add(productId, quantity);
-    setState({ ...state, cart: cart });
+    setCart({ cart });
   };
 
   const updateCartQty = async (productId, quantity) => {
     const { cart } = await commerce.cart.update(productId, { quantity });
-    setState({ ...state, cart: cart });
+    setCart({ cart });
   };
 
   const removeCart = async (productId) => {
     const { cart } = await commerce.cart.remove(productId);
-    setState({ ...state, cart: cart });
+    setCart({ cart });
   };
 
   const emptyCart = async () => {
     const { cart } = await commerce.cart.empty();
-    setState({ ...state, cart: cart });
+    setCart({ cart });
   };
 
 /*
@@ -73,7 +73,7 @@ function App() {
 
   const fetchCart = async () => {
     await commerce.cart.retrieve().then((cart) => {
-      setState({ ...state, cart: cart, loading: false });
+      setCart({ cart });
     });
   }
 
@@ -98,6 +98,7 @@ function App() {
         removeCart,
         emptyCart,
         product,
+        cart,
       }}
     >
       <BrowserRouter>
