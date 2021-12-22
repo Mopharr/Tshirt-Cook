@@ -57,6 +57,7 @@ function App() {
     setState({ ...state, cart: cart });
   };
 
+/*
   useEffect(() => {
     let subscribe = false;
     commerce.cart.retrieve().then((cart) => {
@@ -68,6 +69,13 @@ function App() {
       subscribe = true;
     };
   }, []);
+*/
+
+  const fetchCart = async () => {
+    await commerce.cart.retrieve().then((cart) => {
+      setState({ ...state, cart: cart, loading: false });
+    });
+  }
 
   const fetchProducts = async () => {
     const response = await commerce.products.list();
