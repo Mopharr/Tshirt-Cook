@@ -6,9 +6,7 @@ import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
 
 const Cart = () => {
-  const { updateCartQty, removeCart, cart } = useContext(UserContext);
-
-  // if (state.loading) return <h1>Loading...</h1>;
+  const { updateCartQty, removeCart, cart } = useContext(UserContext)
   return (
     <CartContainer>
       <Nav />
@@ -146,7 +144,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${state.cart.subtotal.formatted_with_symbol}`}</span>
+                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
