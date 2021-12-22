@@ -29,7 +29,16 @@ const RegisterForm = () => {
         const errorMessage = error.message;
         console.log(`error code: ${errorCode} error message: ${errorMessage}`);
       });
+
+    // Validation for password
+    if (state.password === "") {
+      window.alert("pls input password");
+    }
+    
   };
+
+
+
   return (
     <div className="container" id="container">
       <div className="form-container sign-up-container">
@@ -67,6 +76,13 @@ const RegisterForm = () => {
             onChange={handleChange}
             value={state.password}
             placeholder="Password"
+          />
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={state.password}
+            placeholder="Confirm Password"
           />
           <button>Sign Up</button>
         </form>

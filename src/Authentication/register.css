@@ -79,7 +79,7 @@ form {
 }
 form span {
   font-size: 18px;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 input {
@@ -90,25 +90,6 @@ input {
   width: 100%;
   outline: none;
 }
-
-/* .container {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  top: 70px;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
-  min-height: 600px;
-}
-
-.form-container {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
-} */
 .form-container {
   width: 450px;
   margin: auto;

@@ -98,21 +98,28 @@ const Nav = () => {
           </a>
         </Logo>
         <Auth>
-        <IconButton aria-label="Show cart item" color="inherit">
-          <Badge badgeContent={state.cart.total_unique_items} color="secondary">
-            <a href="/cart">
-              <ShoppingCart />
-            </a>
-          </Badge>
-        </IconButton>
+          <IconButton aria-label="Show cart item" color="inherit">
+            <Badge
+              badgeContent={state.cart.total_unique_items}
+              color="secondary"
+            >
+              <a href="/cart">
+                <ShoppingCart />
+              </a>
+            </Badge>
+          </IconButton>
         </Auth>
         <div className={openNav ? "navbar-list active" : "navbar-list"}>
           <ul>
             <li>
-              <a href="/login">Login</a>
+              <a href="/login" className="linkTag">
+                Login
+              </a>
             </li>
             <li>
-              <a href="/register">Sign Up</a>
+              <a href="/register" className="linkTag">
+                Sign Up
+              </a>
             </li>
           </ul>
         </div>
@@ -220,6 +227,9 @@ const MobileNav = styled.div`
     .navbar-list-items {
       padding: 0.5rem;
     }
+  }
+  .linkTag{
+    
   }
 `;
 const Hide = styled.div`
