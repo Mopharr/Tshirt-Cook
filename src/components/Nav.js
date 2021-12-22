@@ -8,13 +8,12 @@ import { ShoppingCart } from "@material-ui/icons";
 import UserContext from "Context";
 
 const Nav = () => {
-  const {state } = useContext(UserContext);
+  const { cart } = useContext(UserContext);
   const [openSearch, setOpenSearch] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const handleNav = () => setOpenNav(!openNav);
   const handleSearch = () => setOpenSearch(!openSearch);
 
-  console.log("cart no " + state.cart.total_unique_items)
   return (
     <>
       <MainNav>
@@ -32,7 +31,7 @@ const Nav = () => {
           <a href="/login">Login</a>
           <a href="/register">SignUp</a>
           <IconButton aria-label="Show cart item" color="inherit">
-            <Badge badgeContent={2} color="secondary">
+            <Badge badgeContent={cart.total_unique_items} color="secondary">
               <a style={{ color: "#000" }} href="/cart">
                 <ShoppingCart />
               </a>
@@ -98,16 +97,13 @@ const Nav = () => {
           </a>
         </Logo>
         <Auth>
-          <IconButton aria-label="Show cart item" color="inherit">
-            <Badge
-              badgeContent={state.cart.total_unique_items}
-              color="secondary"
-            >
-              <a href="/cart">
-                <ShoppingCart />
-              </a>
-            </Badge>
-          </IconButton>
+        <IconButton aria-label="Show cart item" color="inherit">
+          <Badge badgeContent={cart.total_unique_items} color="secondary">
+            <a href="/cart">
+              <ShoppingCart />
+            </a>
+          </Badge>
+        </IconButton>
         </Auth>
         <div className={openNav ? "navbar-list active" : "navbar-list"}>
           <ul>

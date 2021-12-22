@@ -1,12 +1,14 @@
-import React, {useState} from "react";
+/* eslint-disable array-callback-return */
+import React, { useContext } from "react";
+import UserContext from "Context";
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Cart = () => {
-  const [count, setCount] = useState(0)
-  const increment = () => setCount(count + 1)
-  const decrement = () => setCount(count - 1)
+  const { state, updateCartQty, removeCart, cart } = useContext(UserContext);
   return (
     <CartContainer>
       <Nav />
@@ -40,50 +42,66 @@ const Cart = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="cart-content-header">
-                    <dziv className="cart-content-header-wrapper--1">
-                      <div className="cart-item-overlay">
-                        <div className="cart-item-image-box">
-                          <div className="cart-item-image-box-overlay">
-                            <a href="#img">
-                              <img
-                                src="https://ih1.redbubble.net/image.437353179.6883/ssrco,mhoodie,mens,101010:01c5ca27c6,back,square_product,x600-bg,f8f8f8.1u1.jpg"
-                                alt="hoddie"
-                              />
-                            </a>
+                  {state.loading ? <Skeleton /> : cart.line_items.map((item) => (
+                    <div className="cart-content-header">
+                      <div className="cart-content-header-wrapper--1">
+                        <div className="cart-item-overlay">
+                          <div className="cart-item-image-box">
+                            <div className="cart-item-image-box-overlay">
+                              <a href="#img">
+                                <img src={state.loading ? <Skeleton /> : item.media.source } alt="hoddie" />
+                              </a>
+                            </div>
                           </div>
-                        </div>
-                        <div className="cart-item-content-box">
-                          <div className="cart-item-content-box-desc">
-                            <h2 className="title">Hoodie (Pullover)</h2>
-                            <p>L.Black, Black</p>
-                          </div>
-                          <div className="cart-item-content-count">
-                            <div className="cart-item-content-count-overlay">
-                              <div className="cart-item-content-count-inner">
-                                <span onClick={decrement}>-</span>
-                                <span>{count}</span>
-                                <span onClick={increment}>+</span>
+                          <div className="cart-item-content-box">
+                            <div className="cart-item-content-box-desc">
+                              <h2 className="title">{state.loading ? <Skeleton /> : item.name}</h2>
+                              <p>L.Black, Black</p>
+                            </div>
+                            <div className="cart-item-content-count">
+                              <div className="cart-item-content-count-overlay">
+                                <div className="cart-item-content-count-inner">
+                                  <span
+                                    onClick={() =>
+                                      updateCartQty(item.id, item.quantity - 1)
+                                    }
+                                  >
+                                    -
+                                  </span>
+                                  <span>{state.loading ? <Skeleton /> : item.quantity}</span>
+                                  <span
+                                    onClick={() => {
+                                      updateCartQty(item.id, item.quantity + 1);
+                                    }}
+                                  >
+                                    +
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="price-content">
+                              <div className="price-content-inner">
+                                <span>{state.loading ? <Skeleton /> : item.price.formatted_with_code }</span>
+                              </div>
+                            </div>
+                            <div className="remove-cart">
+                              <div className="remove-cart-inner">
+                                <span
+                                  className="remove-icon"
+                                  onClick={() => {
+                                    removeCart(item.id);
+                                  }}
+                                >
+                                  <FiX />
+                                </span>
                               </div>
                             </div>
                           </div>
-                          <div className="price-content">
-                            <div className="price-content-inner">
-                              <span>$48.56</span>
-                            </div>
-                          </div>
-                          <div className="remove-cart">
-                            <div className="remove-cart-inner">
-                              <span className="remove-icon">
-                                <FiX />
-                              </span>
-                            </div>
-                          </div>
+                          <div className=""></div>
                         </div>
-                        <div className=""></div>
                       </div>
-                    </dziv>
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </span>
@@ -94,7 +112,7 @@ const Cart = () => {
           <div className="carts">
             <ul className="cart-lists">
               <li>
-                <span className="prop">1 item</span>
+                <span className="prop">{`${state.loading ? <Skeleton /> : cart.total_unique_items} items`}</span>
                 <span className="val">$48.56</span>
               </li>
               <li>
@@ -103,7 +121,7 @@ const Cart = () => {
               </li>
               <li>
                 <span className="prop">subtotal</span>
-                <span className="val">$84.57</span>
+                <span className="val">{`${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
               </li>
             </ul>
           </div>
@@ -128,7 +146,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">Checkout $84.57</span>
+                    <span className="checkout-link-text">{`Checkput ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
@@ -137,7 +155,7 @@ const Cart = () => {
               </div>
               <div className="order-contents-inner">
                 <div className="seperator">
-                  <div className="dark-line" id='or'>
+                  <div className="dark-line" id="or">
                     <span>------- OR -------</span>
                   </div>
                 </div>
@@ -151,7 +169,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">Checkout $84.57</span>
+                    <span className="checkout-link-text">{`Checkput ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
