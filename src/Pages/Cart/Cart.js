@@ -6,7 +6,7 @@ import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
 
 const Cart = () => {
-  const { state, updateCartQty, removeCart } = useContext(UserContext);
+  const { state, updateCartQty, removeCart, cart } = useContext(UserContext);
 
    if (state.loading) return <h1>Loading...</h1>;
   return (
@@ -42,7 +42,7 @@ const Cart = () => {
                       </div>
                     </div>
                   </div>
-                  {state.cart.line_items.map((item) => (
+                  {cart.line_items.map((item) => (
                     <div className="cart-content-header">
                       <div className="cart-content-header-wrapper--1">
                         <div className="cart-item-overlay">
@@ -112,7 +112,7 @@ const Cart = () => {
           <div className="carts">
             <ul className="cart-lists">
               <li>
-                <span className="prop">{`${state.cart.total_unique_items} items`}</span>
+                <span className="prop">{`${cart.total_unique_items} items`}</span>
                 <span className="val">$48.56</span>
               </li>
               <li>
@@ -121,7 +121,7 @@ const Cart = () => {
               </li>
               <li>
                 <span className="prop">subtotal</span>
-                <span className="val">{`${state.cart.subtotal.formatted_with_symbol}`}</span>
+                <span className="val">{`${cart.subtotal.formatted_with_symbol}`}</span>
               </li>
             </ul>
           </div>
@@ -169,7 +169,7 @@ const Cart = () => {
                 </div>
                 <div className="deliveries">
                   <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${state.cart.subtotal.formatted_with_symbol}`}</span>
+                    <span className="checkout-link-text">{`Checkput ${cart.subtotal.formatted_with_symbol}`}</span>
                   </a>
                   <span className="deliveries-text">
                     includes standard shipping
