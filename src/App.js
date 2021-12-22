@@ -14,14 +14,16 @@ import { commerce } from "Commerce";
 
 function App() {
   const [product, setProduct] = useState([]);
+  const [cart, setCart] = useState([]);
   const [state, setState] = useState({
     fullname: "",
     email: "",
     password: "",
     currentUser: "",
     loading: true,
-    cart: [],
   });
+
+  console.log(state.cart)
 
   useEffect(() => {
     const auth = getAuth(app);
@@ -30,31 +32,32 @@ function App() {
       setState({
         ...state,
         currentUser: userData,
-        loading: false,
+        //loading: false,
       });
     }
   }, []);
 
   const addToCart = async (productId, quantity) => {
     const { cart } = await commerce.cart.add(productId, quantity);
-    setState({ ...state, cart: cart });
+    setCart(cart);
   };
 
   const updateCartQty = async (productId, quantity) => {
     const { cart } = await commerce.cart.update(productId, { quantity });
-    setState({ ...state, cart: cart });
+    setCart(cart);
   };
 
   const removeCart = async (productId) => {
     const { cart } = await commerce.cart.remove(productId);
-    setState({ ...state, cart: cart });
+    setCart(cart);
   };
 
   const emptyCart = async () => {
     const { cart } = await commerce.cart.empty();
-    setState({ ...state, cart: cart });
+    setCart(cart);
   };
 
+/*
   useEffect(() => {
     let subscribe = false;
     commerce.cart.retrieve().then((cart) => {
@@ -66,6 +69,14 @@ function App() {
       subscribe = true;
     };
   }, []);
+*/
+
+  const fetchCart = async () => {
+    await commerce.cart.retrieve().then((cart) => {
+      setCart(cart);
+      setState({ ...state, loading: false });
+    });
+  }
 
   const fetchProducts = async () => {
     const response = await commerce.products.list();
@@ -74,6 +85,7 @@ function App() {
 
   useEffect(() => {
     fetchProducts();
+    fetchCart();
   }, []);
 
   console.log(product);
@@ -87,6 +99,7 @@ function App() {
         removeCart,
         emptyCart,
         product,
+        cart,
       }}
     >
       <BrowserRouter>
