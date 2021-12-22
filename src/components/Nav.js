@@ -14,7 +14,6 @@ const Nav = () => {
   const handleNav = () => setOpenNav(!openNav);
   const handleSearch = () => setOpenSearch(!openSearch);
 
-  console.log("cart no " + cart.total_unique_items)
   return (
     <>
       <MainNav>
