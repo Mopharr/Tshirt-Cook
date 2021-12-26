@@ -14,7 +14,7 @@ const Nav = () => {
   const handleNav = () => setOpenNav(!openNav);
   const handleSearch = () => setOpenSearch(!openSearch);
 
-  console.log("cart no " + state.cart.total_unique_items);
+  // console.log("cart no " + state.cart.total_unique_items);
   return (
     <>
       <MainNav>
@@ -92,7 +92,7 @@ const Nav = () => {
         <Auth>
           <IconButton aria-label="Show cart item" color="inherit">
             <Badge
-              badgeContent={state.cart.total_unique_items}
+              // badgeContent={state.cart.total_unique_items}
               color="secondary"
             >
               <a href="/cart">
