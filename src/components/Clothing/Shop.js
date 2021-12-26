@@ -1,77 +1,58 @@
 import React from "react";
 import Fade from "react-reveal";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineRight } from "react-icons/ai";
 import styled from "styled-components";
 import wrapPic from "../../assets/music.jpg";
-import wrapPic1 from "../../assets/lion.jpg";
 
 const Shop = () => {
   return (
     <Main>
       <Title>
-        <p>Shop by theme</p>
-        <a href="/">View More</a>
+        <p>Explore More theme</p>
+        <a href="/">See all theme</a>
       </Title>
       <Wrap>
         <Fade>
-          <div>
-            <img src={wrapPic} alt="" />
-            <button>
-              <AiOutlineHeart />
-            </button>
-            <Text>
-              <h3>Music</h3>
-              <p>40 product</p>
-            </Text>
-          </div>
+          <a href="/">
+            <Wrapp>
+              <img src={wrapPic} alt="" />
+              <Fade buttom>
+                <p>
+                  Music freestyle <AiOutlineRight />
+                </p>
+                <span>By TshirtCook</span>
+                <p>$30</p>
+              </Fade>
+            </Wrapp>
+          </a>
         </Fade>
         <Fade>
-          <div>
-            <img src={wrapPic} alt="" />
-            <button>
-              <AiOutlineHeart />
-            </button>
-            <Text>
-              <h3>Music</h3>
-              <p>40 product</p>
-            </Text>
-          </div>
+          <a href="/">
+            <Wrapp>
+              <img src={wrapPic} alt="" />
+              <Fade buttom>
+                <p>
+                  Giraff <AiOutlineRight />
+                </p>
+                <span>By TshirtCook</span>
+                <p>$30</p>
+              </Fade>
+            </Wrapp>
+          </a>
         </Fade>
         <Fade>
-          <div>
-            <img src={wrapPic} alt="" />
-            <button>
-              <AiOutlineHeart />
-            </button>
-            <Text>
-              <h3>Music</h3>
-              <p>40 product</p>
-            </Text>
-          </div>
-        </Fade>
-        <Fade>
-          <div>
-            <img src={wrapPic1} alt="" />
-            <button>
-              <AiOutlineHeart />
-            </button>
-            <Text>
-              <h3>Music</h3>
-              <p>40 product</p>
-            </Text>
-          </div>
-        </Fade>
-        <Fade>
-          <div>
-            <img src={wrapPic1} alt="" />
-            <button>
-              <AiOutlineHeart />
-            </button>
-            <Text>
-              <h3>Music</h3>
-              <p>40 product</p>
-            </Text>
-          </div>
+          <a href="/">
+            <Wrapp>
+              <img src={wrapPic} alt="" />
+              <Fade buttom>
+                <p>
+                  Wall art painting <AiOutlineRight />
+                </p>
+                <span>By TshirtCook</span>
+                <p>$30</p>
+              </Fade>
+            </Wrapp>
+          </a>
         </Fade>
       </Wrap>
     </Main>
@@ -93,7 +74,7 @@ const Title = styled.div`
   align-items: center;
   p {
     font-size: 30px;
-    margin: 1em 0;
+    margin:0;
     font-family: "Nunito", sans-serif;
     color: #ff6600;
     font-weight: bold;
@@ -128,7 +109,7 @@ const Wrap = styled.div`
   }
   img {
     position: relative;
-    width: 200px;
+    width: 220px;
     height: 300px;
     margin: 1em;
   }
@@ -148,14 +129,21 @@ const Wrap = styled.div`
     cursor: pointer;
   }
 `;
-const Text = styled.div`
-  margin-left: 20px;
-  h3 {
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
+
+const Wrapp = styled.div`
+  transition: all 0.3s ease;
+  margin: 1em 3em;
+  @media (max-width: 1024px) {
+    margin: 1em;
+  }
+  img:hover {
+   opacity: 1.5;
   }
   p {
-    font-family: "Nunito", sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+    color: #ff6600;
   }
 `;

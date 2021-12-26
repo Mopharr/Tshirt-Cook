@@ -11,9 +11,9 @@ const Footer = () => {
             <h3 class="widget-title">Quick Information</h3>
           </div>
           <div class="contact_wrapper">
-            <div class="address">Lagos State University, Ojo, Lagos</div>
+            <div class="address">Lagos, Nigeria</div>
             <div class="phone">
-              <div class="contact_phone">+2349027647320</div>
+              <div class="contact_phone">+2349022233344</div>
             </div>
             <div class="email">
               <div class="contact_email">
@@ -22,7 +22,7 @@ const Footer = () => {
                   className="
                 email"
                 >
-                  support@templatmela.com
+                  support@tshirtcook.com
                 </a>
               </div>
             </div>
@@ -228,7 +228,7 @@ const Menu = styled.div`
     height: 24px;
     width: 24px;
     text-align: center;
-    margin: 0 1px;
+    margin: 0 10px;
     display: inline-block;
     padding: 6px;
     display: flex;

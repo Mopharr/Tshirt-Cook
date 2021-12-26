@@ -228,7 +228,6 @@ const Section = () => {
           </li>
         </ul>
       </Main>
-      <hr />
     </>
   );
 };
@@ -238,7 +237,7 @@ export default Section;
 const Main = styled.div`
   width: 80%;
   margin: auto;
-  padding: 1em 0;
+  padding: 0;
   display: flex;
   justify-content: space-around;
   @media (max-width: 1024px) {
@@ -292,7 +291,7 @@ const Main = styled.div`
     text-decoration: none;
     font-weight: bold;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 1rem;
     height: 100%;
     cursor: pointer;
   }
