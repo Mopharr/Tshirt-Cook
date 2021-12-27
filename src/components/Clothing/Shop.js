@@ -183,5 +183,6 @@ const Wrapp = styled.div`
     text-align: left;
     padding: 0;
     color: #ff6600;
+    margin: 10px 0;
   }
 `;

@@ -92,7 +92,7 @@ const Nav = () => {
         <Auth>
           <IconButton aria-label="Show cart item" color="inherit">
             <Badge
-              // badgeContent={state.cart.total_unique_items}
+              badgeContent={state.cart.total_unique_items}
               color="secondary"
             >
               <a href="/cart">

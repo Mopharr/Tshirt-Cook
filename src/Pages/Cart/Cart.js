@@ -389,6 +389,25 @@ const Cart = () => {
                 </div>
               </div>
             </div>
+            <div className="shipping-details">
+            <h2 className="shipping-headline">What are the shipping details?</h2>
+            <form>
+                <input type='email' placeholder="Email Address" className="delivery-form-input" />
+                <label className="label">(for message and order confirmation)</label>
+            </form>
+            <div className="delivery-form">
+            <h2 className="delivery-headline">Delivery Details</h2>
+            <form>
+            <input type='text' placeholder='Name' className="delivery-form-input" />
+            <input type='text' placeholder='Phone Number' className="delivery-form-input" />
+            <input type='text' placeholder='Street Address' className="delivery-form-input" />
+            <input type='text' placeholder='Street Address 2 (optional)' className="delivery-form-input" />
+            <input type='text' placeholder='Zip or Postal Code' className="delivery-form-input" />
+            <input type='text' placeholder='State Region or Province' className="delivery-form-input" />
+            <input type='text' placeholder='Country' className="delivery-form-input" />
+            </form>
+            </div>
+            </div>
           </div>
         </div>
       </CartSection>
@@ -953,5 +972,41 @@ const CartSection = styled.div`
       padding-left: 16px;
       padding-right: 16px;
     }
+  }
+
+  .shipping-details {
+    display: block;
+  }
+
+  .delivery-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+  }
+
+  .delivery-headline {
+    text-transform: capitalize;
+    text-align: left;
+    width: 200px;
+    font-size: .7rem;
+    font-weight: 700;
+    color: #303238;
+    line-height: 1.2;
+  }
+
+  .label {
+    font-size: 10px;
+    margin-bottom: 20px;
+    margin-top: -5px;
+  }
+
+  .delivery-form-input {
+    width: 200px;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 12px;
   }
 `;
