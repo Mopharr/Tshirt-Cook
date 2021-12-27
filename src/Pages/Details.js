@@ -16,6 +16,8 @@ const Details = () => {
           <Item>
             <CarouselItem>
               <img src={hero} alt="" />
+              <img src={hero} alt="" />
+              <img src={hero} alt="" />
             </CarouselItem>
             <Product>
               <h2>Share this product</h2>
@@ -91,7 +93,6 @@ const Details = () => {
             <li>Super-bright colors embedded directly into the case</li>
           </ul>
         </Features>
-
       </Main>
     </Overlay>
   );
@@ -106,27 +107,49 @@ const Overlay = styled.div`
 const Main = styled.div`
   width: 70%;
   margin: 1em auto;
+  @media (max-width: 1024px) {
+    width: 95%
+  }
 `;
 const Content = styled.div`
   display: flex;
   width: 100%;
   background: #fff;
   padding: 1em 2em;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1em .5em;
+  }
 `;
 const Item = styled.div`
   width: 40%;
   margin: 0 1em;
+  @media (max-width: 768px) {
+    width: 98%;
+    margin: auto;
+  }
   img {
-    width: 300px;
+    width: 70%;
     display: flex;
     justify-content: center;
     height: 300px;
     margin: auto;
     padding-bottom: 2em;
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
+`;
+const CarouselItem = styled.div`
+  overflow-x: scroll;
+  display: flex;
+  img {
+    margin: 0 1em;
+    background: #f5f5f5;
+    padding: 2em;
   }
 `;
 const Product = styled.div`
-border-bottom: 1px solid #dcdcdc;
   padding; 1em 0;
   h2{
     font-size: 1em;
@@ -147,6 +170,10 @@ border-bottom: 1px solid #dcdcdc;
 `;
 const Right = styled.div`
   width: 60%;
+  @media (max-width: 768px) {
+    width: 98%;
+    margin: auto;
+  }
 `;
 const Name = styled.div`
   display: flex;
@@ -207,7 +234,12 @@ const Size = styled.div`
     display: flex;
     width: 70%;
     padding: 0;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      width: 98%;
+    }
   }
+
   li {
     list-style: none;
     border: 2px solid #ededed;
@@ -216,6 +248,9 @@ const Size = styled.div`
     margin: 0 1em;
     min-width: 50px;
     cursor: pointer;
+    @media (max-width: 768px) {
+      margin: 1em .5em;
+    }
   }
   div {
     display: flex;
@@ -237,7 +272,6 @@ const Button = styled.div`
   font-weight: bold;
   justify-self: center;
 `;
-const CarouselItem = styled.div``;
 const ProductDetails = styled.div`
   margin: 2em 0;
   background: #fff;
