@@ -47,7 +47,35 @@ const Shop = () => {
               <Fade buttom>
                 <p>
                   Wall art painting <AiOutlineRight />
-                </p>
+                </p> 
+                <span>By TshirtCook</span>
+                <p>$30</p>
+              </Fade>
+            </Wrapp>
+          </a>
+        </Fade>
+        <Fade>
+          <a href="/">
+            <Wrapp>
+              <img src={wrapPic} alt="" />
+              <Fade buttom>
+                <p>
+                  Wall art painting <AiOutlineRight />
+                </p> 
+                <span>By TshirtCook</span>
+                <p>$30</p>
+              </Fade>
+            </Wrapp>
+          </a>
+        </Fade>
+        <Fade>
+          <a href="/">
+            <Wrapp>
+              <img src={wrapPic} alt="" />
+              <Fade buttom>
+                <p>
+                  Wall art painting <AiOutlineRight />
+                </p> 
                 <span>By TshirtCook</span>
                 <p>$30</p>
               </Fade>
@@ -72,6 +100,7 @@ const Title = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
   p {
     font-size: 30px;
     margin:0;
@@ -96,14 +125,25 @@ const Title = styled.div`
   }
 `;
 const Wrap = styled.div`
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  @media (max-width: 485px) {
-    overflow-x: scroll;
-    flex-wrap: noWrap;
-    justify-content: flex-start;
-  }
+  display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 0;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: auto auto;
+    }
+
+    @media (max-width: 568px) {
+      grid-template-columns: auto;
+      overflow-x: scroll;
+    }
+
   div {
     position: relative;
   }
@@ -111,7 +151,6 @@ const Wrap = styled.div`
     position: relative;
     width: 220px;
     height: 300px;
-    margin: 1em;
   }
   button {
     position: absolute;
@@ -132,9 +171,8 @@ const Wrap = styled.div`
 
 const Wrapp = styled.div`
   transition: all 0.3s ease;
-  margin: 1em 3em;
   @media (max-width: 1024px) {
-    margin: 1em;
+    margin: .5em;
   }
   img:hover {
    opacity: 1.5;
@@ -145,5 +183,6 @@ const Wrapp = styled.div`
     text-align: left;
     padding: 0;
     color: #ff6600;
+    margin: 10px 0;
   }
 `;
