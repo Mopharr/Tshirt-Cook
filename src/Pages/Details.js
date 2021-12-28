@@ -1,23 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "components/Nav";
 import Section from "components/Section";
 import styled from "styled-components";
 import hero from "assets/bags.jpg";
+import hero1 from "assets/bag.jpg";
+import hero2 from "assets/hoody.jpg";
+import hero3 from "assets/hoo.jpeg";
+import hero4 from "assets/clearr2.png";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import Carousel from "react-elastic-carousel";
 
 const Details = () => {
+  const [img, setImg] = useState(hero);
+  const breakPoints = [
+    { width: 1, itemsToShow: 4 },
+    { width: 550, itemsToShow: 3, itemsToScroll: 2 },
+    { width: 768, itemsToShow: 2 },
+    { width: 1200, itemsToShow: 5 },
+  ];
   return (
     <Overlay>
       <Nav />
       <Section />
       <Main>
         <Content>
-          <Item>
+          <Items>
+            <ItemImage>
+              <img src={img} alt="" />
+            </ItemImage>
             <CarouselItem>
-              <img src={hero} alt="" />
-              <img src={hero} alt="" />
-              <img src={hero} alt="" />
+              <Carousel breakPoints={breakPoints} itemsToShow={3}>
+                <Item>
+                  <span onClick={() => setImg(hero)}>
+                    <img src={hero} alt="" />
+                  </span>
+                </Item>
+                <Item>
+                  <span onClick={() => setImg(hero1)}>
+                    <img src={hero1} alt="" />
+                  </span>
+                </Item>
+                <Item>
+                  <span onClick={() => setImg(hero3)}>
+                    <img src={hero3} alt="" />
+                  </span>
+                </Item>
+                <Item>
+                  <span onClick={() => setImg(hero4)}>
+                    <img src={hero4} alt="" />
+                  </span>
+                </Item>
+                <Item>
+                  <span onClick={() => setImg(hero)}>
+                    <img src={hero} alt="" />
+                  </span>
+                </Item>
+                <Item>
+                  <span onClick={() => setImg(hero2)}>
+                    <img src={hero2} alt="" />
+                  </span>
+                </Item>
+                <Item>
+                  <span onClick={() => setImg(hero1)}>
+                    <img src={hero1} alt="" />
+                  </span>
+                </Item>
+              </Carousel>
             </CarouselItem>
             <Product>
               <h2>Share this product</h2>
@@ -26,7 +75,7 @@ const Details = () => {
                 <FaTwitter className="shareIcon" />
               </div>
             </Product>
-          </Item>
+          </Items>
           <Right>
             <Name>
               <h1>Black Hoodie</h1>
@@ -108,7 +157,7 @@ const Main = styled.div`
   width: 70%;
   margin: 1em auto;
   @media (max-width: 1024px) {
-    width: 95%
+    width: 95%;
   }
 `;
 const Content = styled.div`
@@ -118,46 +167,83 @@ const Content = styled.div`
   padding: 1em 2em;
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: 1em .5em;
+    padding: 1em 0.5em;
   }
 `;
-const Item = styled.div`
+
+const Items = styled.div`
   width: 40%;
-  margin: 0 1em;
+  margin-right: 2em;
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: 768px) {
     width: 98%;
     margin: auto;
   }
   img {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    height: 300px;
-    margin: auto;
-    padding-bottom: 2em;
-    @media (max-width: 425px) {
-      width: 100%;
+
+    @media (max-width: 768px) {
+      height: 100%;
     }
   }
 `;
+
+const ItemImage = styled.div`
+  padding-bottom: 2em;
+`;
 const CarouselItem = styled.div`
-  overflow-x: scroll;
-  display: flex;
-  img {
-    margin: 0 1em;
+  .carousel-items {
+    overflow-x: scroll;
+    display: flex;
     background: #f5f5f5;
-    padding: 2em;
+  }
+
+  .rec-arrow {
+    margin: 0;
+    background: none;
+    transition: all 0.3s ease;
+    font-size: 1.6em;
+    color: #333;
+    box-shadow: 0 0 2px 0px #333;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    min-width: auto;
+    line-height: 0;
+    align-self: center;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+  }
+
+  .rec-pagination {
+    display: none;
   }
 `;
+const Item = styled.div`
+  img {
+    width: 80px;
+    height: 80px;
+    padding: 0.5em;
+    cursor: pointer;
+  }
+`;
+
 const Product = styled.div`
-  padding; 1em 0;
-  h2{
+  padding: 1em 0;
+  h2 {
     font-size: 1em;
     font-weight: bold;
-    padding: 1em 0 .5em;
+    padding: 1em 0 0.5em;
     text-transform: uppercase;
   }
-  .shareIcon{
+  .shareIcon {
     width: 30px;
     height: 30px;
     border: 1px solid;
@@ -166,7 +252,6 @@ const Product = styled.div`
     cursor: pointer;
     margin: 0 1em 1em;
   }
-
 `;
 const Right = styled.div`
   width: 60%;
@@ -249,7 +334,7 @@ const Size = styled.div`
     min-width: 50px;
     cursor: pointer;
     @media (max-width: 768px) {
-      margin: 1em .5em;
+      margin: 1em 0.5em;
     }
   }
   div {
