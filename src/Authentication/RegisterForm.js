@@ -84,7 +84,7 @@ const RegisterForm = () => {
             value={state.password}
             placeholder="Confirm Password"
           />
-          <button>Sign Up</button>
+          <button className="buttons">Sign Up</button>
         </form>
       </div>
     </div>
