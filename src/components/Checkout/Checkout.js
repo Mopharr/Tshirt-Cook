@@ -12,10 +12,9 @@ import {
 } from "@material-ui/core";
 import UserContext from "Context";
 import { Link, useNavigate } from "react-router-dom";
-
-import { commerce } from "../../../lib/commerce";
-import AddressForm from "../AddressForm";
-import PaymentForm from "../PaymentForm";
+import { commerce } from "Commerce";
+import AddressForm from "./AddressForm";
+import PaymentForm from "./PaymentForm";
 import useStyles from "./styles";
 
 const steps = ["Shipping address", "Payment details"];
