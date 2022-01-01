@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
-import "./register.css";
+import "style/register.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "../config/firebase";
 import { useNavigate } from "react-router-dom";
@@ -29,7 +29,16 @@ const RegisterForm = () => {
         const errorMessage = error.message;
         console.log(`error code: ${errorCode} error message: ${errorMessage}`);
       });
+
+    // Validation for password
+    if (state.password === "") {
+      window.alert("pls input password");
+    }
+    
   };
+
+
+
   return (
     <div className="container" id="container">
       <div className="form-container sign-up-container">
@@ -68,7 +77,14 @@ const RegisterForm = () => {
             value={state.password}
             placeholder="Password"
           />
-          <button>Sign Up</button>
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={state.password}
+            placeholder="Confirm Password"
+          />
+          <button className="buttons">Sign Up</button>
         </form>
       </div>
     </div>

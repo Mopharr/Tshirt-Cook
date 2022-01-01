@@ -69,7 +69,7 @@ const LoginForm = () => {
             </div>
             <a href="#">Forgot your password?</a>
           </div>
-          <button>Sign In</button>
+          <button className="buttons">Sign In</button>
         </form>
       </div>
     </div>

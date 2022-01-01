@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react";
-// import Fade from 'react-reveal'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { HeroData } from './HeroData'
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import './Explore.css'
+import '../style/Explore.css'
 
 const Hero = () => {
   const [value, setValue] = useState(0);

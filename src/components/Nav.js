@@ -8,12 +8,13 @@ import { ShoppingCart } from "@material-ui/icons";
 import UserContext from "Context";
 
 const Nav = () => {
-  const { cart } = useContext(UserContext);
+  const { state } = useContext(UserContext);
   const [openSearch, setOpenSearch] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const handleNav = () => setOpenNav(!openNav);
   const handleSearch = () => setOpenSearch(!openSearch);
 
+  // console.log("cart no " + state.cart.total_unique_items);
   return (
     <>
       <MainNav>
@@ -31,7 +32,7 @@ const Nav = () => {
           <a href="/login">Login</a>
           <a href="/register">SignUp</a>
           <IconButton aria-label="Show cart item" color="inherit">
-            <Badge badgeContent={cart.total_unique_items} color="secondary">
+            <Badge badgeContent={2} color="secondary">
               <a style={{ color: "#000" }} href="/cart">
                 <ShoppingCart />
               </a>
@@ -43,22 +44,14 @@ const Nav = () => {
       <MobileNav>
         <Hide>
           <span onClick={handleNav}>
-            {openNav ? (
-              <FiX />
-            ) : (
-              <GiHamburgerMenu
-                style={{ fontSize: "25px", marginRight: "10px" }}
-              />
-            )}
+            <GiHamburgerMenu
+              style={{ fontSize: "25px", marginRight: "10px" }}
+            />
           </span>
           <div className="search-bar">
             <div className="search-form search-form-popup">
               <a onClick={handleSearch} href="#search">
-                {openSearch ? (
-                  <FiX />
-                ) : (
-                  <BsSearch style={{ fontSize: "20px" }} />
-                )}
+                <BsSearch style={{ fontSize: "20px" }} />
               </a>
               <div
                 className={
@@ -97,15 +90,28 @@ const Nav = () => {
           </a>
         </Logo>
         <Auth>
-        <IconButton aria-label="Show cart item" color="inherit">
-          <Badge badgeContent={cart.total_unique_items} color="secondary">
-            <a href="/cart">
-              <ShoppingCart />
-            </a>
-          </Badge>
-        </IconButton>
+          <IconButton aria-label="Show cart item" color="inherit">
+            <Badge
+              badgeContent={state.cart.total_unique_items}
+              color="secondary"
+            >
+              <a href="/cart">
+                <ShoppingCart />
+              </a>
+            </Badge>
+          </IconButton>
         </Auth>
         <div className={openNav ? "navbar-list active" : "navbar-list"}>
+            <span onClick={handleNav}
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              fontSize: '24px',
+              cursor: 'pointer'
+            }}>
+            <FiX />
+            </span>
           <ul>
             <li>
               <a href="/login">Login</a>
@@ -203,17 +209,17 @@ const MobileNav = styled.div`
     }
   }
   .navbar-list.active {
-    @media (max-width: 568px) {
+    @media (max-width: 768px) {
       display: block;
       position: absolute;
       width: 100vw;
       left: 0;
-      top: 6%;
+      top: 0;
       background: #fff;
       z-index: 10;
-      border-top: 1px solid rgba(0,0,0,.1);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
       padding: 1rem;
-      height: 200px
+      height: 200px;
     }
 
     .navbar-list-items {

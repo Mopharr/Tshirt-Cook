@@ -10,6 +10,7 @@ import UserContext from "./Context";
 import { getAuth } from "firebase/auth";
 import app from "./config/firebase";
 import Clothing from "Pages/Clothing";
+import Details from "Pages/Details"
 import { commerce } from "Commerce";
 
 function App() {
@@ -109,6 +110,7 @@ function App() {
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/clothing" element={<Clothing />} />
+          <Route exact path="/details" element={<Details />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>
