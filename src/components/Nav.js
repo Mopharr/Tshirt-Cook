@@ -8,13 +8,12 @@ import { ShoppingCart } from "@material-ui/icons";
 import UserContext from "Context";
 
 const Nav = () => {
-  const { state } = useContext(UserContext);
+  const { cart } = useContext(UserContext);
   const [openSearch, setOpenSearch] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const handleNav = () => setOpenNav(!openNav);
   const handleSearch = () => setOpenSearch(!openSearch);
 
-  // console.log("cart no " + state.cart.total_unique_items);
   return (
     <>
       <MainNav>
@@ -92,7 +91,7 @@ const Nav = () => {
         <Auth>
           <IconButton aria-label="Show cart item" color="inherit">
             <Badge
-              badgeContent={state.cart.total_unique_items}
+              badgeContent={cart.total_unique_items}
               color="secondary"
             >
               <a href="/cart">
