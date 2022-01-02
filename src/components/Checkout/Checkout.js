@@ -20,7 +20,7 @@ import useStyles from "./styles";
 
 const steps = ["Shipping address", "Payment details"];
 
-const Checkout = ({cart}) => {
+const Checkout = ({ cart }) => {
   const { onCaptureCheckout, order, error } = useContext(UserContext);
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
