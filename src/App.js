@@ -119,7 +119,7 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/clothing" element={<Clothing />} />
           <Route exact path="/details" element={<Details />} />
-          <Route exact path="/checkout" element={<Checkout />} />
+        <Route exact path="/checkout" element={<Checkout cart={cart} />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

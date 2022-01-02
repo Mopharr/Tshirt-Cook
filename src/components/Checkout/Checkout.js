@@ -12,7 +12,7 @@ import {
   Button,
 } from "@material-ui/core";
 import UserContext from "Context";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { commerce } from "Commerce";
 import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
@@ -20,13 +20,13 @@ import useStyles from "./styles";
 
 const steps = ["Shipping address", "Payment details"];
 
-const Checkout = () => {
-  const { cart, onCaptureCheckout, order, error } = useContext(UserContext);
+const Checkout = ({cart}) => {
+  const { onCaptureCheckout, order, error } = useContext(UserContext);
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const [shippingData, setShippingData] = useState({});
   const classes = useStyles();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
@@ -41,7 +41,7 @@ const Checkout = () => {
 
           setCheckoutToken(token);
         } catch {
-          if (activeStep !== steps.length) navigate("/");
+          if (activeStep !== steps.length) console.log("error");
         }
       };
 
