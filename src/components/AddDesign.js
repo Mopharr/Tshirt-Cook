@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import app from "config/firebase"
+import { v4 as uuid } from "uuid";
 
 const AddDesign = () => {
   const [design, setDesign] = useState({
@@ -16,7 +17,11 @@ const AddDesign = () => {
     e.preventDefault();
     console.log(design);
     const save = app.firestore();
-    save.collection("designs").add(design)
+    save.collection("designs").add({
+        id: uuid(),
+        label: design.label,
+        description: design.description
+    })
   };
   return (
     <div>

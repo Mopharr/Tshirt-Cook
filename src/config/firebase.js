@@ -1,7 +1,9 @@
-import firebase from "firebase";
+/* eslint-disable import/no-anonymous-default-export */
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase";
+import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyDHg1MJebhFzbdGcFLUezrDRsAMjxX1lNA",
   authDomain: "omd-clothing.firebaseapp.com",
   projectId: "omd-clothing",
@@ -10,5 +12,6 @@ var firebaseConfig = {
   appId: "1:286969672722:web:0e7f200a3d935347a914cb",
 };
 
-const app = firebase.initializeApp(firebaseConfig);
-export default app;
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export default {app, getFirestore};
