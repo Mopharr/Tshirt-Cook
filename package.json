@@ -55,7 +55,7 @@
     ]
   },
   "devDependencies": {
-    "firebase": "^9.6.0",
+    "firebase": "^9.6.2",
     "react-reveal": "^1.2.2"
   }
 }
