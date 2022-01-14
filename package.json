@@ -24,6 +24,7 @@
     "react-hook-form": "^7.22.5",
     "react-icons": "^4.3.1",
     "react-loading-skeleton": "^3.0.1",
+    "react-paystack": "^3.0.5",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "styled-component": "^2.8.0",

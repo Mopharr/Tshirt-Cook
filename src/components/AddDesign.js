@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import app from "config/firebase"
+import db from "config/firebase";
 import { v4 as uuid } from "uuid";
+import { collection, addDoc } from "firebase/firestore";
 
 const AddDesign = () => {
   const [design, setDesign] = useState({
@@ -15,13 +16,11 @@ const AddDesign = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(design);
-    const save = app.firestore();
-    save.collection("designs").add({
-        id: uuid(),
-        label: design.label,
-        description: design.description
-    })
+    addDoc(collection(db, "designs"), {
+      id: uuid(),
+      label: design.label,
+      description: design.description,
+    });
   };
   return (
     <div>

@@ -31,7 +31,7 @@ function App() {
   console.log(state.cart);
 
   useEffect(() => {
-    const auth = getAuth(app);
+    const auth = getAuth();
     const userData = auth.currentUser;
     if (userData) {
       setState({
