@@ -37,10 +37,10 @@ const PaymentForm = ({
   // };
 
   const publicKey = "pk_live_a07545d3858ad1c11108c5be493fbbf217a9885b";
-
+console.log(checkoutToken.live.subtotal.raw)
   const componentProps = {
     email: shippingData.email,
-    amount: checkoutToken.live.subtotal.formatted_with_symbol,
+    amount: checkoutToken.live.subtotal.raw * 100,
     metadata: {
       name: shippingData.firstName,
       phone: shippingData.no,

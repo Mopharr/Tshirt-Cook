@@ -50,7 +50,7 @@ const Cart = () => {
                           <div className="cart-item-image-box">
                             <div className="cart-item-image-box-overlay">
                               <a href="#img">
-                                <img src={state.loading ? <Skeleton /> : item.media.source } alt="hoddie" />
+                                <img src={state.loading ? <Skeleton /> : item.image.url } alt="hoddie" />
                               </a>
                             </div>
                           </div>
