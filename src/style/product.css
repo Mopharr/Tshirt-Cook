@@ -1,0 +1,20 @@
+.product{
+    margin: 3em auto;
+    width: 80%;
+}
+.product h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+.proContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+.proContentCap{
+    display: flex;
+}
+.icons{
+    font-size: 20px;
+}
