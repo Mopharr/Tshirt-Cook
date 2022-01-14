@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FileBase64 from "react-file-base64";
 import { v4 as uuid } from "uuid";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
 
@@ -17,6 +18,7 @@ const AddDesign = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(design.image);
     try {
       const docRef = await addDoc(collection(db, "designs"), {
         id: uuid(),
@@ -38,11 +40,12 @@ const AddDesign = () => {
           value={design.label}
           onChange={handleChange}
         />
-        <input
+        <FileBase64
           type="file"
-          name="design"
-          value={design.image}
-          onChange={handleChange}
+          multiple={false}
+          onDone={({ base64 }) =>
+            setDesign({ ...design, image: base64 })
+          }
         />
         <input
           type="text"
