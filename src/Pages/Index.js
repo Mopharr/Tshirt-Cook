@@ -6,7 +6,7 @@ import Section from "../components/Section"
 import Hero from "../components/Hero";
 import Catigories from "../components/Catigories";
 import Footer from "../components/Footer";
-import Product from "components/product";
+import Product from "components/Product";
 
 const Index = () => {
   return (
