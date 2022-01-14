@@ -9,7 +9,6 @@ import Checkout from "components/Checkout/Checkout";
 import Cart from "./Pages/Cart/Cart";
 import UserContext from "./Context";
 import { getAuth } from "firebase/auth";
-import app from "./config/firebase";
 import Clothing from "Pages/Clothing";
 import Details from "Pages/Details";
 import { commerce } from "Commerce";

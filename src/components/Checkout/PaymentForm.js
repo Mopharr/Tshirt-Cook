@@ -11,30 +11,30 @@ const PaymentForm = ({
   shippingData,
   onCaptureCheckout,
 }) => {
-  const handleSubmit = async (event, elements, stripe) => {
-    event.preventDefault();
-    const orderData = {
-      line_items: checkoutToken.live.line_items,
-      customer: {
-        firstname: shippingData.firstName,
-        lastname: shippingData.lastName,
-        email: shippingData.email,
-      },
-      shipping: {
-        name: "International",
-        street: shippingData.address1,
-        town_city: shippingData.city,
-        county_state: shippingData.shippingSubdivision,
-        postal_zip_code: shippingData.zip,
-        country: shippingData.shippingCountry,
-      },
-      fulfillment: { shipping_method: shippingData.shippingOption },
-    };
+  // const handleSubmit = async (event, elements, stripe) => {
+  //   event.preventDefault();
+  //   const orderData = {
+  //     line_items: checkoutToken.live.line_items,
+  //     customer: {
+  //       firstname: shippingData.firstName,
+  //       lastname: shippingData.lastName,
+  //       email: shippingData.email,
+  //     },
+  //     shipping: {
+  //       name: "International",
+  //       street: shippingData.address1,
+  //       town_city: shippingData.city,
+  //       county_state: shippingData.shippingSubdivision,
+  //       postal_zip_code: shippingData.zip,
+  //       country: shippingData.shippingCountry,
+  //     },
+  //     fulfillment: { shipping_method: shippingData.shippingOption },
+  //   };
 
-    onCaptureCheckout(checkoutToken.id, orderData);
+  //   onCaptureCheckout(checkoutToken.id, orderData);
 
-    nextStep();
-  };
+  //   nextStep();
+  // };
 
   const publicKey = "pk_live_a07545d3858ad1c11108c5be493fbbf217a9885b";
 
