@@ -40,7 +40,7 @@ const PaymentForm = ({
 
   const componentProps = {
     email: shippingData.email,
-    amount: 2000,
+    amount: checkoutToken.live.subtotal.formatted_with_symbol,
     metadata: {
       name: shippingData.firstName,
       phone: shippingData.no,
