@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button, Divider } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 import { PaystackButton } from "react-paystack";
 
 import Review from "./Review";

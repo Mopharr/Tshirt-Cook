@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../style/nav.css";
 import logo from "../assets/ava.png";
 import styled from "styled-components";
 import { IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import { BiSearchAlt } from "react-icons/bi";
+import UserContext from "Context";
 
-const nav = () => {
+const NavNew = () => {
+  const { cart } = useContext(UserContext);
   return (
     <div className="nav">
       <a href="/">
@@ -34,7 +36,7 @@ const nav = () => {
         </div>
         <Auth>
           <IconButton aria-label="Show cart item" color="inherit">
-            <Badge badgeContent={1} color="secondary">
+            <Badge badgeContent={cart.total_unique_items} color="secondary">
               <a href="/cart">
                 <ShoppingCart className="icon" />
               </a>
@@ -46,6 +48,6 @@ const nav = () => {
   );
 };
 
-export default nav;
+export default NavNew;
 
 const Auth = styled.div``;
