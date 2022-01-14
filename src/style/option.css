@@ -1,0 +1,36 @@
+.optMain{
+    width: 80%;
+    margin: 1em auto;
+}
+.optMain h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+.optContent{
+    display: flex;
+}
+.optContentCap{
+    margin: 0 1em;
+}
+.capMain{
+    border: 2px solid black;
+    margin: 1em 0;
+    padding: .4em;
+}
+.capMain p{
+    margin: .5em 0;
+}
+.down{
+    text-align: center;
+    border-bottom: 2px dotted black;
+    padding: 1em 0 2em;
+}
+.down button{
+    outline: none;
+    border: none;
+    background-color: black;
+    border-radius: 25px;
+    padding: .5em 1em;
+    color: white;
+}

@@ -1,0 +1,46 @@
+.nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em 2em;
+}
+.section{
+    display: flex;
+}
+.sectionLink{
+    margin: 0 1em;
+}
+.sectionLink h2{
+    font-weight: bold;
+    margin: 0;
+}
+.sectionLink p{
+    margin: 0;
+    font-weight: 700;
+}
+.active h2{
+    color: #ff6600;
+}
+.third{
+    display: flex;
+    align-items: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    padding: .5em;
+    border-radius: 50px;
+    margin-right: 1em;
+}
+.search input{
+    border: none;
+    border-bottom: none !important;
+    padding: 0%;
+    outline: none;
+}
+.icon{
+    font-size: 1.4em;
+    color: #000;
+}
