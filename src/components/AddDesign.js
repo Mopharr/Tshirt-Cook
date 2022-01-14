@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import db from "config/firebase";
+import firestore from "config/firebase";
 import { v4 as uuid } from "uuid";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getFirestore } from "firebase/firestore";
 
 const AddDesign = () => {
   const [design, setDesign] = useState({
@@ -10,17 +10,24 @@ const AddDesign = () => {
     description: "",
   });
 
+  const db = getFirestore();
+
   const handleChange = ({ target: { name, value } }) => {
     setDesign({ ...design, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    addDoc(collection(db, "designs"), {
-      id: uuid(),
-      label: design.label,
-      description: design.description,
-    });
+    try {
+      const docRef = await addDoc(collection(db, "designs"), {
+        label: design.label,
+        //image: design.image,
+        description: design.description,
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
   };
   return (
     <div>
