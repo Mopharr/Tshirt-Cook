@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import firestore from "config/firebase";
 import { v4 as uuid } from "uuid";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
 
@@ -20,8 +19,9 @@ const AddDesign = () => {
     e.preventDefault();
     try {
       const docRef = await addDoc(collection(db, "designs"), {
+        id: uuid(),
         label: design.label,
-        //image: design.image,
+        image: design.image,
         description: design.description,
       });
       console.log("Document written with ID: ", docRef.id);
