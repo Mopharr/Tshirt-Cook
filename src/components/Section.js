@@ -12,7 +12,69 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Clothing
+              Mens
+            </a>
+            <ul className="dropdown-menu">
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Men Tshirt
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Women Hoddies
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Mens Cap
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Mens SweatShirt
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="subnav-list-items dropdown">
+            <a
+              href="#cloth"
+              className="
+            subnav-link"
+            >
+              Women
+            </a>
+            <ul className="dropdown-menu">
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Men Tshirt
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Women Hoddies
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Women Cap
+                </a>
+              </li>
+              <li>
+                <a href="#cloth-items" className="dropdown-menu-item">
+                  Women SweatShirt
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="subnav-list-items dropdown">
+            <a
+              href="#cloth"
+              className="
+            subnav-link"
+            >
+              Clothing & Accessories
             </a>
             <ul className="dropdown-menu">
               <li>
@@ -48,38 +110,7 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Wall Art
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  All Art
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Frame Print
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Poster
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Canva Print
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Stationaries
+              Stationaries & Paper Prints
             </a>
             <ul className="dropdown-menu">
               <li>
@@ -115,69 +146,7 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Stickers
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  All Stickers
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Car Stickers
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Hedro Stickers
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Laptop Sticker
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Babies & Kids
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  All kids clothing
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Baby One-piece
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Baby T-shirt
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Baby Pullover Hoodies
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Home and Living
+              Home & Living items
             </a>
             <ul className="dropdown-menu">
               <li>
@@ -223,7 +192,16 @@ const Section = () => {
               className="
             subnav-link"
             >
-              Explore More
+              Gifts
+            </a>
+          </li>
+          <li className="subnav-list-items dropdown">
+            <a
+              href="#cloth"
+              className="
+            subnav-link"
+            >
+              Explore
             </a>
           </li>
         </ul>
@@ -266,7 +244,6 @@ const Main = styled.div`
   .dropdown {
     display: block;
     position: relative;
-    
   }
 
   .subnav-list-items .dropdown-menu {
@@ -281,7 +258,7 @@ const Main = styled.div`
     font-size: 1rem;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: #f3f3f3;
     background-clip: padding-box;
     border-radius: 0.25rem;
     margin-top: 1rem;

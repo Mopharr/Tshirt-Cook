@@ -32,3 +32,19 @@
     height: 100%;
     width: 100%;
 }
+
+@media (max-width: 1024px) {
+    .main{
+        width: 97%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main{
+        flex-direction: column;
+    }
+    .text{
+        width: 98%;
+        margin-bottom: 1.7em;
+    }
+}

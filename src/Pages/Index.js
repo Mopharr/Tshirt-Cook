@@ -1,6 +1,5 @@
 import React from "react";
 import Option from "../components/option";
-import Contact from "../components/Contact";
 import Navbar from "../components/NavNew";
 import Section from "../components/Section"
 import Hero from "../components/Hero";
@@ -17,7 +16,7 @@ const Index = () => {
       <Catigories />
       <Product />
       <Option />
-      <Contact />
+      <Learn />
       <Footer />
     </>
   );
