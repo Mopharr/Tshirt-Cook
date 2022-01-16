@@ -16,7 +16,6 @@ const Index = () => {
       <Catigories />
       <Product />
       <Option />
-      <Learn />
       <Footer />
     </>
   );

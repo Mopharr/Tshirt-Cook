@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
+import UserContext from "Context";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import "../style/product.css";
-import UserContext from "Context";
 
 const Product = () => {
   const { addToCart, product } = useContext(UserContext);
