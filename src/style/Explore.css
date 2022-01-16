@@ -19,8 +19,8 @@
 
 /* Card Styling */
 .card-div{
-    width: 20em;
-    min-height: 20em;
+    width: 300px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-items: center;

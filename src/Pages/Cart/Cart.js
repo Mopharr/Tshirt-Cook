@@ -4,6 +4,7 @@ import UserContext from "Context";
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
 import Nav from "../../components/Nav";
+import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -49,7 +50,7 @@ const Cart = () => {
                           <div className="cart-item-image-box">
                             <div className="cart-item-image-box-overlay">
                               <a href="#img">
-                                <img src={state.loading ? <Skeleton /> : item.media.source } alt="hoddie" />
+                                <img src={state.loading ? <Skeleton /> : item.image.url } alt="hoddie" />
                               </a>
                             </div>
                           </div>
@@ -145,9 +146,9 @@ const Cart = () => {
                   </span>
                 </div>
                 <div className="deliveries">
-                  <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
-                  </a>
+                  <Link to="/checkout" className="checkout-link">
+                    <span className="checkout-link-text">{`Checkout ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
+                  </Link>
                   <span className="deliveries-text">
                     includes standard shipping
                   </span>
@@ -168,9 +169,9 @@ const Cart = () => {
                   </span>
                 </div>
                 <div className="deliveries">
-                  <a href="#ship" className="checkout-link">
-                    <span className="checkout-link-text">{`Checkput ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
-                  </a>
+                  <Link to="/checkout" className="checkout-link">
+                    <span className="checkout-link-text">{`Checkout ${state.loading ? <Skeleton /> : cart.subtotal.formatted_with_symbol}`}</span>
+                  </Link>
                   <span className="deliveries-text">
                     includes standard shipping
                   </span>

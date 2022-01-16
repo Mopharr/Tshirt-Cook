@@ -5,17 +5,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./Pages/Index";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import Checkout from "components/Checkout/Checkout";
 import Cart from "./Pages/Cart/Cart";
 import UserContext from "./Context";
 import { getAuth } from "firebase/auth";
-import app from "./config/firebase";
 import Clothing from "Pages/Clothing";
-import Details from "Pages/Details"
+import Details from "Pages/Details";
 import { commerce } from "Commerce";
+import AddDesign from "components/AddDesign";
 
 function App() {
   const [product, setProduct] = useState([]);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({});
+  const [order, setOrder] = useState({});
+  const [errorMessage, setErrorMessage] = useState("");
   const [state, setState] = useState({
     fullname: "",
     email: "",
@@ -24,10 +27,10 @@ function App() {
     loading: true,
   });
 
-  console.log(state.cart)
+  console.log(state.cart);
 
   useEffect(() => {
-    const auth = getAuth(app);
+    const auth = getAuth();
     const userData = auth.currentUser;
     if (userData) {
       setState({
@@ -58,26 +61,31 @@ function App() {
     setCart(cart);
   };
 
-/*
-  useEffect(() => {
-    let subscribe = false;
-    commerce.cart.retrieve().then((cart) => {
-      if (!subscribe) {
-        setState({ ...state, cart: cart, loading: false });
-      }
-    });
-    return () => {
-      subscribe = true;
-    };
-  }, []);
-*/
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+
+    setCart(newCart);
+  };
+
+  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(
+        checkoutTokenId,
+        newOrder
+      );
+      setOrder(incomingOrder);
+      refreshCart();
+    } catch (error) {
+      setErrorMessage(error.data.error.message);
+    }
+  };
 
   const fetchCart = async () => {
     await commerce.cart.retrieve().then((cart) => {
       setCart(cart);
       setState({ ...state, loading: false });
     });
-  }
+  };
 
   const fetchProducts = async () => {
     const response = await commerce.products.list();
@@ -101,6 +109,9 @@ function App() {
         emptyCart,
         product,
         cart,
+        order,
+        errorMessage,
+        handleCaptureCheckout,
       }}
     >
       <BrowserRouter>
@@ -111,6 +122,8 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/clothing" element={<Clothing />} />
           <Route exact path="/details" element={<Details />} />
+          <Route exact path="/checkout" element={<Checkout cart={cart} />} />
+          <Route exact path="/design" element={<AddDesign />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

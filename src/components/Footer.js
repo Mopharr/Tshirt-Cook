@@ -1,6 +1,6 @@
 import React from "react";
-import { BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
 import styled from "styled-components";
+import ava from "assets/flogo.png";
 
 const Footer = () => {
   return (
@@ -8,78 +8,56 @@ const Footer = () => {
       <Menu>
         <div class="footer-widget first-widget">
           <div class="title-outer">
-            <h3 class="widget-title">Quick Information</h3>
+            <h3 class="widget-title">Shop</h3>
           </div>
           <div class="contact_wrapper">
-            <div class="address">Lagos, Nigeria</div>
-            <div class="phone">
-              <div class="contact_phone">+2349022233344</div>
-            </div>
-            <div class="email">
-              <div class="contact_email">
-                <a
-                  href="mailto:#"
-                  className="
-                email"
-                >
-                  support@tshirtcook.com
-                </a>
-              </div>
-            </div>
+            <div class="address">Mens t-shirt</div>
+            <div class="address">Women t-shirt</div>
+            <div class="address">Baby Wear</div>
+            <div class="address">Mugs</div>
+            <div class="address">Cap</div>
+            <div class="address">Throw Pillows</div>
           </div>
-          <ul className="footer-social-icons">
-            <li className="footer-social-icons-list">
-              <a href="/#instagram" className="social-icons">
-                <BsInstagram />
-              </a>
-              <a href="/" className="social-icons">
-                <BsTwitter />
-              </a>
-              <a href="/" className="social-icons">
-                <BsFacebook />
-              </a>
-            </li>
-          </ul>
         </div>
 
         <div class="footer-widget second-widget">
           <div class="title-outer">
-            <h3 class="widget-title">Information</h3>
+            <h3 class="widget-title">About</h3>
+          </div>
+          <div className="address">
+            Tshirtcook is a print on demand online store that provides unique
+            designs & premium quality products at the best prices.
+            <strong>Learn more</strong>
+          </div>
+        </div>
+        <div class="footer-widget third-widget">
+          <div class="title-outer">
+            <h3 class="widget-title">Help?</h3>
           </div>
           <ul class="toggle-block">
             <li>
               <div class="static-links-list">
                 <span>
                   <a href="#about" className="link-list-item">
-                    About Us
+                    Delivery
                   </a>
                 </span>
 
                 <span>
                   <a href="#contact" className="link-list-item">
-                    Contact Us
+                    Returns
                   </a>
                 </span>
 
                 <span>
                   <a href="#terms_conditions" className="link-list-item">
-                    Terms &amp; Conditions
+                    Customer Care
                   </a>
                 </span>
 
                 <span>
                   <a href="#returns_exchanges" className="link-list-item">
-                    Returns &amp; Exchanges
-                  </a>
-                </span>
-                <span>
-                  <a href="#ship_delivery" className="link-list-item">
-                    Shipping &amp; Delivery
-                  </a>
-                </span>
-                <span>
-                  <a href="#privacy" className="link-list-item">
-                    Privacy Policy
+                    FAQs
                   </a>
                 </span>
               </div>
@@ -88,37 +66,32 @@ const Footer = () => {
         </div>
         <div class="footer-widget third-widget">
           <div class="title-outer">
-            <h3 class="widget-title">Need Help?</h3>
+            <h3 class="widget-title">Social</h3>
           </div>
           <ul class="toggle-block">
             <li>
               <div class="static-links-list">
                 <span>
                   <a href="#about" className="link-list-item">
-                   Your Account
+                    Facebook
                   </a>
                 </span>
 
                 <span>
                   <a href="#contact" className="link-list-item">
-                    Returns Center
+                    Instagram
                   </a>
                 </span>
 
                 <span>
                   <a href="#terms_conditions" className="link-list-item">
-                    Purchase
+                    Pinterest
                   </a>
                 </span>
 
                 <span>
                   <a href="#returns_exchanges" className="link-list-item">
-                    App Download
-                  </a>
-                </span>
-                <span>
-                  <a href="#ship_delivery" className="link-list-item">
-                    Help
+                    Blog
                   </a>
                 </span>
               </div>
@@ -126,10 +99,10 @@ const Footer = () => {
           </ul>
         </div>
       </Menu>
-
-      <hr />
       <Copy>
-        <p>© OMDClothing. All Rights Reserved</p>
+        <img src={ava} alt="" />
+        <p>Copyright . Privacy Policy . Cookies Policy . User Agreement</p>
+        <span>All right s reserved</span>
       </Copy>
     </Container>
   );
@@ -139,13 +112,14 @@ export default Footer;
 
 const Container = styled.div`
   background: #000;
-  padding: 2em;
+  padding: 2em 1em;
   color: #fff;
 `;
 const Menu = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  width: 100%;
+  justify-content: space-between;
 
   @media (max-width: 425px) {
     flex-direction: column;
@@ -163,11 +137,17 @@ const Menu = styled.div`
     align-items: center;
     justify-content: space-around;
   }
+  a:hover {
+    text-decoration: underline;
+  }
   li {
     font-size: 18px;
     list-style: none;
     font-family: "Nunito", sans-serif;
     margin: 1em 0;
+  }
+  .footer-widget.second-widget {
+    width: 30%;
   }
 
   .footer-widget {
@@ -176,7 +156,6 @@ const Menu = styled.div`
     min-height: 210px;
     padding: 0;
     padding-inline-end: 20px;
-    width: 22%;
     display: inline-block;
     vertical-align: top;
 
@@ -186,7 +165,6 @@ const Menu = styled.div`
   }
 
   .first-widget.footer-widget {
-    width: 28%;
     padding-inline-start: 0;
 
     @media (max-width: 568px) {
@@ -246,10 +224,21 @@ const Menu = styled.div`
   }
 `;
 const Copy = styled.div`
+  text-align: center;
   p {
     text-align: center;
-    margin: 1em 0;
+    margin: 0;
+
     font-family: "Nunito", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  span {
+    text-align: center;
+    margin: 0;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
   }
 `;

@@ -9,7 +9,6 @@ import { BsFacebook, BsGoogle, BsLinkedin } from "react-icons/bs";
 
 const LoginForm = () => {
   const { state, setState } = useContext(UserContext);
-
   const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
