@@ -205,7 +205,7 @@ const Section = () => {
             </a>
           </li>
         </ul>
-      </Main>
+      </Main> 
     </>
   );
 };
@@ -292,6 +292,9 @@ const Main = styled.div`
     font-weight: bold;
     cursor: pointer;
   }
+  .dropdown-menu li:hover{
+    background: #fff;
+  }  
 
   hr {
     width: 100%;

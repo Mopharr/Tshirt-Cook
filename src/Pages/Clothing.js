@@ -1,4 +1,4 @@
-import Nav from "components/Nav";
+import Nav from "../components/NavNew";
 import Section from "components/Section";
 import ClothHero from "components/Clothing/ClothHero";
 import React from "react";

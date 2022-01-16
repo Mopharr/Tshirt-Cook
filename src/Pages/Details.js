@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "components/Nav";
+import Nav from "../components/NavNew";
 import Section from "components/Section";
 import styled from "styled-components";
 import hero from "assets/bags.jpg";
