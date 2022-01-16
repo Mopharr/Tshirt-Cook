@@ -32,7 +32,7 @@ const NavNew = () => {
       <div className="third">
         <div className="search">
           <input type="text" placeholder="Find what you want" />
-          <BiSearchAlt />
+          <BiSearchAlt className="icon" />
         </div>
         <Auth>
           <IconButton aria-label="Show cart item" color="inherit">

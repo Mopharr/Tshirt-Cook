@@ -20,7 +20,7 @@
     font-weight: 700;
 }
 .active h2{
-    color: #ff6600;
+    color: #ff4b2b;
 }
 .third{
     display: flex;
@@ -38,7 +38,13 @@
     border: none;
     border-bottom: none !important;
     padding: 0%;
+    margin: 0;
     outline: none;
+    color: black;
+}
+.search input[placeholder]{
+    color: black;
+    font-weight: bold;
 }
 .icon{
     font-size: 1.4em;
