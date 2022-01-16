@@ -18,7 +18,6 @@ const AddDesign = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(design.image);
     try {
       const docRef = await addDoc(collection(db, "designs"), {
         id: uuid(),
