@@ -43,6 +43,9 @@ const NavNew = () => {
             </Badge>
           </IconButton>
         </Auth>
+        <div className="profile">
+          
+        </div>
       </div>
     </div>
   );
