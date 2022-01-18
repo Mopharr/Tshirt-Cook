@@ -16,7 +16,7 @@
   font-family: serif;
 }
 .text p {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   margin: 0 auto 10px;
   font-weight: bold;
@@ -69,5 +69,11 @@
   }
   .input {
     width: 98%;
+  }
+  .pic {
+    width: 97%;
+  }
+  .main {
+    padding: 1em 0;
   }
 }

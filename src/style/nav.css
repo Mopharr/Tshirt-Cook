@@ -150,32 +150,25 @@
 /* media query */
 
 @media (max-width: 1024px) {
-  .nav {
-    flex-direction: column;
-  }
-  .nav a {
-    margin-bottom: 1em;
-  }
-  .section {
-    margin-bottom: 2em;
-  }
-  .third {
-    margin-bottom: 1em;
-    justify-content: space-around;
-    width: 100%;
-  }
-  .icon{
-    font-size: 30px !important;
-  }
-  .hamburger {
-    display: block;
-  }
+  
+ .nav{
+   width: 100%;
+   padding:1em ;
+   justify-content: space-between;
+ }
+  
   .search {
     display: none;
   }
 }
-@media (max-width: 555px) {
+@media (max-width: 768px) {
   .section {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .profile{
     display: none;
   }
 }

@@ -51,4 +51,7 @@
     .catMain{
         width: 98%;
     }
+    .catMain h2{
+        text-align: center;
+    }
 }

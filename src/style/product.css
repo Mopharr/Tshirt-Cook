@@ -51,4 +51,7 @@ a:hover{
     .product{
         width: 98%;
     }
+    .product h2{
+      text-align: center;
+    }
 }

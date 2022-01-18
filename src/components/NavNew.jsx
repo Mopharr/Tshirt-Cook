@@ -22,6 +22,8 @@ const NavNew = () => {
   return (
     <>
       <div className="nav">
+        <GiHamburgerMenu onClick={toggle} className="hamburger" />
+
         <a href="/">
           <img src={logo} alt="" />
         </a>
@@ -41,7 +43,6 @@ const NavNew = () => {
           </div>
         </div>
         <div className="third">
-          <GiHamburgerMenu onClick={toggle} className="hamburger" />
           <div className="search">
             <input type="text" placeholder="Find what you want" />
             <BiSearchAlt className="icon" />
@@ -60,8 +61,13 @@ const NavNew = () => {
           </div>
         </div>
       </div>
-      <div className={open ? 'sidebar show': 'sidebar'}>
-        <MdCancel onClick={() => {setOpen(!open)}} className="sideIcon" />
+      <div className={open ? "sidebar show" : "sidebar"}>
+        <MdCancel
+          onClick={() => {
+            setOpen(!open);
+          }}
+          className="sideIcon"
+        />
 
         <div className="search2">
           <input type="text" placeholder="Find what you want" />

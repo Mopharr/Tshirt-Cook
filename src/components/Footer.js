@@ -10,14 +10,45 @@ const Footer = () => {
           <div class="title-outer">
             <h3 class="widget-title">Shop</h3>
           </div>
-          <div class="contact_wrapper">
-            <div class="address">Mens t-shirt</div>
-            <div class="address">Women t-shirt</div>
-            <div class="address">Baby Wear</div>
-            <div class="address">Mugs</div>
-            <div class="address">Cap</div>
-            <div class="address">Throw Pillows</div>
-          </div>
+          <ul class="toggle-block">
+            <li>
+              <div class="static-links-list">
+                <span>
+                  <a href="#about" className="link-list-item">
+                    Mens t-shirt
+                  </a>
+                </span>
+
+                <span>
+                  <a href="#contact" className="link-list-item">
+                    Women t-shirt
+                  </a>
+                </span>
+
+                <span>
+                  <a href="#terms_conditions" className="link-list-item">
+                    Baby Wear
+                  </a>
+                </span>
+
+                <span>
+                  <a href="#returns_exchanges" className="link-list-item">
+                    Mugs
+                  </a>
+                </span>
+                <span>
+                  <a href="#returns_exchanges" className="link-list-item">
+                    Cap
+                  </a>
+                </span>
+                <span>
+                  <a href="#returns_exchanges" className="link-list-item">
+                    Throw Pillows
+                  </a>
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
 
         <div class="footer-widget second-widget">
@@ -101,7 +132,13 @@ const Footer = () => {
       </Menu>
       <Copy>
         <img src={ava} alt="" />
-        <p>Copyright . Privacy Policy . Cookies Policy . User Agreement</p>
+        <p>
+          {" "}
+          <a href="/">Copyright .</a>
+          <a href="/">Privacy Policy .</a>
+          <a href="/">Cookies Policy .</a>
+          <a href="/">User Agreement .</a>
+        </p>
         <span>All right s reserved</span>
       </Copy>
     </Container>
@@ -114,6 +151,10 @@ const Container = styled.div`
   background: #000;
   padding: 2em 1em;
   color: #fff;
+  a{
+    color:#fff;
+    font-weight: 500;
+  }
 `;
 const Menu = styled.div`
   display: flex;
@@ -153,7 +194,6 @@ const Menu = styled.div`
   .footer-widget {
     float: none;
     box-sizing: border-box;
-    min-height: 210px;
     padding: 0;
     padding-inline-end: 20px;
     display: inline-block;
@@ -228,10 +268,7 @@ const Copy = styled.div`
   p {
     text-align: center;
     margin: 0;
-
-    font-family: "Nunito", sans-serif;
     font-size: 16px;
-    font-weight: 800;
   }
   span {
     text-align: center;

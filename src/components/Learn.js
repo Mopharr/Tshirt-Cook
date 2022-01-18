@@ -13,8 +13,8 @@ const Learn = () => {
         <div className="mainLcap">
           <p>Nationwide Shipping</p>
           <img src={ava1} alt="" />
-          <span>We deliever to all over the country</span>
-          <h5>check the delivery guide</h5>
+          {/* <span>We deliever to all over the country</span>
+          <h5>check the delivery guide</h5> */}
         </div>
         <div className="mainLcap">
           <p>Secure Payments</p>
@@ -23,8 +23,8 @@ const Learn = () => {
         <div className="mainLcap">
           <p>Free Returns</p>
           <img src={ava3} alt="" />
-          <span>Exchange & replacement guarantee with free delivery.</span>
-          <h5>Learn more</h5>
+          {/* <span>Exchange & replacement guarantee with free delivery.</span>
+          <h5>Learn more</h5> */}
         </div>
         <div className="mainLcap">
           <p>Top Quality Prints</p>
@@ -37,7 +37,7 @@ const Learn = () => {
         <div className="mainLcap">
           <p>24/7 Dedicated Support</p>
           <img src={ava6} alt="" />
-          <h5>Contact us</h5>
+          {/* <h5>Contact us</h5> */}
         </div>
       </div>
     );
