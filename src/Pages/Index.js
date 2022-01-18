@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Catigories from "../components/Catigories";
 import Footer from "../components/Footer";
 import Product from "../components/product";
+import Learn from "../components/Learn";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Catigories />
       <Product />
       <Option />
+      <Learn />
       <Footer />
     </>
   );

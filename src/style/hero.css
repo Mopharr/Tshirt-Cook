@@ -3,6 +3,7 @@
     border: 2px solid black;
     padding: 2em ;
     display: flex;
+    align-items: center;
     margin: 1em auto;
     justify-content: space-between;
 }
@@ -46,5 +47,16 @@
     .text{
         width: 98%;
         margin-bottom: 1.7em;
+    }
+    .text h3{
+        font-size: 30px;
+        line-height: 33px;
+    }
+    .text p{
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .input{
+        width: 98%;
     }
 }

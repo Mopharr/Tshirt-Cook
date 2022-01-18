@@ -1,10 +1,11 @@
 .catMain{
-    margin: 1em auto;
+    margin: 3em auto 1em;
     width: 80%;
 }
 .catMain h2{
     font-size: 30px;
     margin-bottom: 1em;
+    font-weight: bold;
 
 }
 .content{
@@ -31,6 +32,12 @@
     transform: translateX(-50%);
     border: none;
     outline: none;
-    padding: .5em 1em;
+    padding: .5em 1.7em;
+    font-weight: bold;
     border-radius: 25px;
+}
+@media (max-width: 768px) {
+    .catMain{
+        width: 98%;
+    }
 }

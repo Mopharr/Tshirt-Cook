@@ -37,3 +37,8 @@
   padding: 0.5em 1em;
   color: white;
 }
+@media (max-width: 768px) {
+    .optMain{
+        width: 98%;
+    }
+}

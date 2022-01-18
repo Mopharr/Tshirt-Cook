@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import Nav from "components/Nav";
+import Nav from "../components/NavNew";
 import Section from "components/Section";
 import styled from "styled-components";
 import hero from "assets/bags.jpg";
 import hero1 from "assets/bag.jpg";
-import hero2 from "assets/hoody.jpg";
-import hero3 from "assets/hoo.jpeg";
-import hero4 from "assets/clearr2.png";
+
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Carousel from "react-elastic-carousel";
@@ -42,23 +40,19 @@ const Details = () => {
                   </span>
                 </Item>
                 <Item>
-                  <span onClick={() => setImg(hero3)}>
-                    <img src={hero3} alt="" />
+                  <span onClick={() => setImg(hero)}>
+                    <img src={hero} alt="" />
                   </span>
                 </Item>
+
                 <Item>
-                  <span onClick={() => setImg(hero4)}>
-                    <img src={hero4} alt="" />
+                  <span onClick={() => setImg(hero)}>
+                    <img src={hero1} alt="" />
                   </span>
                 </Item>
                 <Item>
                   <span onClick={() => setImg(hero)}>
                     <img src={hero} alt="" />
-                  </span>
-                </Item>
-                <Item>
-                  <span onClick={() => setImg(hero2)}>
-                    <img src={hero2} alt="" />
                   </span>
                 </Item>
                 <Item>

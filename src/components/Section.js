@@ -8,7 +8,7 @@ const Section = () => {
         <ul>
           <li className="subnav-list-items dropdown">
             <a
-              href="/Clothing"
+              href="/"
               className="
             subnav-link"
             >
@@ -70,7 +70,7 @@ const Section = () => {
           </li>
           <li className="subnav-list-items dropdown">
             <a
-              href="#cloth"
+              href="/Clothing"
               className="
             subnav-link"
             >
@@ -292,6 +292,9 @@ const Main = styled.div`
     font-weight: bold;
     cursor: pointer;
   }
+  .dropdown-menu li:hover{
+    background: #fff;
+  }  
 
   hr {
     width: 100%;
