@@ -119,7 +119,7 @@ const Menu = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (max-width: 425px) {
     flex-direction: column;

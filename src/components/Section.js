@@ -8,7 +8,7 @@ const Section = () => {
         <ul>
           <li className="subnav-list-items dropdown">
             <a
-              href="/Clothing"
+              href="/"
               className="
             subnav-link"
             >
@@ -70,7 +70,7 @@ const Section = () => {
           </li>
           <li className="subnav-list-items dropdown">
             <a
-              href="#cloth"
+              href="/Clothing"
               className="
             subnav-link"
             >
@@ -205,7 +205,7 @@ const Section = () => {
             </a>
           </li>
         </ul>
-      </Main> 
+      </Main>
     </>
   );
 };

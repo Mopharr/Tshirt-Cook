@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../style/nav.css";
 import logo from "../assets/ava.png";
 import styled from "styled-components";
@@ -12,6 +12,13 @@ import UserContext from "Context";
 
 const NavNew = () => {
   const { cart } = useContext(UserContext);
+  const [open, setOpen] = useState(null)
+
+  const toggle = () => {
+    setOpen(!open)
+  }
+
+
   return (
     <>
       <div className="nav">
@@ -34,7 +41,7 @@ const NavNew = () => {
           </div>
         </div>
         <div className="third">
-          <GiHamburgerMenu className="hamburger" />
+          <GiHamburgerMenu onClick={toggle} className="hamburger" />
           <div className="search">
             <input type="text" placeholder="Find what you want" />
             <BiSearchAlt className="icon" />
@@ -53,12 +60,61 @@ const NavNew = () => {
           </div>
         </div>
       </div>
-      <div className="sidebar">
-        <MdCancel />
+      <div className={open ? 'sidebar show': 'sidebar'}>
+        <MdCancel onClick={() => {setOpen(!open)}} className="sideIcon" />
 
-        <div className="search">
+        <div className="search2">
           <input type="text" placeholder="Find what you want" />
           <BiSearchAlt className="icon" />
+        </div>
+        <div className="cat">
+          <ul>
+            <li>
+              <a href="mens" target="">
+                Mens
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                Women
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                Clothings & Accessories
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                Stationaries and Paper Print
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                Home & Living
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                Gift
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                Explore
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                Login
+              </a>
+            </li>
+            <li>
+              <a href="mens" target="">
+                SignUp
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </>

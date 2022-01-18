@@ -4,8 +4,10 @@ import ClothHero from "components/Clothing/ClothHero";
 import React from "react";
 import styled from "styled-components";
 import ClothExplore from "components/Clothing/ClothExplore";
-import Shop from "components/Clothing/Shop";
+import Product from "components/product";
+import Learn from "components/Learn";
 import Footer from "components/Footer";
+import CltAb from "components/Clothing/CltAb";
 // import UserContext from "Context"
 
 const Clothing = () => {
@@ -15,7 +17,9 @@ const Clothing = () => {
       <Section />
       <ClothHero />
       <ClothExplore />
-      <Shop />
+      <Product />
+      <Learn />
+      <CltAb />
       <Footer />
     </Main>
   );
