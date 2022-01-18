@@ -13,7 +13,7 @@ const Product = () => {
         <IoIosArrowBack className="icons" />
         <div className="proContentCap">
           {product.map((item) => (
-            <div class="cards">
+            <a href="/details" class="cards">
               <div class="gow-img-div img-div">
                 <img src={item.image.url} alt="" />
               </div>
@@ -33,7 +33,7 @@ const Product = () => {
                   />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         <IoIosArrowForward className="icons" />

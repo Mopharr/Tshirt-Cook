@@ -160,7 +160,7 @@ const Menu = styled.div`
     vertical-align: top;
 
     @media (max-width: 568px) {
-      width: 100%;
+      width: 100% !important;
     }
   }
 
@@ -168,7 +168,7 @@ const Menu = styled.div`
     padding-inline-start: 0;
 
     @media (max-width: 568px) {
-      width: 100%;
+      width: 100% !important;
     }
   }
 
