@@ -14,28 +14,6 @@ const Section = () => {
             >
               Mens
             </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Men Tshirt
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Women Hoddies
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Mens Cap
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Mens SweatShirt
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="subnav-list-items dropdown">
             <a
@@ -45,28 +23,6 @@ const Section = () => {
             >
               Women
             </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Men Tshirt
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Women Hoddies
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Women Cap
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Women SweatShirt
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="subnav-list-items dropdown">
             <a
@@ -76,33 +32,6 @@ const Section = () => {
             >
               Clothing & Accessories
             </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  All Clothing
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Dresses
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Hoodies & Sweatshit
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Sock
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  T-Shirt
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="subnav-list-items dropdown">
             <a
@@ -112,33 +41,6 @@ const Section = () => {
             >
               Stationaries & Paper Prints
             </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  All Stationaries
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Greeting Card
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Hardcover Jounal
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Mouse Pad
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Postcard
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="subnav-list-items dropdown">
             <a
@@ -148,43 +50,6 @@ const Section = () => {
             >
               Home & Living items
             </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  All Home & Living
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Bath mat
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Clock
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Coster
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Duvet cover
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Floor Pillow
-                </a>
-              </li>
-              <li>
-                <a href="#cloth-items" className="dropdown-menu-item">
-                  Mug
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="subnav-list-items dropdown">
             <a
@@ -213,7 +78,7 @@ const Section = () => {
 export default Section;
 
 const Main = styled.div`
-  width: 80%;
+  width: 85%;
   margin: auto;
   padding: 0;
   display: flex;
@@ -271,11 +136,11 @@ const Main = styled.div`
     padding: 1rem;
     height: 100%;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
-
-  .subnav-list-items .subnav-link:hover {
-    border-bottom: 1px solid white;
-  }
+  .subnav-link:hover{
+    color:#ff4b2b
+  } 
 
   .subnav-list-items:hover .dropdown-menu {
     display: block;
@@ -292,9 +157,9 @@ const Main = styled.div`
     font-weight: bold;
     cursor: pointer;
   }
-  .dropdown-menu li:hover{
+  .dropdown-menu li:hover {
     background: #fff;
-  }  
+  }
 
   hr {
     width: 100%;

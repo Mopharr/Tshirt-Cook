@@ -15,11 +15,16 @@
 }
 .optContentCap {
   margin: 0 1em;
+  width: 200px;
 }
 .capMain {
   border: 2px solid black;
   margin: 1em 0;
   padding: 0.4em;
+  width: 100%;
+}
+.capMain h1{
+  font-size: 30px;
 }
 .capMain p {
   margin: 0.5em 0;
@@ -38,7 +43,7 @@
   color: white;
 }
 @media (max-width: 768px) {
-    .optMain{
-        width: 98%;
-    }
+  .optMain {
+    width: 98%;
+  }
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import '../style/learn.css'
-import ava1 from 'assets/hava6.png'
-import ava2 from 'assets/hava5.png'
-import ava3 from "assets/hava4.png";
-import ava4 from "assets/hava3.png";
-import ava5 from "assets/hava2.png";
-import ava6 from "assets/hava1.png";
+import ava1 from 'assets/drive.png'
+import ava2 from 'assets/secure.png'
+import ava3 from "assets/return.png";
+import ava4 from "assets/quality.png";
+import ava5 from "assets/best.png";
+import ava6 from "assets/contact.png";
 
 const Learn = () => {
     return (

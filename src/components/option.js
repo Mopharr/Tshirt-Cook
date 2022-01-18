@@ -14,14 +14,15 @@ const option = () => {
             <h1>Shop</h1>
             <p>Browse Our Selection of Unique ideas</p>
           </div>
+
           <div className="capMain">
-            <span>Birthday Gift</span>
+            <a href="/">Birthday Gift</a>
           </div>
           <div className="capMain">
-            <span>Gift for friends</span>
+            <a href="/">Gift for friends</a>
           </div>
           <div className="capMain">
-            <span>Celebration</span>
+            <a href="/">Celebration</a>
           </div>
         </div>
         <div className="optContentCap">
@@ -30,13 +31,13 @@ const option = () => {
             <p>Make your own ideas come to life!</p>
           </div>
           <div className="capMain">
-            <span>Family Anniversary</span>
+            <a href="/">Family Anniversary</a>
           </div>
           <div className="capMain">
-            <span>Personal Wear</span>
+            <a href="/">Personal Wear</a>
           </div>
           <div className="capMain">
-            <span>Small Business</span>
+            <a href="/">Small Business</a>
           </div>
         </div>
         <div className="optContentCap">
@@ -45,13 +46,13 @@ const option = () => {
             <p>Can’t create your own ideas? No problem. Lets do it for you.</p>
           </div>
           <div className="capMain">
-            <span>Couples & Love</span>
+            <a href="/">Couples & Love</a>
           </div>
           <div className="capMain">
-            <span>Party Gift Ideas</span>
+            <a href="/">Party Gift Ideas</a>
           </div>
           <div className="capMain">
-            <span>Travels Idea</span>
+            <a href="/">Travels Idea</a>
           </div>
         </div>
         <div className="optContentCap">
@@ -60,13 +61,13 @@ const option = () => {
             <p>Order for your Events, Parties, Campaigns, Church etc</p>
           </div>
           <div className="capMain">
-            <span>Wedding Idea</span>
+            <a href="/">Wedding Idea</a>
           </div>
           <div className="capMain">
-            <span>Baby wears</span>
+            <a href="/">Baby wears</a>
           </div>
           <div className="capMain">
-            <span>Gifts for Family</span>
+            <a href="/">Gifts for Family</a>
           </div>
         </div>
       </div>

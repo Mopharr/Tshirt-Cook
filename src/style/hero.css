@@ -1,62 +1,73 @@
-.main{
-    width: 70%;
-    border: 2px solid black;
-    padding: 2em ;
-    display: flex;
-    align-items: center;
-    margin: 1em auto;
-    justify-content: space-between;
+.main {
+  width: 80%;
+  border: 2px solid black;
+  padding: 2em 0;
+  display: flex;
+  align-items: center;
+  margin: 1em auto;
+  justify-content: space-around;
 }
-.text{
-    width: 60%;
+.text {
+  width: 50%;
 }
-.text h3{
-    font-size: 60px;
-    line-height: 63px;
+.text h3 {
+  font-size: 30px;
+  margin-bottom: 1em;
+  font-family: serif;
 }
-.text p{
-    font-size: 25px;
-    line-height: 33px;
+.text p {
+  font-family: sans-serif;
+  font-size: 18px;
+  margin: 0 auto 10px;
+  font-weight: bold;
 }
-.input{
-    border: 2.5px solid #ff6600;
-    width: 70%;
+.input {
+  border: none;
+  width: 70%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid #ccc9c9;
 }
-.input input{
-    border-bottom: none !important;
-    padding: .5em;
-    font-size: 20px;
-    color: #a1a1a1;
-    
+
+.input:hover {
+  border: 2px solid #ff6600;
 }
-.pic img{
-    height: 100%;
-    width: 100%;
+.input h3 {
+  padding: 0.5em;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: #a1a1a1;
+  margin: 0;
+}
+.pic img {
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
-    .main{
-        width: 97%;
-    }
+  .main {
+    width: 97%;
+  }
 }
 
 @media (max-width: 768px) {
-    .main{
-        flex-direction: column;
-    }
-    .text{
-        width: 98%;
-        margin-bottom: 1.7em;
-    }
-    .text h3{
-        font-size: 30px;
-        line-height: 33px;
-    }
-    .text p{
-        font-size: 20px;
-        line-height: 27px;
-    }
-    .input{
-        width: 98%;
-    }
+  .main {
+    flex-direction: column;
+  }
+  .text {
+    width: 98%;
+    margin-bottom: 1.7em;
+  }
+  .text h3 {
+    font-size: 30px;
+    line-height: 33px;
+  }
+  .text p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .input {
+    width: 98%;
+  }
 }

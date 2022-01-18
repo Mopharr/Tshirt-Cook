@@ -19,11 +19,17 @@
     height: 300px;
     margin: 1em ;
     position: relative;
+    cursor: pointer;
 }
 .contentCap img{
     height: 100%;
     width: 100%;
+    transform: scale(0.9);
+    transition: all 0.2s ease-out;
     position: absolute;
+}
+.contentCap img:hover{
+    transform: scale(1);
 }
 .contentCap button{
     position: absolute;
@@ -35,6 +41,11 @@
     padding: .5em 1.7em;
     font-weight: bold;
     border-radius: 25px;
+    transition: all 0.2s ease-out;
+}
+.contentCap button:hover{
+    color: #fff;
+    background-color: #ff6600;
 }
 @media (max-width: 768px) {
     .catMain{
