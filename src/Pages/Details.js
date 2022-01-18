@@ -176,6 +176,7 @@ const Items = styled.div`
     margin: auto;
   }
   img {
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -187,6 +188,9 @@ const Items = styled.div`
 `;
 
 const ItemImage = styled.div`
+  height: 300px;
+  width: 250px;
+  margin: auto;
   padding-bottom: 2em;
 `;
 const CarouselItem = styled.div`
@@ -292,6 +296,7 @@ const Price = styled.div`
     font-size: 12px;
     margin: 0 10px;
     background: #ff6600;
+    border: none;
   }
   p {
     margin: 5px 0;
