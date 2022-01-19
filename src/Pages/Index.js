@@ -7,10 +7,12 @@ import Catigories from "../components/Catigories";
 import Footer from "../components/Footer";
 import Product from "../components/product";
 import Learn from "../components/Learn";
+import Loading from "../components/loading";
 
 const Index = () => {
   return (
     <>
+    <Loading />
       <Navbar />
       <Section />
       <Hero />

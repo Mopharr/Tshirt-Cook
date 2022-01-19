@@ -4,6 +4,7 @@ import Section from "components/Section";
 import styled from "styled-components";
 import hero from "assets/bags.jpg";
 import hero1 from "assets/bag.jpg";
+import Footer from "components/Footer";
 
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
@@ -18,6 +19,7 @@ const Details = () => {
     { width: 1200, itemsToShow: 5 },
   ];
   return (
+    <>
     <Overlay>
       <Nav />
       <Section />
@@ -138,6 +140,8 @@ const Details = () => {
         </Features>
       </Main>
     </Overlay>
+    <Footer />
+    </>
   );
 };
 
@@ -176,6 +180,7 @@ const Items = styled.div`
     margin: auto;
   }
   img {
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -187,6 +192,9 @@ const Items = styled.div`
 `;
 
 const ItemImage = styled.div`
+  height: 300px;
+  width: 250px;
+  margin: auto;
   padding-bottom: 2em;
 `;
 const CarouselItem = styled.div`
@@ -292,6 +300,7 @@ const Price = styled.div`
     font-size: 12px;
     margin: 0 10px;
     background: #ff6600;
+    border: none;
   }
   p {
     margin: 5px 0;

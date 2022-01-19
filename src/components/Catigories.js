@@ -13,7 +13,7 @@ import ava8 from "../assets/wallframe.jpg";
 const Catigories = () => {
     return (
       <div className="catMain">
-        <h2>Shop by catigory</h2>
+        <h2>Shop by categories</h2>
         <div className="content">
           <div className="contentCap">
             <img src={ava} alt="" />
@@ -45,7 +45,7 @@ const Catigories = () => {
           </div>
           <div className="contentCap">
             <img src={ava7} alt="" />
-            <button>Throw Pillow</button>
+            <button>Pillow</button>
           </div>
           <div className="contentCap">
             <img src={ava8} alt="" />
