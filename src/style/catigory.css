@@ -40,6 +40,7 @@
     outline: none;
     padding: .5em 1.7em;
     font-weight: bold;
+    font-family: serif;
     border-radius: 25px;
     transition: all 0.2s ease-out;
 }

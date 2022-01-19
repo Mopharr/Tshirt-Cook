@@ -149,7 +149,7 @@ export default Footer;
 
 const Container = styled.div`
   background: #000;
-  padding: 2em 1em;
+  padding: 1em;
   color: #fff;
   a{
     color:#fff;

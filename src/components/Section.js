@@ -102,7 +102,6 @@ const Main = styled.div`
   li {
     list-style: none;
     font-size: 16px;
-    font-family: monospace;
     font-weight: 500;
   }
 
