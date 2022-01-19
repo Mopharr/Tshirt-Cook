@@ -12,8 +12,8 @@ const Loading = () => {
     // const tl = gsap.timeline({defaults: {ease: 'power1.out'}})
 
     useEffect(() => {
-        gsap.to(imageName.current, {y: '0%'}, 1.5)
-        gsap.to(hide.current, {y: '-100%'}, 2)
+        gsap.to(imageName.current, {y: '0%'}, 2)
+        gsap.to(hide.current, {y: '-100%'}, 2.5)
     }, [])
     return (
       <div ref={hide} className='Lmain'>
