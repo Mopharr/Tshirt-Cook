@@ -2,14 +2,14 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background-color: #d15400;
+    background-color: #ff6600;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .hide{
-    background: #d15400;
+    background: #ff6600;
     overflow: hidden;
 }
 .Lmain img{
