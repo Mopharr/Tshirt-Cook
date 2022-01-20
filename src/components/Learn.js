@@ -1,11 +1,11 @@
 import React from 'react'
 import '../style/learn.css'
-import ava1 from 'assets/hava6.png'
-import ava2 from 'assets/hava5.png'
-import ava3 from "assets/hava4.png";
-import ava4 from "assets/hava3.png";
-import ava5 from "assets/hava2.png";
-import ava6 from "assets/hava1.png";
+import ava1 from 'assets/drive.png'
+import ava2 from 'assets/secure.png'
+import ava3 from "assets/return.png";
+import ava4 from "assets/quality.png";
+import ava5 from "assets/best.png";
+import ava6 from "assets/contact.png";
 
 const Learn = () => {
     return (
@@ -13,8 +13,8 @@ const Learn = () => {
         <div className="mainLcap">
           <p>Nationwide Shipping</p>
           <img src={ava1} alt="" />
-          <span>We deliever to all over the country</span>
-          <h5>check the delivery guide</h5>
+          {/* <span>We deliever to all over the country</span>
+          <h5>check the delivery guide</h5> */}
         </div>
         <div className="mainLcap">
           <p>Secure Payments</p>
@@ -23,8 +23,8 @@ const Learn = () => {
         <div className="mainLcap">
           <p>Free Returns</p>
           <img src={ava3} alt="" />
-          <span>Exchange & replacement guarantee with free delivery.</span>
-          <h5>Learn more</h5>
+          {/* <span>Exchange & replacement guarantee with free delivery.</span>
+          <h5>Learn more</h5> */}
         </div>
         <div className="mainLcap">
           <p>Top Quality Prints</p>
@@ -37,7 +37,7 @@ const Learn = () => {
         <div className="mainLcap">
           <p>24/7 Dedicated Support</p>
           <img src={ava6} alt="" />
-          <h5>Contact us</h5>
+          {/* <h5>Contact us</h5> */}
         </div>
       </div>
     );

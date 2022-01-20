@@ -7,7 +7,7 @@
 }
 .mainLcap {
   display: flex;
-  width: 200px;
+  width: 150px;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -28,4 +28,9 @@
 .mainLcap h5 {
   font-size: 15px;
   font-weight: bold;
+}
+@media (max-width: 768px) {
+    .mainL{
+        width: 98%;
+    }
 }
