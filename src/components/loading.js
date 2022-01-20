@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import '../style/loading.css'
 import {gsap } from "gsap"
-import ava from 'assets/flogo.png'
+import ava from 'assets/flogo-.png'
 
 
 

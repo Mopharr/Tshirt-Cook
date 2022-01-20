@@ -139,7 +139,7 @@ const Footer = () => {
           <a href="/">Cookies Policy .</a>
           <a href="/">User Agreement .</a>
         </p>
-        <span>All right s reserved</span>
+        <span>All rights reserved</span>
       </Copy>
     </Container>
   );
