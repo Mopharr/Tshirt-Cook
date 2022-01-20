@@ -115,7 +115,7 @@ const Checkout = ({ cart }) => {
       <div className={classes.toolbar} />
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography variant="h4" align="center">
+          <Typography variant="h4" align="left">
             Checkout
           </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
@@ -130,6 +130,9 @@ const Checkout = ({ cart }) => {
           ) : (
             checkoutToken && <Form />
           )}
+
+          
+
         </Paper>
       </main>
     </>
