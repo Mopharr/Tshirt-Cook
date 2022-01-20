@@ -13,6 +13,7 @@ import Clothing from "Pages/Clothing";
 import Details from "Pages/Details";
 import { commerce } from "Commerce";
 import AddDesign from "components/AddDesign";
+import Check from 'Pages/Check'
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -124,6 +125,7 @@ function App() {
           <Route exact path="/details" element={<Details />} />
           <Route exact path="/checkout" element={<Checkout cart={cart} />} />
           <Route exact path="/design" element={<AddDesign />} />
+          <Route exact path='/check' element={<Check />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

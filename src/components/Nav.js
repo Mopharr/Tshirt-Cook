@@ -18,7 +18,7 @@ const Nav = () => {
     <>
       <MainNav>
         <Logo>
-          <a href="/">
+          <a href="/check">
             Tshirt<span>cook</span>
           </a>
         </Logo>
