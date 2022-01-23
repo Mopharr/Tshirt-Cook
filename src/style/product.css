@@ -24,7 +24,7 @@ a:hover {
 }
 .proContent {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 1em 0;
 }
@@ -70,8 +70,8 @@ a:hover {
   transition: all 0.3s ease-in-out;
   text-align: center;
   display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
+  justify-content: center;
+    width: 100%;
 }
 .pricing-and-cart button:hover {
   background-color: indianred;
@@ -82,5 +82,10 @@ a:hover {
   }
   .product .haha {
     text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .icons{
+    display: none;
   }
 }

@@ -260,7 +260,7 @@ const Menu = styled.div`
 
   .link-list-item {
     justify-content: flex-start;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 `;
 const Copy = styled.div`
