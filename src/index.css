@@ -8,6 +8,10 @@
     --black: '#000'
 }
 
+#root{
+    background-color: #f5f5f5;
+
+}
 .App{
     font-size: 50px;
 }

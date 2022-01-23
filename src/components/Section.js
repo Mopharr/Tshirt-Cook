@@ -78,8 +78,6 @@ const Section = () => {
 export default Section;
 
 const Main = styled.div`
-  width: 85%;
-  margin: auto;
   padding: 0;
   display: flex;
   justify-content: space-around;

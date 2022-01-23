@@ -1,27 +1,26 @@
 import React from "react";
 import Option from "../components/option";
 import Navbar from "../components/NavNew";
-import Section from "../components/Section"
 import Hero from "../components/Hero";
 import Catigories from "../components/Catigories";
 import Footer from "../components/Footer";
 import Product from "../components/product";
 import Learn from "../components/Learn";
-import Loading from "../components/loading";
+import './main.css'
+import SedTab from "components/SedTab";
 
 const Index = () => {
   return (
-    <>
-    <Loading />
+    <div className="mainIndex">
       <Navbar />
-      <Section />
       <Hero />
+      <SedTab/>
       <Catigories />
       <Product />
       <Option />
       <Learn />
       <Footer />
-    </>
+    </div>
   );
 };
 

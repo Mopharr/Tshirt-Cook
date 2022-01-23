@@ -24,16 +24,16 @@ const NavNew = () => {
       <div className="nav">
         <GiHamburgerMenu onClick={toggle} className="hamburger" />
 
-        <a href="/">
+        <a className="logo" href="/">
           <img src={logo} alt="" />
         </a>
 
         <div className="section">
-          <div className="sectionLink">
+          <div className="sectionLink active">
             <h2>Shop</h2>
             <p>Unique ideas</p>
           </div>
-          <div className="sectionLink active">
+          <div className="sectionLink">
             <h2>Create </h2>
             <p>Your own ideas</p>
           </div>

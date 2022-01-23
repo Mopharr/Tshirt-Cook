@@ -5,7 +5,7 @@ const option = () => {
   return (
     <div className="optMain">
       <h2>
-        Still cant nd what you are looking for? <br /> Please try here.
+        Stil can't find what you are looking for? <br/> Please try here.
       </h2>
 
       <div className="optContent">
