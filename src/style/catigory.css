@@ -1,58 +1,61 @@
-.catMain{
-    margin: 3em auto 1em;
-    width: 80%;
+.catMain {
+  margin: 3em auto 1em;
+  width: 80%;
 }
-.catMain h2{
-    font-size: 30px;
-    margin-bottom: 1em;
-    font-weight: bold;
+.catMain h2 {
+  font-size: 30px;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.contentCap {
+  width: 300px;
+  height: 400px;
+  margin: 1em;
+  position: relative;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.contentCap:hover {
+  transform: translateY(-4px);
+  outline: 0;
+  box-shadow: 0 3px 4px -1px rgb(0 0 0 / 15%), 0 5px 10px 0 rgb(0 0 0 / 10%),
+    0 1px 12px 0 rgb(0 0 0 / 10%);
+}
 
+.contentCap img {
+  height: 70%;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  position: absolute;
+  border-radius: 10px 10px 0 0;
 }
-.content{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+.contentCap button {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  border: none;
+  outline: none;
+  padding: 0.5em 2em;
+  font-weight: bold;
+  font-family: serif;
+  transition: all 0.2s ease-out;
+  background-color: transparent;
 }
-.contentCap{
-    width: 300px;
-    height: 300px;
-    margin: 1em ;
-    position: relative;
-    cursor: pointer;
-}
-.contentCap img{
-    height: 100%;
-    width: 100%;
-    transform: scale(0.9);
-    transition: all 0.2s ease-out;
-    position: absolute;
-}
-.contentCap img:hover{
-    transform: scale(1);
-}
-.contentCap button{
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    transform: translateX(-50%);
-    border: none;
-    outline: none;
-    padding: .5em 1.7em;
-    font-weight: bold;
-    font-family: serif;
-    border-radius: 25px;
-    transition: all 0.2s ease-out;
-}
-.contentCap button:hover{
-    color: #fff;
-    background-color: #ff6600;
-}
+
 @media (max-width: 768px) {
-    .catMain{
-        width: 98%;
-    }
-    .catMain h2{
-        text-align: center;
-    }
+  .catMain {
+    width: 98%;
+  }
+  .catMain h2 {
+    text-align: center;
+  }
 }

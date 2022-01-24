@@ -47,3 +47,8 @@
     width: 98%;
   }
 }
+@media (max-width: 468px) {
+  .optContentCap{
+    width: 270px;
+  }
+}

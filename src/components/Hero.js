@@ -8,9 +8,9 @@ const Hero = () => {
       <div className="text">
         <h3>All the Koolest Custom items & Prints you need in one place!</h3>
         <p>What are you looking to print today?</p>
-        <p>Lets help you nd it easy!</p>
+        <p>Lets help you find it easy!</p>
         <div className="input">
-          <h3>Tshirt Cook.....</h3>
+          <input placeholder="Tshirt Cook....."/>
         </div>
       </div>
       <div className="pic">
