@@ -2,6 +2,7 @@ import React from "react";
 import "../style/hero.css";
 import ava from "../assets/bgg.png";
 
+
 const Hero = () => {
   return (
     <div className="main">
@@ -10,7 +11,7 @@ const Hero = () => {
         <p>What are you looking to print today?</p>
         <p>Lets help you find it easy!</p>
         <div className="input">
-          <input placeholder="Tshirt Cook....."/>
+          <input placeholder="Search for Tshirts, Hoodies, SwearShirt" />
         </div>
       </div>
       <div className="pic">

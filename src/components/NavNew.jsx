@@ -42,6 +42,7 @@ const NavNew = () => {
             <p>Events, Parties & Campaigns</p>
           </div>
         </div>
+
         <div className="third">
           <div className="search">
             <input type="text" placeholder="Find what you want" />
@@ -72,6 +73,21 @@ const NavNew = () => {
         <div className="search2">
           <input type="text" placeholder="Find what you want" />
           <BiSearchAlt className="icon" />
+        </div>
+
+        <div className="section2">
+          <div className="sectionLink active">
+            <h2>Shop</h2>
+            <p>Unique ideas</p>
+          </div>
+          <div className="sectionLink">
+            <h2>Create </h2>
+            <p>Your own ideas</p>
+          </div>
+          <div className="sectionLink">
+            <h2>Bulk Orders</h2>
+            <p>Events, Parties & Campaigns</p>
+          </div>
         </div>
         <div className="cat">
           <ul>

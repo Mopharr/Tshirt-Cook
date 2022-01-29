@@ -7,14 +7,14 @@ import Footer from "../components/Footer";
 import Product from "../components/product";
 import Learn from "../components/Learn";
 import './main.css'
-import SedTab from "components/SedTab";
+import Section from "components/Section";
 
 const Index = () => {
   return (
     <div className="mainIndex">
       <Navbar />
+      <Section />
       <Hero />
-      <SedTab/>
       <Catigories />
       <Product />
       <Option />

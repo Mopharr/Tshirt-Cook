@@ -88,4 +88,19 @@ a:hover {
   .icons{
     display: none;
   }
+  .proContentCap{
+    width: 95%;
+  }
+  .cards{
+    width: 95%;
+  }
+  .img-div{
+    width: 100%;
+  }
+
+.pricing-and-cart button{
+  margin: auto;
+  width: 70%;
+  margin-bottom: .5em;
+}
 }

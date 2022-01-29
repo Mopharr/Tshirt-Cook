@@ -79,6 +79,8 @@ export default Section;
 
 const Main = styled.div`
   padding: 0;
+  margin: auto;
+  width: 80%;
   display: flex;
   justify-content: space-around;
   @media (max-width: 1024px) {
@@ -128,16 +130,19 @@ const Main = styled.div`
 
   .subnav-link {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    font-size: 17px;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
     height: 100%;
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  .subnav-link:hover{
-    color:#ff4b2b
-  } 
+  .subnav-link:hover {
+    color: #ff4b2b;
+  }
 
   .subnav-list-items:hover .dropdown-menu {
     display: block;
