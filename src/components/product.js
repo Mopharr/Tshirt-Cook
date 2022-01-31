@@ -29,7 +29,34 @@ const Product = () => {
                     onClick={() => {
                       addToCart(item.id, 1);
                     }}
-                  >Add to cart</button>
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </a>
+          ))}
+          {product.map((item) => (
+            <a href="/details" class="cards">
+              <div class="img-div">
+                <img src={item.image.url} alt="" />
+              </div>
+              <div class="text-container">
+                <h2 class="item-name">{item.name}</h2>
+                <div class="pricing-and-cart">
+                  <div class="pricing">
+                    <p className="price">
+                      Price: {item.price.formatted_with_symbol}
+                    </p>
+                  </div>
+                  <button
+                    style={{ fontSize: "1.4em", cursor: "pointer" }}
+                    onClick={() => {
+                      addToCart(item.id, 1);
+                    }}
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </a>

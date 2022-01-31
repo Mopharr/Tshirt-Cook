@@ -1,0 +1,25 @@
+.social{
+    width: 75%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+}
+.social h2{
+    text-align: center;
+    font-size: 40px;
+}
+.socialIcon{
+    display: flex;
+    margin: auto;
+}
+
+.socialItem{
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.socialItem span{
+    font-size: 1.3em;
+    margin: 0 .4em;
+}

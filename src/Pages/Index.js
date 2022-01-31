@@ -8,6 +8,7 @@ import Product from "../components/product";
 import Learn from "../components/Learn";
 import './main.css'
 import Section from "components/Section";
+import Social from "components/social";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Product />
       <Option />
       <Learn />
+      <Social />
       <Footer />
     </div>
   );

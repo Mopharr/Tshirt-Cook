@@ -14,41 +14,40 @@
   align-items: center;
 }
 .contentCap {
-  width: 300px;
+  width: 350px;
   height: 400px;
   margin: 1em 0;
   position: relative;
   cursor: pointer;
-  background-color: #f5f5f5;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
-.contentCap:hover {
-  transform: translateY(-4px);
-  outline: 0;
-  box-shadow: 0 3px 4px -1px rgb(0 0 0 / 15%), 0 5px 10px 0 rgb(0 0 0 / 10%),
-    0 1px 12px 0 rgb(0 0 0 / 10%);
+.contentCap img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ;
+  position: absolute;
+  border-radius: 10px ;
+}
+img:hover{
+  transform: scale(1.1);
 }
 
-.contentCap img {
-  height: 70%;
-  width: 100%;
-  transition: all 0.2s ease-out;
-  position: absolute;
-  border-radius: 10px 10px 0 0;
-}
+
 .contentCap button {
   position: absolute;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
+  background-color: #f5f5f5;
+  text-align: center;
   border: none;
   outline: none;
+  border-radius: 25px;
   padding: 0.5em 2em;
   font-weight: bold;
-  font-family: serif;
   transition: all 0.2s ease-out;
-  background-color: transparent;
 }
 
 @media (max-width: 768px) {

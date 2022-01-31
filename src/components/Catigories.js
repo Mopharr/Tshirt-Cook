@@ -16,7 +16,9 @@ const Catigories = () => {
         <h2>Shop by categories</h2>
         <div className="content">
           <div className="contentCap">
-            <img src={ava} alt="" />
+            <div className='img-divv'>
+              <img src={ava} alt="" />
+            </div>
             <button>T-shirt</button>
           </div>
           <div className="contentCap">
@@ -37,7 +39,7 @@ const Catigories = () => {
           </div>
           <div className="contentCap">
             <img src={ava5} alt="" />
-            <button>Baby Wears</button>
+            <button>Baby-Wears</button>
           </div>
           <div className="contentCap">
             <img src={ava6} alt="" />
