@@ -265,6 +265,9 @@ const Menu = styled.div`
 `;
 const Copy = styled.div`
   text-align: center;
+  img{
+    margin-bottom: 1em;
+  }
   p {
     text-align: center;
     margin: 0;
