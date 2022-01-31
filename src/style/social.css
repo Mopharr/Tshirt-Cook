@@ -10,6 +10,7 @@
 }
 .socialIcon{
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
 }
 
@@ -22,4 +23,15 @@
 .socialItem span{
     font-size: 1.3em;
     margin: 0 .4em;
+}
+@media (max-width: 425px) {
+    .social{
+        width: 100%;
+    }
+    .social h2{
+        font-size: 1.3em;
+    }
+    .socialItem{
+        width: 40%;
+    }
 }

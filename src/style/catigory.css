@@ -59,7 +59,11 @@ img:hover{
   }
 }
 @media (max-width:425px) {
+  .content{
+    justify-content: center;
+
+  }
   .contentCap{
-    width: 95%;
+    width: 92%;
   }
 }
