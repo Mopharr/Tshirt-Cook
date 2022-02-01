@@ -29,7 +29,7 @@ const NavNew = () => {
         </a>
 
         <div className="section">
-          <div className="sectionLink active">
+          <div className="sectionLink">
             <h2>Shop</h2>
             <p>Unique ideas</p>
           </div>
