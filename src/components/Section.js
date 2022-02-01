@@ -83,6 +83,9 @@ const Main = styled.div`
   width: 80%;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 1600px) {
+    width: 94%;
+  }
   @media (max-width: 1024px) {
     padding: 0;
   }

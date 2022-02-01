@@ -49,7 +49,11 @@
   font-weight: bold;
   transition: all 0.2s ease-out;
 }
-
+@media (max-width: 1600px) {
+  .catMain{
+    width: 85%;
+  }
+}
 @media (max-width: 768px) {
   .catMain {
     width: 98%;

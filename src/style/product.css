@@ -148,6 +148,10 @@ article {
   background-color: indianred;
 }
 @media (max-width: 1500px) {
+  .product{
+    width: 85%;
+  
+  }
   .proContent {
     width: 100%;
   }

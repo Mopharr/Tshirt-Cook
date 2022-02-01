@@ -158,6 +158,11 @@ section{
 }
 
 /* media query */
+@media (max-width: 1600px) {
+  .nav{
+    width: 90% ;
+  }
+}
 
 @media (max-width: 1024px) {
   .nav {
