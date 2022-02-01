@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <Container>
       <Menu>
-        <div class="footer-widget first-widget">
-          <div class="title-outer">
-            <h3 class="widget-title">Shop</h3>
+        <div className="footer-widget first-widget">
+          <div className="title-outer">
+            <h3 className="widget-title">Shop</h3>
           </div>
-          <ul class="toggle-block">
+          <ul className="toggle-block">
             <li>
-              <div class="static-links-list">
+              <div className="static-links-list">
                 <span>
                   <a href="#about" className="link-list-item">
                     Mens t-shirt
@@ -51,9 +51,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="footer-widget second-widget">
-          <div class="title-outer">
-            <h3 class="widget-title">About</h3>
+        <div className="footer-widget second-widget">
+          <div className="title-outer">
+            <h3 className="widget-title">About</h3>
           </div>
           <div className="address">
             Tshirtcook is a print on demand online store that provides unique
@@ -61,13 +61,13 @@ const Footer = () => {
             <strong>Learn more</strong>
           </div>
         </div>
-        <div class="footer-widget third-widget">
-          <div class="title-outer">
-            <h3 class="widget-title">Help?</h3>
+        <div className="footer-widget third-widget">
+          <div className="title-outer">
+            <h3 className="widget-title">Help?</h3>
           </div>
-          <ul class="toggle-block">
+          <ul className="toggle-block">
             <li>
-              <div class="static-links-list">
+              <div className="static-links-list">
                 <span>
                   <a href="#about" className="link-list-item">
                     Delivery
@@ -95,13 +95,13 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div class="footer-widget third-widget">
-          <div class="title-outer">
-            <h3 class="widget-title">Social</h3>
+        <div className="footer-widget third-widget">
+          <div className="title-outer">
+            <h3 className="widget-title">Social</h3>
           </div>
-          <ul class="toggle-block">
+          <ul className="toggle-block">
             <li>
-              <div class="static-links-list">
+              <div className="static-links-list">
                 <span>
                   <a href="#about" className="link-list-item">
                     Facebook

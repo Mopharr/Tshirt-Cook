@@ -8,7 +8,7 @@ const Section = () => {
         <ul>
           <li className="subnav-list-items dropdown">
             <a
-              href="/"
+              href="/mens"
               className="
             subnav-link"
             >
