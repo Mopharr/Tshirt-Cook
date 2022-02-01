@@ -3,10 +3,11 @@ import React, { useContext } from "react";
 import UserContext from "Context";
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
-import Nav from "../../components/Nav";
+import Nav from "../../components/NavNew";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Footer from "components/Footer";
 
 const Cart = () => {
   const { state, updateCartQty, removeCart, cart } = useContext(UserContext);
@@ -209,6 +210,7 @@ const Cart = () => {
           </div>     
         </div>
       </CartSection>
+      <Footer />
     </CartContainer>
   );
 };
@@ -218,7 +220,6 @@ export default Cart;
 const CartContainer = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: "Nunito", sans-serif;
 
   header {
     height: 60px;
@@ -281,7 +282,7 @@ const CartContainer = styled.div`
           display: block;
           font-family: "Nunito", sans-serif;
           font-size: 16px;
-          font-weight: 500;
+           
           line-height: 18px;
           outline: none;
           padding: 16px 0 16px 16px;
@@ -324,7 +325,7 @@ const CartSection = styled.div`
     .placeholder-title {
       text-align: center;
       font-size: 1.25rem;
-      font-weight: 500;
+
       color: #303238;
       line-height: 1.2;
       padding: 16px;
@@ -479,7 +480,7 @@ const CartSection = styled.div`
                       text-align: center;
                       line-height: 24px;
                       color: #8c95a5;
-                      font-weight: 500;
+
                       cursor: pointer;
                     }
 
@@ -569,7 +570,7 @@ const CartSection = styled.div`
       text-transform: capitalize;
       text-align: center;
       font-size: 1.25rem;
-      font-weight: 500;
+
       color: #303238;
       line-height: 1.2;
     }
@@ -579,7 +580,7 @@ const CartSection = styled.div`
       text-transform: capitalize;
       text-align: center;
       font-size: 1.25rem;
-      font-weight: 500;
+
       color: #303238;
       line-height: 1.2;
     }
@@ -620,14 +621,14 @@ const CartSection = styled.div`
         font-size: 1rem;
         margin: 8px 0;
         line-height: 24px;
-        font-weight: 500;
+
         color: #8c95a5;
       }
       .trust-signal-support {
         font-size: 1rem;
         margin: 8px 0;
         line-height: 24px;
-        font-weight: 500;
+
         color: #8c95a5;
 
         .trust-signal-support-link {
@@ -660,7 +661,7 @@ const CartSection = styled.div`
         h2 {
           text-align: center;
           font-size: 1.25rem;
-          font-weight: 500;
+
           color: #303238;
           line-height: 1.2;
         }
@@ -687,7 +688,7 @@ const CartSection = styled.div`
           text-decoration: none;
           text-transform: none;
           font-size: 1rem;
-          font-weight: 500;
+
           padding-top: 24px;
           padding-bottom: 24px;
         }
@@ -710,7 +711,7 @@ const CartSection = styled.div`
         padding-bottom: 12px;
       }
       .checkout-link {
-        background: #4292e3;
+        background: #ff6600;
         color: #fff;
         padding: 18px;
         position: relative;
@@ -720,7 +721,7 @@ const CartSection = styled.div`
         justify-content: center;
         align-items: center;
         white-space: nowrap;
-        font-weight: 500;
+
         text-decoration: none;
         height: 100%;
         border-radius: 1.75rem;
@@ -822,7 +823,7 @@ const CartSection = styled.div`
 
       .section-title {
         font-size: 14px;
-        font-weight: 500;
+
         color: #ababab;
         margin-bottom: 10px;
         text-transform: uppercase;
@@ -856,13 +857,13 @@ const CartSection = styled.div`
             color: #000;
             padding-left: 16px;
             font-size: 14px;
-            font-weight: 500;
+
             text-transform: uppercase;
           }
 
           .change {
             font-size: 14px;
-            font-weight: 500;
+
             color: #f68b1e;
             float: right;
             margin-right: 6px;
@@ -880,7 +881,6 @@ const CartSection = styled.div`
 
           .customer-name {
             color: #000;
-            font-weight: 500;
           }
 
           .customer-contact {
@@ -889,7 +889,7 @@ const CartSection = styled.div`
             line-height: 1.5;
           }
         }
-        
+
         .cont {
           padding: 16px 46px;
         }

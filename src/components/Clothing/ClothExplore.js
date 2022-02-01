@@ -49,7 +49,9 @@ const ClothExplore = () => {
       <Fade>
         <a href="/">
           <Wrap>
-            <img src={wrap1} alt="" />
+            <div className="image-div">
+              <img src={wrap1} alt="" />
+            </div>
             <Fade buttom>
               <p>Dress</p>
             </Fade>
@@ -99,8 +101,6 @@ const Wrap = styled.div`
   }
   :hover {
     border-radius: 10px;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
-    transition: transform 0.2s ease-in-out;
     transform: scale(1.1);
   }
   p {
