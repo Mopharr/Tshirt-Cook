@@ -28,14 +28,10 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 1em 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 80%;
-  height: 100vh;
-
   margin: auto;
 }
 
@@ -73,8 +69,8 @@ a:hover {
 }
 
 .activeCard {
-left: 50%;
-transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nextCard {
@@ -115,7 +111,7 @@ article {
 .text-proContent {
   margin: 0.5em;
 }
-.item-name{
+.item-name {
   text-align: left;
 }
 .img-div {
@@ -137,7 +133,7 @@ article {
   font-size: 40px;
 }
 .pricing-and-cart button {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   outline: none;
   border: none;
   color: #fff;
@@ -146,10 +142,15 @@ article {
   text-align: center;
   display: flex;
   justify-content: center;
-    width: 100%;
+  width: 100%;
 }
 .pricing-and-cart button:hover {
   background-color: indianred;
+}
+@media (max-width: 1500px) {
+  .proContent {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .product {
@@ -160,24 +161,24 @@ article {
   }
 }
 @media (max-width: 425px) {
-  .icons{
+  .icons {
     display: none;
   }
-  .proContentCap{
+  .proContentCap {
     width: 95%;
   }
-  .cards{
+  .cards {
     width: 95%;
   }
-  .img-div{
+  .img-div {
     width: 100%;
   }
 
-.pricing-and-cart button{
-  margin: auto;
-  width: 70%;
-  margin-bottom: .5em;
-}
+  .pricing-and-cart button {
+    margin: auto;
+    width: 70%;
+    margin-bottom: 0.5em;
+  }
 }
 
 .card img {

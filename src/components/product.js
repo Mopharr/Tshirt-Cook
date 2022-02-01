@@ -1,28 +1,14 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-
 import UserContext from "Context";
 import "../style/product.css";
 
 const Product = () => {
-  const [index, setIndex] = useState(0);
   const { addToCart, product } = useContext(UserContext);
-
-  const slideLeft = () => {
-    if (index - 1 >= 0) {
-      setIndex(index - 1);
-    }
-  };
-
-  const slideRight = () => {
-    if (index + 1 <= product.length - 1) {
-      setIndex(index + 1);
-    }
-  };
 
   return (
     <div className="product">
