@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import {Navigation } from "swiper";
 import UserContext from "Context";
 import "../style/product.css";
 
@@ -28,7 +28,7 @@ const Product = () => {
             clickable: true,
           }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Navigation]}
           className="mySwiper"
         >
           {" "}

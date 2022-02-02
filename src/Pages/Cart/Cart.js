@@ -8,12 +8,14 @@ import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Footer from "components/Footer";
+import Section from "components/Section";
 
 const Cart = () => {
   const { state, updateCartQty, removeCart, cart } = useContext(UserContext);
   return (
     <CartContainer>
       <Nav />
+      <Section />
       <CartSection>
         <div className="cart-wrap">
           <div className="cart-placeholder">
@@ -126,7 +128,7 @@ const Cart = () => {
                                       removeCart(item.id);
                                     }}
                                   >
-                                    <FiX />
+                                    <FiX style={{fontSize: '17px'}}/>
                                   </span>
                                 </div>
                               </div>
@@ -169,24 +171,24 @@ const Cart = () => {
             </ul>
           </div>
           <div className="order">
-            <div className="order-header">
+            {/* <div className="order-header">
               <div className="order-heading">
                 <h2>When would you like your order by?</h2>
               </div>
-            </div>
+            </div> */}
             <div className="order-contents">
               <div className="order-contents-inner">
-                <div className="ship-box">
+                {/* <div className="ship-box">
                   <a href="#ship" className="='ship-link">
                     Shipping to Nigeria
                   </a>
-                </div>
-                <div className="deliveries">
+                </div> */}
+                {/* <div className="deliveries">
                   <span className="deliveries-text">
                     Delivers between <br />
                     31 December - 4 January
                   </span>
-                </div>
+                </div> */}
                 <div className="deliveries">
                   <Link to="/checkout" className="checkout-link">
                     <span className="checkout-link-text">{`Checkout ${
@@ -197,17 +199,17 @@ const Cart = () => {
                       )
                     }`}</span>
                   </Link>
-                  <span className="deliveries-text">
+                  {/* <span className="deliveries-text">
                     includes standard shipping
-                  </span>
+                  </span> */}
                 </div>
               </div>
               
             </div>
           </div>
-          <div className="payment">
+          {/* <div className="payment">
             <div className="payment-headline">payment method</div>
-          </div>     
+          </div>      */}
         </div>
       </CartSection>
       <Footer />
@@ -315,7 +317,7 @@ const CartSection = styled.div`
   margin: 0 auto;
 
   .cart-wrap {
-    min-height: 70vh;
+    padding: 2em 0;
   }
 
   .cart-placeholder {
@@ -324,8 +326,8 @@ const CartSection = styled.div`
 
     .placeholder-title {
       text-align: center;
-      font-size: 1.25rem;
-
+      font-size: 2rem;
+      font-weight: 700;
       color: #303238;
       line-height: 1.2;
       padding: 16px;
@@ -370,7 +372,7 @@ const CartSection = styled.div`
             .inner-title {
               font-size: 0.875rem;
               text-transform: uppercase;
-              color: #8c95a5;
+              color: #000;
               line-height: 1;
               font-weight: 600;
             }
@@ -418,6 +420,8 @@ const CartSection = styled.div`
             .cart-item-content-box {
               display: flex;
               flex: 5;
+              align-items: center;
+
               position: relative;
               padding: 16px;
 
@@ -431,16 +435,16 @@ const CartSection = styled.div`
                 justify-content: flex-start;
 
                 .title {
-                  font-size: 1rem;
-                  color: #8c95a5;
-                  font-weight: normal;
+                  font-size: 1.4rem;
+                  font-weight: 700;
+                  color: #000;
                   line-height: 1.4;
                 }
 
                 p {
                   font-size: 1rem;
-                  color: #8c95a5;
-                  font-weight: normal;
+                  color: #000;
+                  font-weight: 600;
                   line-height: 1.4;
                   padding-top: 8px;
                 }
@@ -479,7 +483,7 @@ const CartSection = styled.div`
                       height: 32px;
                       text-align: center;
                       line-height: 24px;
-                      color: #8c95a5;
+                      color: #000;
 
                       cursor: pointer;
                     }
@@ -511,6 +515,10 @@ const CartSection = styled.div`
                   display: flex;
                   flex-direction: column;
                   align-items: center;
+                }
+                span{
+                  font-size: 15px;
+                  font-weight: 700;
                 }
               }
 
@@ -561,6 +569,12 @@ const CartSection = styled.div`
       align-items: center;
       padding: 10px;
       text-transform: uppercase;
+      .prop{
+        font-size: 1rem;
+      }
+      .val{
+        font-size: 1rem;
+      }
     }
   }
   .payment {
@@ -622,14 +636,14 @@ const CartSection = styled.div`
         margin: 8px 0;
         line-height: 24px;
 
-        color: #8c95a5;
+        color: #000;
       }
       .trust-signal-support {
         font-size: 1rem;
         margin: 8px 0;
         line-height: 24px;
 
-        color: #8c95a5;
+        color: #000;
 
         .trust-signal-support-link {
           color: #4292e3;
@@ -703,7 +717,7 @@ const CartSection = styled.div`
       }
       .deliveries-text {
         font-size: 1rem;
-        color: #8c95a5;
+        color: #000;
         font-weight: normal;
         line-height: 1.4;
         box-sizing: border-box;
@@ -756,7 +770,7 @@ const CartSection = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 66%;
+      width: 84%;
       height: 1px;
       margin: 0;
       z-index: 1;

@@ -70,6 +70,7 @@ const GridWrap = styled.div`
 
 const GridItems = styled.div`
   background: url(${Hoo});
+
   background-size: cover;
   position: relative;
   z-index: 0;
@@ -77,8 +78,12 @@ const GridItems = styled.div`
   align-items: center;
   padding: 3em;
   transition: all 0.3s ease;
+  cursor:pointer;
   :nth-child(1) {
     grid-row: 1 / span 2;
+    :hover{
+      tranform:scale(1.1);
+    }
   }
   a {
     display: inline-block;
