@@ -8,6 +8,7 @@ import Product from "components/product";
 import Learn from "components/Learn";
 import Footer from "components/Footer";
 import CltAb from "components/Clothing/CltAb";
+import Grid from 'components/Grid'
 // import UserContext from "Context"
 
 const Clothing = () => {
@@ -16,6 +17,7 @@ const Clothing = () => {
       <Nav />
       <Section />
       <ClothHero />
+      <Grid />
       <ClothExplore />
       <Product />
       <Learn />
