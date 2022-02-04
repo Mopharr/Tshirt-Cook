@@ -6,7 +6,7 @@ import hero from "assets/bags.jpg";
 import hero1 from "assets/bag.jpg";
 import Footer from "components/Footer";
 
-import { FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Carousel from "react-elastic-carousel";
 
@@ -20,127 +20,128 @@ const Details = () => {
   ];
   return (
     <>
-    <Overlay>
-      <Nav />
-      <Section />
-      <Main>
-        <Content>
-          <Items>
-            <ItemImage>
-              <img src={img} alt="" />
-            </ItemImage>
-            <CarouselItem>
-              <Carousel breakPoints={breakPoints} itemsToShow={3}>
-                <Item>
-                  <span onClick={() => setImg(hero)}>
-                    <img src={hero} alt="" />
-                  </span>
-                </Item>
-                <Item>
-                  <span onClick={() => setImg(hero1)}>
-                    <img src={hero1} alt="" />
-                  </span>
-                </Item>
-                <Item>
-                  <span onClick={() => setImg(hero)}>
-                    <img src={hero} alt="" />
-                  </span>
-                </Item>
+      <Overlay>
+        <Nav />
+        <Section />
+        <Main>
+          <Content>
+            <Items>
+              <ItemImage>
+                <img src={img} alt="" />
+              </ItemImage>
+              <CarouselItem>
+                <Carousel breakPoints={breakPoints} itemsToShow={3}>
+                  <Item>
+                    <span onClick={() => setImg(hero)}>
+                      <img src={hero} alt="" />
+                    </span>
+                  </Item>
+                  <Item>
+                    <span onClick={() => setImg(hero1)}>
+                      <img src={hero1} alt="" />
+                    </span>
+                  </Item>
+                  <Item>
+                    <span onClick={() => setImg(hero)}>
+                      <img src={hero} alt="" />
+                    </span>
+                  </Item>
 
-                <Item>
-                  <span onClick={() => setImg(hero)}>
-                    <img src={hero1} alt="" />
-                  </span>
-                </Item>
-                <Item>
-                  <span onClick={() => setImg(hero)}>
-                    <img src={hero} alt="" />
-                  </span>
-                </Item>
-                <Item>
-                  <span onClick={() => setImg(hero1)}>
-                    <img src={hero1} alt="" />
-                  </span>
-                </Item>
-              </Carousel>
-            </CarouselItem>
-            <Product>
-              <h2>Share this product</h2>
-              <div>
-                <FaFacebookF className="shareIcon" />
-                <FaTwitter className="shareIcon" />
-              </div>
-            </Product>
-          </Items>
-          <Right>
-            <Name>
-              <h1>Black Hoodie</h1>
-              <AiOutlineHeart className="heartIcon" />
-            </Name>
-            <Price>
-              <h1>$5300</h1>
-              <span>
-                <s>$6490</s>
-                <button>-8%</button>
-              </span>
-              <p>
-                + shipping fee to Ajah <b>+$1300</b>
-              </p>
-            </Price>
-            <Size>
-              <h1>Variation Available</h1>
-              <ul>
-                <li>S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
-                <li>XXL</li>
-              </ul>
-              <div>
-                <Button>
-                  <AiOutlineMinus
-                    style={{ justifySelf: "center", margin: "auto" }}
-                  />
-                </Button>
-                <span>1</span>
-                <Button>
-                  <AiOutlinePlus
-                    style={{
-                      justifySelf: "center",
-                      margin: "auto",
-                      fontWeight: "bold",
-                    }}
-                  />
-                </Button>
-              </div>
-            </Size>
-          </Right>
-        </Content>
-        <ProductDetails>
-          <h1>Product Detils</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            eget ornare est. Praesent id hendrerit risus. Aliquam nulla lectus,
-            bibendum sed vulputate sit amet, suscipit sed est. Etiam vulputate
-            urna lacinia quam sodales varius. Nullam et mauris eget turpis
-            lacinia
-          </p>
-        </ProductDetails>
-        <Features>
-          <h2>Features</h2>
-          <ul>
-            <li>Super-bright colors embedded directly into the case</li>
-            <li>Super-bright colors embedded directly into the case</li>
-            <li>Super-bright colors embedded directly into the case</li>
-            <li>Super-bright colors embedded directly into the case</li>
-            <li>Super-bright colors embedded directly into the case</li>
-            <li>Super-bright colors embedded directly into the case</li>
-            <li>Super-bright colors embedded directly into the case</li>
-          </ul>
-        </Features>
-      </Main>
-    </Overlay>
-    <Footer />
+                  <Item>
+                    <span onClick={() => setImg(hero)}>
+                      <img src={hero1} alt="" />
+                    </span>
+                  </Item>
+                  <Item>
+                    <span onClick={() => setImg(hero)}>
+                      <img src={hero} alt="" />
+                    </span>
+                  </Item>
+                  <Item>
+                    <span onClick={() => setImg(hero1)}>
+                      <img src={hero1} alt="" />
+                    </span>
+                  </Item>
+                </Carousel>
+              </CarouselItem>
+              <Product>
+                <h2>Share this product</h2>
+                <div>
+                  <FaFacebookF className="shareIcon" />
+                  <FaTwitter className="shareIcon" />
+                  <FaPinterestP className="shareIcon" />
+                </div>
+              </Product>
+            </Items>
+            <Right>
+              <Name>
+                <h1>Black Hoodie</h1>
+                <AiOutlineHeart className="heartIcon" />
+              </Name>
+              <Price>
+                <h1>$5300</h1>
+                <span>
+                  <s>$6490</s>
+                  <button>-8%</button>
+                </span>
+                <p>
+                  + shipping fee to Ajah <b>+$1300</b>
+                </p>
+              </Price>
+              <Size>
+                <h1>Variation Available</h1>
+                <ul>
+                  <li>S</li>
+                  <li>M</li>
+                  <li>L</li>
+                  <li>XL</li>
+                  <li>XXL</li>
+                </ul>
+                <div>
+                  <Button>
+                    <AiOutlineMinus
+                      style={{ justifySelf: "center", margin: "auto" }}
+                    />
+                  </Button>
+                  <span>1</span>
+                  <Button>
+                    <AiOutlinePlus
+                      style={{
+                        justifySelf: "center",
+                        margin: "auto",
+                        fontWeight: "bold",
+                      }}
+                    />
+                  </Button>
+                </div>
+              </Size>
+            </Right>
+          </Content>
+          <ProductDetails>
+            <h1>Product Detils</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              eget ornare est. Praesent id hendrerit risus. Aliquam nulla
+              lectus, bibendum sed vulputate sit amet, suscipit sed est. Etiam
+              vulputate urna lacinia quam sodales varius. Nullam et mauris eget
+              turpis lacinia
+            </p>
+          </ProductDetails>
+          <Features>
+            <h2>Features</h2>
+            <ul>
+              <li>Super-bright colors embedded directly into the case</li>
+              <li>Super-bright colors embedded directly into the case</li>
+              <li>Super-bright colors embedded directly into the case</li>
+              <li>Super-bright colors embedded directly into the case</li>
+              <li>Super-bright colors embedded directly into the case</li>
+              <li>Super-bright colors embedded directly into the case</li>
+              <li>Super-bright colors embedded directly into the case</li>
+            </ul>
+          </Features>
+        </Main>
+      </Overlay>
+      <Footer />
     </>
   );
 };
@@ -152,7 +153,7 @@ const Overlay = styled.div`
 `;
 
 const Main = styled.div`
-  width: 70%;
+  width: 60%;
   margin: 1em auto;
   @media (max-width: 1024px) {
     width: 95%;
@@ -170,8 +171,8 @@ const Content = styled.div`
 `;
 
 const Items = styled.div`
-  width: 40%;
-  margin-right: 2em;
+  width: 60%;
+  // margin-right: 2em;
   display: flex;
   flex-direction: column;
 
@@ -192,12 +193,13 @@ const Items = styled.div`
 `;
 
 const ItemImage = styled.div`
-  height: 300px;
-  width: 250px;
+  height: 350px;
+  width: 97%;
   margin: auto;
   padding-bottom: 2em;
 `;
 const CarouselItem = styled.div`
+  width: 100%;
   .carousel-items {
     overflow-x: scroll;
     display: flex;
@@ -252,11 +254,11 @@ const Product = styled.div`
     border-radius: 25px;
     padding: 5px;
     cursor: pointer;
-    margin: 0 1em 1em;
+    margin: 0 1em 1em 0;
   }
 `;
 const Right = styled.div`
-  width: 60%;
+  width: 40%;
   @media (max-width: 768px) {
     width: 98%;
     margin: auto;
@@ -267,7 +269,6 @@ const Name = styled.div`
   justify-content: space-between;
   align-item: center;
   padding: 1em 0;
-  border-bottom: 1px solid #dcdcdc;
   h1 {
     font-size: 1.5em;
     font-weight: 400;
@@ -281,7 +282,6 @@ const Name = styled.div`
 `;
 const Price = styled.div`
   padding: 1em 0;
-  border-bottom: 1px solid #dcdcdc;
   h1 {
   }
   span {
@@ -290,7 +290,7 @@ const Price = styled.div`
     justify-content: flex-start;
     font-size: 18px;
     color: #cecdcd;
-    margin: 1em 0;
+    margin: 1em 0 0.4em;
   }
   button {
     width: 43px;
@@ -300,6 +300,7 @@ const Price = styled.div`
     font-size: 12px;
     margin: 0 10px;
     background: #ff6600;
+    color: #fff;
     border: none;
   }
   p {
@@ -311,11 +312,10 @@ const Price = styled.div`
 `;
 const Size = styled.div`
   padding: 1em 0;
-  border-bottom: 1px solid #dcdcdc;
   h1 {
     font-size: 1.4em;
     font-weight: bold;
-    padding: 1em 0 0.5em;
+    padding: .5em 0 0.5em;
     text-transform: uppercase;
   }
   ul {
@@ -333,7 +333,7 @@ const Size = styled.div`
     border: 2px solid #ededed;
     padding: 8px;
     text-align: center;
-    margin: 0 1em;
+    margin: 0 1em 0 0;
     min-width: 50px;
     cursor: pointer;
     @media (max-width: 768px) {
@@ -364,10 +364,9 @@ const ProductDetails = styled.div`
   margin: 2em 0;
   background: #fff;
   width: 100%;
-  padding: 1em 2em;
+  padding: 1em ;
   h1 {
     padding: 1em 0;
-    border-bottom: 1px solid #dcdcdc;
     display: flex;
     align-items: center;
     font-size: 20px;

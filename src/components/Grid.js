@@ -41,7 +41,7 @@ const GridContainer = styled.div`
   position: relative;
   padding: 15px 0 40px 0;
   margin: 0 auto;
-  width: 1200px;
+  width: 66%;
   overflow: hidden;
   @media only screen and (max-width: 1024px) {
     width: 920px;
