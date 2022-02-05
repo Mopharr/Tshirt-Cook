@@ -93,7 +93,6 @@ const Wrap = styled.div`
   }
   :hover {
     border-radius: 10px;
-    // transform: scale(1.1); 
   }
   .image-div{
     width: 100%;

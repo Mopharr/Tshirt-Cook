@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {Navigation } from "swiper";
+import { Autoplay } from "swiper";
 import UserContext from "Context";
 import "../style/product.css";
 
@@ -21,14 +21,16 @@ const Product = () => {
           loop={true}
           loopFillGroupWithBlank={true}
           autoplay={{
-            delay: 1500,
+            delay: 2500,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Navigation]}
+          // breakpoints={
+          //   1240 = {
+          //     slidesPerView= 2
+          //   }
+          // }
+         
+          modules={[Autoplay]}
           className="mySwiper"
         >
           {" "}
