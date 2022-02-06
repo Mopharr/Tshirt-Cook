@@ -12,7 +12,7 @@ import { getAuth } from "firebase/auth";
 import Clothing from "Pages/Clothing";
 import Details from "Pages/Details";
 import { commerce } from "Commerce";
-import AddDesign from "components/AddDesign";
+import AddDesign from "components/Design/AddDesign";
 import Check from "Pages/Check";
 
 function App() {

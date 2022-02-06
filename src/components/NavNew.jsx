@@ -33,10 +33,12 @@ const NavNew = () => {
             <h2>Shop</h2>
             <p>Unique ideas</p>
           </div>
-          <div className="sectionLink">
-            <h2>Create </h2>
-            <p>Your own ideas</p>
-          </div>
+          <a href="design">
+            <div className="sectionLink">
+              <h2>Create </h2>
+              <p>Your own ideas</p>
+            </div>
+          </a>
           <div className="sectionLink">
             <h2>Bulk Orders</h2>
             <p>Events, Parties & Campaigns</p>

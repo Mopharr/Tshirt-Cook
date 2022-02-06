@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import FileBase64 from "react-file-base64";
 import { v4 as uuid } from "uuid";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
+import NavNew from "../NavNew"
+import Section from "../Section";
+import Footer from "../Footer";
+import con from 'assets/con.jpeg'
+import './design.css'
+import { BsFillCloudUploadFill } from 'react-icons/bs'
 
 const AddDesign = () => {
   const [design, setDesign] = useState({
@@ -32,7 +38,21 @@ const AddDesign = () => {
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <NavNew />
+      <Section />
+
+      <div className="hero">
+        <div className="upload">
+          <h2>Create Custom Clothing & Accessories</h2>
+          <h3>Realize any design with our Customize Tool</h3>
+          <button path = 'file' >Creat Now</button>
+        </div>
+      </div>
+      <form className="form" onSubmit={handleSubmit}>
+        <BsFillCloudUploadFill
+          style={{ color: "gainsboro", fontSize: "10em", marginTop: "25px" }}
+        />
+        <h1>Import your design to Upload</h1>
         <input
           type="text"
           name="label"
@@ -40,11 +60,10 @@ const AddDesign = () => {
           onChange={handleChange}
         />
         <FileBase64
+        id = 'file'
           type="file"
           multiple={false}
-          onDone={({ base64 }) =>
-            setDesign({ ...design, image: base64 })
-          }
+          onDone={({ base64 }) => setDesign({ ...design, image: base64 })}
         />
         <input
           type="text"
@@ -54,6 +73,7 @@ const AddDesign = () => {
         />
         <input type="submit" />
       </form>
+      <Footer />
     </div>
   );
 };
