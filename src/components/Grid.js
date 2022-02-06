@@ -50,7 +50,7 @@ const GridContainer = styled.div`
     width: 734px;
   }
   @media (max-width: 568px) {
-    width: 100%;
+    width: 95%;
   }
 `;
 

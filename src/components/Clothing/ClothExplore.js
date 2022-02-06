@@ -82,6 +82,13 @@ const Main = styled.div`
   }
   a {
     color: #000;
+    @media (max-width: 425px) {
+      width: 95%
+    }
+  }
+  @media (max-width: 765px){
+    width: 100%;
+    padding: 2em 0;
   }
 `;
 const Wrap = styled.div`
@@ -89,7 +96,7 @@ const Wrap = styled.div`
   margin: 1em;
   position: relative;
   @media (max-width: 1024px) {
-    margin: 1em;
+    margin: 1em 0; 
   }
   :hover {
     border-radius: 10px;

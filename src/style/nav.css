@@ -181,7 +181,9 @@ section{
     display: none;
   }
   .section2{
-   display: grid;
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
   }
   .section2 .sectionLink{

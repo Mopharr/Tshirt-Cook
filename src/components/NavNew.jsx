@@ -102,7 +102,7 @@ const NavNew = () => {
               </a>
             </li>
             <li>
-              <a href="mens" target="">
+              <a href="clothing" target="">
                 Clothings & Accessories
               </a>
             </li>

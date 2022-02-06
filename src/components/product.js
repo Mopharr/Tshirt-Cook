@@ -15,7 +15,7 @@ const Product = () => {
       <h2 className="haha">Feature Product</h2>
       <div className="proContent">
         <Swiper
-          slidesPerView={4}
+          slidesPerView={1}
           spaceBetween={30}
           slidesPerGroup={4}
           loop={true}
@@ -24,11 +24,17 @@ const Product = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          // breakpoints={
-          //   1240 = {
-          //     slidesPerView= 2
-          //   }
-          // }
+          breakpoints={{
+            530:{
+              slidesPerView: 2,
+            },
+             900:{
+              slidesPerView: 3,
+            }, 
+            1024: {
+              slidesPerView: 4
+            }
+          }}
          
           modules={[Autoplay]}
           className="mySwiper"
