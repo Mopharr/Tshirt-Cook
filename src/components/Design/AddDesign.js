@@ -5,7 +5,7 @@ import { collection, addDoc, getFirestore } from "firebase/firestore";
 import NavNew from "../NavNew"
 import Section from "../Section";
 import Footer from "../Footer";
-import con from 'assets/con.jpeg'
+import con from 'assets/debg.jpeg'
 import './design.css'
 import { BsFillCloudUploadFill } from 'react-icons/bs'
 
@@ -42,6 +42,7 @@ const AddDesign = () => {
       <Section />
 
       <div className="hero">
+        <img src={con} alt="" />
         <div className="upload">
           <h2>Create Custom Clothing & Accessories</h2>
           <h3>Realize any design with our Customize Tool</h3>

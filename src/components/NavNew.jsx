@@ -39,10 +39,10 @@ const NavNew = () => {
               <p>Your own ideas</p>
             </div>
           </a>
-          <div className="sectionLink">
+          {/* <div className="sectionLink">
             <h2>Bulk Orders</h2>
             <p>Events, Parties & Campaigns</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="third">
@@ -82,14 +82,17 @@ const NavNew = () => {
             <h2>Shop</h2>
             <p>Unique ideas</p>
           </div>
-          <div className="sectionLink">
-            <h2>Create </h2>
-            <p>Your own ideas</p>
-          </div>
-          <div className="sectionLink">
+          <a href="design">
+            <div className="sectionLink">
+              <h2>Create </h2>
+              <p>Your own ideas</p>
+            </div>
+          </a>
+
+          {/* <div className="sectionLink">
             <h2>Bulk Orders</h2>
             <p>Events, Parties & Campaigns</p>
-          </div>
+          </div> */}
         </div>
         <div className="cat">
           <ul>
