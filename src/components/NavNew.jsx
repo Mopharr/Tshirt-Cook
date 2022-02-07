@@ -122,7 +122,7 @@ const NavNew = () => {
               </a>
             </li>
             <li>
-              <a href="mens" target="">
+              <a href="gift" target="">
                 Gift
               </a>
             </li>
@@ -132,12 +132,12 @@ const NavNew = () => {
               </a>
             </li>
             <li>
-              <a href="mens" target="">
+              <a href="login" target="">
                 Login
               </a>
             </li>
             <li>
-              <a href="mens" target="">
+              <a href="register" target="">
                 SignUp
               </a>
             </li>

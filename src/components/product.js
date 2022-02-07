@@ -41,6 +41,7 @@ const Product = () => {
         >
           {" "}
           <div className="proContentCap">
+            {console.log(product)}
             {product.map((item) => (
               <SwiperSlide>
                 <a href="/details" class="cards">

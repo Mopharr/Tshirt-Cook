@@ -53,7 +53,7 @@ const Section = () => {
           </li>
           <li className="subnav-list-items dropdown">
             <a
-              href="#cloth"
+              href="gift"
               className="
             subnav-link"
             >
