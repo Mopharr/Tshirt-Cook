@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+clear/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -15,6 +15,7 @@ import { commerce } from "Commerce";
 import AddDesign from "components/Design/AddDesign";
 import Check from "Pages/Check";
 import Gift from "Pages/Gift";
+import Shop from 'Pages/Shop'
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -128,6 +129,7 @@ function App() {
           <Route exact path="/design" element={<AddDesign />} />
           <Route exact path="/check" element={<Check />} />
           <Route exact path="/gift" element={<Gift />} />
+          <Route exact path="/shop" element={<Shop />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>
