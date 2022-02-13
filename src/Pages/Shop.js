@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import UserContext from "Context";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import "../style/shop.css";
+// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import style from "../style/shop.css";
+import '../style/shop.css'
 import NavNew from '../components/NavNew'
 
   const Shop = () => {
@@ -18,29 +19,30 @@ import NavNew from '../components/NavNew'
   
     return (
       <>
-        <div className={style.shop}>
-          <div className={style.shop_overlay}>
-            <div className={style.shop_inner}>
-              <div className={style.shop_sidebar}>
+
+        <div className='shop'>
+          <div className="shop_overlay">
+            <div className="shop_inner">
+              <div className="shop_sidebar">
                 <aside>
                   <h2>filters</h2>
-                  <div className={style.items}>
+                  <div className="items">
                     <ul>
                       <li>
-                        <div className={style.collapse}>
+                        <div className="colapse">
                           <button onClick={showCategory}>
-                            <span className={style.item_name}>category</span>
+                            <span className="item_name">category</span>
                             <span></span>
                           </button>
-                          <div className={category ? style.collapse_inner : style.collapse_innerN}>
+                          <div className="category ? style.colapse_inner : style.colapse_innerN">
                             <ul>
-                              <li className={style.sub_items}>
-                                <button className={style.item_name}>
+                              <li className="sub_items">
+                                <button className="item_name">
                                   <span>All categories</span>
                                 </button>
                                 <ul>
                                   <li>
-                                    <button className={style.inner_items}>
+                                    <button className="inner_items">
                                       <span>Clothing</span>
                                       <span>Kids and Babies</span>
                                       <span>Stickers</span>
@@ -58,13 +60,13 @@ import NavNew from '../components/NavNew'
                         </div>
                       </li>
                       <li>
-                        <div className={style.collapse}>
+                        <div className="colapse">
                           <button onClick={showPrice}>
-                            <span className={style.item_name}>price</span>
+                            <span className="item_name">price</span>
                             <span></span>
                           </button>
-                          <div className={price ? style.collapse_inner : style.collapse_innerN}>
-                            <ul className={style.items_input}>
+                          <div className={price ? style.colapse_inner : style.colapse_innerN}>
+                            <ul className="items_input">
                               <li>
                                 <input type="checkbox" />
                                 <span>$</span>
@@ -82,13 +84,13 @@ import NavNew from '../components/NavNew'
                         </div>
                       </li>
                       <li>
-                        <div className={style.collapse}>
+                        <div className="colapse">
                           <button onClick={showAllArtwork}>
-                            <span className={style.item_name}>artwork medium</span>
+                            <span className="item_name">artwork medium</span>
                             <span></span>
                           </button>
-                          <div className={allArtwork ? style.collapse_inner : style.collapse_innerN}>
-                            <ul className={style.items_input}>
+                          <div className={allArtwork ? style.colapse_inner : style.colapse_innerN}>
+                            <ul className="items_input">
                               <li>
                                 <input type="radio" />
                                 <span>all medium</span>

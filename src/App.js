@@ -1,4 +1,3 @@
-clear/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

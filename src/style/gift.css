@@ -1,9 +1,10 @@
 .giftCap {
   display: flex;
   margin: 2em auto;
-  width: 80%;
+  width: 70%;
   justify-content: space-around;
   text-align: center;
+  flex-wrap: wrap;
 }
 .giftCat {
   text-align: center;
@@ -14,6 +15,7 @@
 }
 .giftcontentCap {
   position: relative;
+  margin-bottom: 1em;
 }
 .giftcontentCap button {
   position: absolute;
@@ -53,9 +55,9 @@
 .giftText h4 {
   font-weight: 600;
 }
-.giftText ul li{
-    font-size: 18px;
-    font-weight: 500;
+.giftText ul li {
+  font-size: 18px;
+  font-weight: 500;
 }
 .giftText button {
   background-color: transparent;
@@ -67,8 +69,8 @@
   width: 50%;
   font-size: 20px;
 }
-.giftText button:hover{
-    background-color: rgb(221, 221, 221);
+.giftText button:hover {
+  background-color: rgb(221, 221, 221);
 }
 .giftLogo {
   background-color: rgb(221, 221, 221);
@@ -79,15 +81,81 @@
   align-items: center;
   justify-content: center;
 }
-.giftInner{
-    display: flex;
-    align-items: center;
+.giftInner {
+  display: flex;
+  align-items: center;
 }
-.giftLogo img{
-    width: 100px;
-    height: 100px;
+.giftLogo img {
+  width: 100px;
+  height: 100px;
 }
-.giftLogo span{
-    font-size: 30px;
-    font-weight: 800;
+.giftLogo span {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.giftSearch {
+  width: 70%;
+  margin: 2em auto;
+  text-align: center;
+}
+.inputSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #000;
+  padding: 0;
+  cursor: pointer;
+}
+.inputSearch input {
+  border-bottom: none !important;
+  margin: 0;
+  width: calc(100% - 70px);
+}
+.giftIcon {
+  width: 70px;
+  margin: auto;
+}
+
+.inputSearch:hover {
+  border: 1px solid #ff4b2b;
+  color: #ff4b2b;
+}
+.inputSearch:focus {
+  border: 1px solid #ff4b2b;
+  color: #ff4b2b;
+}
+
+.giftIcon:focus {
+  background-color: #ff4b2b;
+}
+
+.package {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.packageCap {
+  margin: 1em;
+}
+.packageCap .giftcontentCap {
+  margin-bottom: 0;
+}
+.packageCap .giftcontentCap .img-divv {
+  width: 450px;
+  overflow: hidden;
+  height: 300px;
+}
+.packageCap a{
+  font-size: 20px;
+  font-weight: 800;
+  color: #ff4b2b;
+  margin: 0;
+  margin-left: 0em;
 }

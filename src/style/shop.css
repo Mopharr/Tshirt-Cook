@@ -44,12 +44,12 @@
     display: flex;
   }
   
-  .items ul li .collapse {
+  .items ul li .colapse {
     width: 100%;
     overflow: hidden;
   }
   
-  .items ul li .collapse button {
+  .items ul li .colapse button {
     align-items: center;
     appearance: none;
     background: transparent;
@@ -70,13 +70,13 @@
     text-align: left;
   }
   
-  .items ul li .collapse_inner {
+  .items ul li .colapse_inner {
     height: auto;
     opacity: 1;
     display: block;
   }
   
-  .items ul li .collapse_inner ul {
+  .items ul li .colapse_inner ul {
     list-style-type: none;
     margin: 0;
     padding: 0 0 8px;
@@ -93,13 +93,13 @@
       border-bottom: none!important;
     }
   
-  .items ul li .collapse_inner ul li .inner_items {
+  .items ul li .colapse_inner ul li .inner_items {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .collapse_innerN {
+  .colapse_innerN {
       display: none;
   }
   

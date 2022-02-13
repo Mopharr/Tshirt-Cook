@@ -3,13 +3,16 @@ import NavNew from "components/NavNew";
 import Section from "components/Section";
 import React from "react";
 import con from "assets/gift.jpeg";
-import ava from 'assets/men.jpeg'
+import ava from "assets/men.jpeg";
 import ava1 from "assets/woman.jpeg";
 import ava2 from "assets/kid.jpeg";
 import ava3 from "assets/every.jpeg";
-import '../style/gift.css'
-import { MdKeyboardArrowRight } from 'react-icons/md'
-import logo from 'assets/ava.png'
+import ava4 from "assets/flex.png";
+import ava5 from "assets/jug.png";
+import ava6 from "assets/kido.png";
+import ava7 from "assets/phone.png";
+import { BsSearch } from "react-icons/bs";
+import "../style/gift.css";
 
 const Gift = () => {
   return (
@@ -50,24 +53,70 @@ const Gift = () => {
             </div>
             <button>For Everybody </button>
           </div>
-        </div>
-      </div>
-      <div className="giftSec">
-        <div className="giftText">
-          <h4>Grab a Gift Card</h4>
-          <ul>
-            <li>Let them find their thing from millions of products</li>
-            <li>Available in any amount</li>
-            <li>Digitally delivered instantly</li>
-          </ul>
-          <button>Buy a gift <MdKeyboardArrowRight style={{fontSize:'20px'}}/></button>
-        </div>
-        <div className="giftLogo">
-          <div className="giftInner">
-            <img src={logo} alt="" />
-            <span>TshirtCook</span>
+          <div className="giftcontentCap">
+            <div className="img-divv">
+              <img src={ava4} alt="" />
+            </div>
+            <button>For Everybody </button>
+          </div>
+          <div className="giftcontentCap">
+            <div className="img-divv">
+              <img src={ava5} alt="" />
+            </div>
+            <button>For Everybody </button>
+          </div>
+          <div className="giftcontentCap">
+            <div className="img-divv">
+              <img src={ava6} alt="" />
+            </div>
+            <button>For Everybody </button>
+          </div>
+          <div className="giftcontentCap">
+            <div className="img-divv">
+              <img src={ava7} alt="" />
+            </div>
+            <button>For Everybody </button>
           </div>
         </div>
+      </div>
+      <div className="giftSearch">
+        <h2>Looking for Something Specific</h2>
+
+        <div className="inputSearch">
+          <input type="text" placeholder="Find it here" />
+          <BsSearch className="giftIcon" />
+        </div>
+      </div>
+      <div className="package">
+        <div className="packageCap">
+          <div className="giftcontentCap">
+            <div className="img-divv">
+              <img src={ava7} alt="" />
+            </div>
+          </div>
+          <a href="/">Full Val package </a>
+        </div>
+        <div className="packageCap">
+          <div className="giftcontentCap">
+            <div className="img-divv">
+              <img src={ava7} alt="" />
+            </div>
+          </div>
+          <a href="/">Family Package</a>
+        </div>
+        <div className="packageCap">
+          <div className="giftcontentCap">
+            <div className="img-divv">
+              <img src={ava7} alt="" />
+            </div>
+          </div>
+          <a href="/">Birthday Package</a>
+        </div>
+      </div>
+      <div className="list">
+        <h2>Plenty Reason to celebrate</h2>
+
+        
       </div>
       <Footer />
     </div>
