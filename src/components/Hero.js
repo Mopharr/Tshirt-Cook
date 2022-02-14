@@ -10,9 +10,6 @@ const Hero = () => {
           <h2>All the Koolest Custom items & Prints you need in one place!</h2>
           <h3>What are you looking to print today?</h3>
           <h3>Lets help you find it easy!</h3>
-          <div className="input">
-            <input placeholder="Search for Tshirts, Hoodies.." />
-          </div>
         </div>
       </div>
     </div>

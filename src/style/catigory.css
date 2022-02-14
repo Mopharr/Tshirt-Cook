@@ -6,24 +6,25 @@
   font-size: 30px;
   margin-bottom: 1em;
   font-weight: bold;
+  text-align: center;
 }
 .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .contentCap {
-  margin: 1em 0;
+      margin: 1em 0 1em 1em;
   position: relative;
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
 .img-divv {
-  width: 350px;
+  width: 300px;
   overflow: hidden;
-  height: 350px;
+  height: 300px;
 }
 .img-divv img {
   height: 100%;
@@ -53,15 +54,12 @@
 }
 @media (max-width: 1600px) {
   .catMain {
-    width: 85%;
+    width: 70%;
   }
 }
-@media (max-width: 768px) {
-  .catMain {
+@media (max-width: 1024px) {
+   .catMain {
     width: 98%;
-  }
-  .catMain h2 {
-    text-align: center;
   }
 }
 @media (max-width: 425px) {

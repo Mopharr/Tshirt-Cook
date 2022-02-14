@@ -64,7 +64,6 @@ a:hover {
   color: blue;
 }
 
-
 article {
   position: absolute;
   width: 12rem;
@@ -119,6 +118,7 @@ article {
 }
 .pricing-and-cart button {
   padding: 0.5em 1em;
+  margin: 1em auto;
   outline: none;
   border: none;
   color: #fff;
@@ -133,12 +133,11 @@ article {
   background-color: indianred;
 }
 @media (max-width: 1500px) {
-  .product{
+  .product {
     width: 85%;
-  
   }
   .proContent {
-    width: 100%;
+    width: 96%;
   }
 }
 @media (max-width: 768px) {
@@ -154,7 +153,7 @@ article {
     display: none;
   }
   .proContentCap {
-    width: 95%;
+    width: 90%;
   }
   .cards {
     width: 95%;
@@ -164,7 +163,6 @@ article {
   }
 
   .pricing-and-cart button {
-    margin: auto;
     width: 70%;
     margin-bottom: 0.5em;
   }
