@@ -127,7 +127,7 @@ import NavNew from '../components/NavNew'
                 <h2 className="">Shop</h2>
                 <div className="card-container">
                 {product.map((item, index) => (
-                  <div key={index} className='shop-card'>
+                  <div className='shop-card'>
                     <div className='shop-card-image'>
                         <img src={item.image.url} alt="" />
                     </div>
