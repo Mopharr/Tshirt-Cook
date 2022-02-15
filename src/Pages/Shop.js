@@ -3,7 +3,9 @@ import UserContext from "Context";
 // import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import style from "../style/shop.css";
 import '../style/shop.css'
+import "../style/product.css";
 import NavNew from '../components/NavNew'
+import Section from "../components/Section";
 
   const Shop = () => {
     const [category, setCategory] = useState(false)
@@ -19,7 +21,8 @@ import NavNew from '../components/NavNew'
   
     return (
       <>
-
+        <NavNew />
+        <Section />
         <div className='shop'>
           <div className="shop_overlay">
             <div className="shop_inner">
@@ -34,7 +37,7 @@ import NavNew from '../components/NavNew'
                             <span className="item_name">category</span>
                             <span></span>
                           </button>
-                          <div className="category ? style.colapse_inner : style.colapse_innerN">
+                          <div className={category ? 'colapse_inner' : 'colapse_innerN'}>
                             <ul>
                               <li className="sub_items">
                                 <button className="item_name">
@@ -65,7 +68,7 @@ import NavNew from '../components/NavNew'
                             <span className="item_name">price</span>
                             <span></span>
                           </button>
-                          <div className={price ? style.colapse_inner : style.colapse_innerN}>
+                          <div className={price ? 'colapse_inner' : 'colapse_innerN'}>
                             <ul className="items_input">
                               <li>
                                 <input type="checkbox" />
@@ -89,7 +92,7 @@ import NavNew from '../components/NavNew'
                             <span className="item_name">artwork medium</span>
                             <span></span>
                           </button>
-                          <div className={allArtwork ? style.colapse_inner : style.colapse_innerN}>
+                          <div className={allArtwork ? 'colapse_inner' : 'colapse_innerN'}>
                             <ul className="items_input">
                               <li>
                                 <input type="radio" />
@@ -124,7 +127,16 @@ import NavNew from '../components/NavNew'
                 </aside>
               </div>
               <div className="shop-main">
-                <h2 className="">Shop</h2>
+                <div className="shop-header">
+                  <h4>Sports</h4>
+                  <h4>Shirt</h4>
+                  <h4>Movies</h4>
+                  <h4>Music</h4>
+                  <h4>Band</h4>
+                </div>
+                <h2 className="shop-title">Shop
+                  <span>{product.length} Results</span>
+                </h2>
                 <div className="card-container">
                 {product.map((item, index) => (
                   <div className='shop-card'>
@@ -133,7 +145,7 @@ import NavNew from '../components/NavNew'
                     </div>
                     <p>{item.name}</p>
                     <div class="pricing">
-                    <p className="price">Price: {item.price.formatted_with_symbol}</p>
+                    <p className="price">{item.price.formatted_with_symbol}</p>
                   </div>
                 </div>
               ))}
