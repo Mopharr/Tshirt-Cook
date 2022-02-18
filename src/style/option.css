@@ -15,7 +15,7 @@
 }
 .optContentCap {
   margin: 0 1em;
-  width: 240px;
+  width: 220px;
 }
 .capMain {
   border: 2px solid black;
@@ -41,6 +41,12 @@
   border-radius: 25px;
   padding: 0.5em 1em;
   color: white;
+}
+@media (max-width: 1600px) {
+  .optMain {
+    width: 70%;
+  }
+  
 }
 @media (max-width: 768px) {
   .optMain {

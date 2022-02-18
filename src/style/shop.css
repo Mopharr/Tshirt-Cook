@@ -2,14 +2,13 @@
     position: relative;
     display: inline-block;
     width: 100%;
-    min-height: 100%;
+    padding: 4rem 0;
   }
   
   .shop_overlay {
     padding: 32px 0;
     display: inline-block;
     margin: 0 auto;
-    min-height: 100vh;
     width: 100%;
   }
   
@@ -17,9 +16,10 @@
     padding: 0 32px;
     grid-gap: 0 32px;
     display: grid;
-    grid-template-columns: 240px minmax(0, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: auto 200px auto minmax(0,1fr);
     max-width: 1600px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
   }
   
@@ -153,6 +153,9 @@
       display: block;
       position: relative;
     }
+    .shop-card {
+      height: inherit;
+    }
   }
 
 .shop-header {
@@ -187,18 +190,22 @@
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    grid-template-columns: auto auto auto auto;
     grid-gap: 30px;
+    width: 100%;
+    height: 100%;
   }
-  
   .shop-card {
     width: 250px;
-    height: 300px;
+    height: 315px;
+    background-color: #f5f5f5;
   }
 
   .shop-card p {
     font-size: 16px;
     font-weight: 700;
+    margin: 10px 0;
+    margin-left:14px ;
   }
 
   .shop-card .pricing {
@@ -212,7 +219,6 @@
   .shop-card-image {
     width: 250px;
     height: 250px;
-    margin-bottom: 10px;
   }
 
   .shop-card-image img {
@@ -220,4 +226,45 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 1024px) {
+    .card-container {
+      grid-template-columns: auto auto auto;
+      grid-gap: 20px;
+    }
+
+    .shop-card {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card-container {
+      grid-template-columns: auto auto;
+    }
+    .shop-card {
+    width: 100%;
+    height: 100%;
+  }
+  }
+
+  @media (max-width: 568px) {
+    .shop_inner {
+      grid-template-columns: auto;
+    }
+    .card-container {
+      grid-template-columns: auto;
+          justify-content: center;
+    align-items: center;
+      height: inherit;
+    }
+    .shop-header {
+      flex-direction: column;
+    }
+    .shop-card {
+      height: inherit;
+    }
+  }
+  
+
   

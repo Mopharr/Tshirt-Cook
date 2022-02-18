@@ -8,10 +8,10 @@
   width: 75%;
 }
 
-.section {
+ .section {
   display: flex;
 }
-section{
+.section{
   display: none;
 }
 .sectionLink {

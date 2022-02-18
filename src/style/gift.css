@@ -152,10 +152,68 @@
   overflow: hidden;
   height: 300px;
 }
-.packageCap a{
+.packageCap a {
   font-size: 20px;
   font-weight: 800;
   color: #ff4b2b;
   margin: 0;
   margin-left: 0em;
+}
+.giftGrid {
+  display: flex;
+  width: 70%;
+  margin: 1em auto;
+  border-radius: 10px;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.word {
+  height: 400px;
+  width: 60%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px 0 0 20px;
+  padding-left: 2em;
+}
+.word span {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.word p {
+  text-align: left;
+  font-size: 20px;
+  margin: 20px 0;
+  font-weight: 600;
+}
+.word button {
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4b2b;
+  color: #fff;
+  font-size: 20px;
+  padding: 0.5em 1em;
+}
+.giftImg {
+  transform: rotate(90deg);
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.giftImg img {
+  width: 400px;
+  height: 100%;
+  border-radius: 10px 10px 0 0px;
+}
+.giftPro {
+  width: 70%;
+  margin: 1em auto;
+}
+.giftPro h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2em;
 }

@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import wrap1 from "../../assets/mens.jpg";
+import wrap2 from "../../assets/dress.jpg";
+import wrap3 from "../../assets/sweat.jpg";
+import wrap4 from "../../assets/tshirts.jpg";
+import wrap5 from "../../assets/dress.jpg";
+import wrap6 from "../../assets/hoody.jpg";
 
 const ClothExplore = () => {
   return (
@@ -10,48 +15,48 @@ const ClothExplore = () => {
           <div className="image-div">
             <img src={wrap1} alt="" />
           </div>
-          <p>Mens clothing</p>
+          <a>Mens clothing</a>
         </Wrap>
       </a>
       <a href="/">
         <Wrap>
           <div className="image-div">
-            <img src={wrap1} alt="" />
+            <img src={wrap2} alt="" />
           </div>
-          <p>Women clothing</p>
+          <a>Women clothing</a>
         </Wrap>
       </a>
       <a href="/">
         <Wrap>
           <div className="image-div">
-            <img src={wrap1} alt="" />
+            <img src={wrap3} alt="" />
           </div>
-          <p>Hoodies</p>
+          <a>Hoodies</a>
         </Wrap>
       </a>
       <a href="/">
         <Wrap>
           <div className="image-div">
-            <img src={wrap1} alt="" />
+            <img src={wrap4} alt="" />
           </div>
-          <p>Tshirt</p>
+          <a>Tshirt</a>
         </Wrap>
       </a>
-      
+
       <a href="/">
         <Wrap>
           <div className="image-div">
-            <img src={wrap1} alt="" />
+            <img src={wrap5} alt="" />
           </div>
-          <p>Dress</p>
+          <a>Dress</a>
         </Wrap>
       </a>
       <a href="/">
         <Wrap>
           <div className="image-div">
-            <img src={wrap1} alt="" />
+            <img src={wrap6} alt="" />
           </div>
-          <p>Sweat Shirt</p>
+          <a>Sweat Shirt</a>
         </Wrap>
       </a>
     </Main>
@@ -82,11 +87,8 @@ const Main = styled.div`
   }
   a {
     color: #000;
-    @media (max-width: 425px) {
-      width: 95%
-    }
   }
-  @media (max-width: 765px){
+  @media (max-width: 765px) {
     width: 100%;
     padding: 2em 0;
   }
@@ -108,12 +110,12 @@ const Wrap = styled.div`
     min-height: 200px;
     
   }
-  p {
+  a {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     left: 50%;
     background: #fff;
     transform: translateX(-50%);

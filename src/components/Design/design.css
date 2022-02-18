@@ -56,10 +56,10 @@ margin: 1.7em auto .5em;
 .upload button:hover{
     background-color: indianred;
 }
-p {
+/* p {
   margin: 0 !important;
   font-size: 18px !important;
-}
+} */
 
 .form {
   border: dashed gray;
