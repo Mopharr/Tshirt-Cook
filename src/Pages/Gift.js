@@ -1,7 +1,9 @@
 import Footer from "components/Footer";
 import NavNew from "components/NavNew";
 import Section from "components/Section";
-import React from "react";
+import React,{ useContext } from "react";
+import UserContext from "Context";
+
 import con from "assets/gift.jpeg";
 import ava from "assets/men.jpeg";
 import ava1 from "assets/woman.jpeg";
@@ -12,9 +14,12 @@ import ava5 from "assets/jug.png";
 import ava6 from "assets/kido.png";
 import ava7 from "assets/phone.png";
 import { BsSearch } from "react-icons/bs";
+import sub from "assets/sur.jpeg";
 import "../style/gift.css";
 
 const Gift = () => {
+  const { addToCart, product } = useContext(UserContext);
+
   return (
     <div>
       <NavNew />
@@ -45,37 +50,37 @@ const Gift = () => {
             <div className="img-divv">
               <img src={ava2} alt="" />
             </div>
-            <button>For Kid/ Babies</button>
+            <button>For Kid</button>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava3} alt="" />
             </div>
-            <button>For Everybody </button>
+            <button>Everybody </button>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava4} alt="" />
             </div>
-            <button>For Everybody </button>
+            <button>For Developer</button>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava5} alt="" />
             </div>
-            <button>For Everybody </button>
+            <button>For Gift</button>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava6} alt="" />
             </div>
-            <button>For Everybody </button>
+            <button>For Guys</button>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava7} alt="" />
             </div>
-            <button>For Everybody </button>
+            <button>For Girls</button>
           </div>
         </div>
       </div>
@@ -113,10 +118,35 @@ const Gift = () => {
           <a href="/">Birthday Package</a>
         </div>
       </div>
-      <div className="list">
-        <h2>Plenty Reason to celebrate</h2>
-
-        
+      <div className="giftGrid">
+        <div className="word">
+          <span>
+            Order and get your gift at your own <br /> comfort zone{" "}
+          </span>
+          <p>Get yours Today </p>
+          <a href="">
+            <button>Order </button>
+          </a>
+        </div>
+        <div className="giftImg">
+          <img src={sub} alt="" />
+        </div>
+      </div>
+      <div className="giftPro">
+        <h5>Gifts Product</h5>
+        <div className="card-container">
+          {product.map((item, index) => (
+            <div className="shop-card">
+              <div className="shop-card-image">
+                <img src={item.image.url} alt="" />
+              </div>
+              <p>{item.name}</p>
+              <div class="pricing">
+                <p className="price">{item.price.formatted_with_symbol}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

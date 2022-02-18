@@ -6,18 +6,19 @@ import '../style/shop.css'
 import "../style/product.css";
 import NavNew from '../components/NavNew'
 import Section from "../components/Section";
+import Footer from "components/Footer";
 
   const Shop = () => {
     const [category, setCategory] = useState(false)
     const [price, setPrice] = useState(false)
     const [allArtwork, setAllArtwork] = useState(false)
   
-    const showCategory = () => setCategory(!category)
-    const showPrice = () => setPrice(!price)
+    const showCategory = () => setCategory(category)
+    const showPrice = () => setPrice(price)
     const showAllArtwork = () => setAllArtwork(!allArtwork)
     
     const { addToCart, product } = useContext(UserContext);
-  console.log(product)
+  // console.log(product)
   
     return (
       <>
@@ -154,6 +155,7 @@ import Section from "../components/Section";
             </div>
           </div>
         </div>
+        <Footer />
       </>
     );
   };

@@ -14,7 +14,7 @@ import { commerce } from "Commerce";
 import AddDesign from "components/Design/AddDesign";
 import Check from "Pages/Check";
 import Gift from "Pages/Gift";
-import Shop from 'Pages/Shop'
+import Shop from "Pages/Shop";
 
 function App() {
   const [product, setProduct] = useState([]);

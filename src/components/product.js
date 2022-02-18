@@ -17,7 +17,7 @@ const Product = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
-          slidesPerGroup={4}
+          slidesPerGroup={3}
           loop={true}
           loopFillGroupWithBlank={true}
           autoplay={{
@@ -32,7 +32,7 @@ const Product = () => {
               slidesPerView: 3,
             }, 
             1024: {
-              slidesPerView: 4
+              slidesPerView: 3
             }
           }}
          
