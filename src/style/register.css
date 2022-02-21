@@ -81,7 +81,7 @@ form span {
   margin-bottom: 1em;
 }
 
-input {
+.stupid input {
   border-bottom: 1px solid #d6dadf !important;
   border: none;
   padding: 12px 15px;
