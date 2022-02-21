@@ -78,7 +78,6 @@
   
   .items ul li .colapse_inner ul {
     list-style-type: none;
-    margin: 0 5px;
     position: relative;
   }
   
@@ -261,6 +260,10 @@
   }
 
   @media (max-width: 1024px) {
+    .shop_inner {
+      padding: 0 12px;
+    grid-gap: 0 12px;
+    }
     .card-container {
       grid-template-columns: auto auto auto;
       grid-gap: 20px;
@@ -284,7 +287,6 @@
   @media (max-width: 568px) {
     .shop_inner {
       grid-template-columns: auto;
-      padding: 0 12px;
     }
     .card-container {
       grid-template-columns: auto;

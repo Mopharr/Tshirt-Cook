@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,7 +20,9 @@ import CheckoutForm from 'Pages/CheckoutForm'
 
 function App() {
   const [product, setProduct] = useState([]);
+  const [singleProduct, setSingleProduct] = useState({});
   const [cart, setCart] = useState({});
+  const [category, setCategory] = useState([]);
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
   const [state, setState] = useState({
@@ -31,6 +34,7 @@ function App() {
   });
 
   console.log(state.cart);
+  console.log("categories", category);
 
   useEffect(() => {
     const auth = getAuth();
@@ -95,9 +99,34 @@ function App() {
     setProduct((response && response.data) || []);
   };
 
+  const fetchSingleProduct = async (id) => {
+    const response = await commerce.products.retrieve(id);
+    setSingleProduct((response && response) || []);
+  };
+
+  const fetchProductsByCategory = async (cat_id) => {
+    const response = await commerce.products.list({
+      category_id: [cat_id]
+    });
+    setProduct((response && response.data) || []);
+  };
+
+  const fetchProductsByQuery = async (q) => {
+    const response = await commerce.products.list({
+      query: [q]
+    });
+    setProduct((response && response.data) || []);
+  };
+
+  const fetchCategory = async () => {
+    const response = await commerce.categories.list();
+    setCategory((response && response.data) || []);
+  };
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
+    fetchCategory();
   }, []);
 
   console.log(product);
@@ -115,6 +144,11 @@ function App() {
         order,
         errorMessage,
         handleCaptureCheckout,
+        category,
+        fetchProductsByCategory,
+        fetchProductsByQuery,
+        fetchSingleProduct,
+        singleProduct,
       }}
     >
       <BrowserRouter>
