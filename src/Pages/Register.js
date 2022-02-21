@@ -42,7 +42,7 @@ const Register = () => {
       <Section />
       <div className="container" id="container">
         <div className="form-container sign-up-container">
-          <form onSubmit={handleSubmit}>
+          <form className="stupid" onSubmit={handleSubmit}>
             <h1>Create Account</h1>
             <div className="social-container">
               <a href="/" className="social">

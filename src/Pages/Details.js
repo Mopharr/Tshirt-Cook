@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "../components/NavNew";
+import NavNew from "../components/NavNew";
 import Section from "components/Section";
 import styled from "styled-components";
 import hero from "assets/bags.jpg";
@@ -20,7 +20,7 @@ const Details = () => {
   return (
     <>
       <Overlay>
-        <Nav />
+        <NavNew />
         <Section />
         <Main>
           <Content>
@@ -93,25 +93,9 @@ const Details = () => {
                   <li>S</li>
                   <li>M</li>
                   <li>L</li>
-                  <li>XL</li>
-                  <li>XXL</li>
                 </ul>
-                <div>
-                  <Button>
-                    <AiOutlineMinus
-                      style={{ justifySelf: "center", margin: "auto" }}
-                    />
-                  </Button>
-                  <span>1</span>
-                  <Button>
-                    <AiOutlinePlus
-                      style={{
-                        justifySelf: "center",
-                        margin: "auto",
-                        fontWeight: "bold",
-                      }}
-                    />
-                  </Button>
+                <div className="orderInput">
+                  <input type="text" />
                 </div>
               </Size>
             </Right>
@@ -154,8 +138,17 @@ const Overlay = styled.div`
 const Main = styled.div`
   width: 60%;
   margin: 1em auto;
+
   @media (max-width: 1024px) {
-    width: 95%;
+    width: 75%;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 568px) {
+    width: 90%;
   }
 `;
 const Content = styled.div`
@@ -170,10 +163,14 @@ const Content = styled.div`
 `;
 
 const Items = styled.div`
-  width: 60%;
-  // margin-right: 2em;
+  width: 45%;
+  margin-right: 2em;
   display: flex;
   flex-direction: column;
+
+  .rec-item-wrapper {
+    width: 80px !important;
+  }
 
   @media (max-width: 768px) {
     width: 98%;
@@ -196,6 +193,13 @@ const ItemImage = styled.div`
   width: 97%;
   margin: auto;
   padding-bottom: 2em;
+
+  @media (max-width: 768px) {
+    height: 450px;
+  }
+  @media (max-width: 568px) {
+    height: 300px;
+  }
 `;
 const CarouselItem = styled.div`
   width: 100%;
@@ -314,7 +318,7 @@ const Size = styled.div`
   h1 {
     font-size: 1.4em;
     font-weight: bold;
-    padding: .5em 0 0.5em;
+    padding: 0.5em 0 0.5em;
     text-transform: uppercase;
   }
   ul {
@@ -339,6 +343,15 @@ const Size = styled.div`
       margin: 1em 0.5em;
     }
   }
+  .orderInput input {
+    width: 50px;
+    list-style: none;
+    border: 2px solid #ededed;
+    margin-right: 0.4em;
+    outline: none;
+    padding: .5em 0;
+  }
+
   div {
     display: flex;
     align-items: center;
@@ -363,7 +376,7 @@ const ProductDetails = styled.div`
   margin: 2em 0;
   background: #fff;
   width: 100%;
-  padding: 1em ;
+  padding: 1em;
   h1 {
     padding: 1em 0;
     display: flex;

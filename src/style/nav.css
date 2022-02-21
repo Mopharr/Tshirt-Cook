@@ -11,9 +11,7 @@
  .section {
   display: flex;
 }
-.section{
-  display: none;
-}
+
 .sectionLink {
   margin: 0 1em;
 }
@@ -157,6 +155,33 @@
 
   font-weight: bold;
 }
+
+.mmodal{
+  background-color: #C0C0C0;
+  border-radius: 10px;
+  position: fixed;
+  right: 10%;
+  top: 8%;
+  z-index: 99;
+  display: grid;
+  width: 120px;
+}
+.mmodal a{
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  padding: .5em; 
+
+  transition: all .3s ease-in-out;
+}
+.mmodal a:hover{
+  background-color: #ff4b2b;
+  border-radius: 10px;
+  color: #fff;
+}
+
+
+
 
 /* media query */
 @media (max-width: 1600px) {
