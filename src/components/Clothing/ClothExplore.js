@@ -121,4 +121,5 @@ const Wrap = styled.div`
     transform: translateX(-50%);
     padding: 0.5em 1em;
     border-radius: 25pc;
+  }
 `;

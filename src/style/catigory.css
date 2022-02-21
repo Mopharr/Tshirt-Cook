@@ -9,13 +9,15 @@
   text-align: center;
 }
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
   justify-content: center;
+  margin-top: 30px;
   align-items: center;
-}
+  }
 .contentCap {
-      margin: 1em 0 1em 1em;
+  margin: 1em 0 1em 1em;
   position: relative;
   cursor: pointer;
   border-radius: 10px;
@@ -71,3 +73,16 @@
     margin: 1em 0;
   }
 }
+
+ @media (max-width: 768px) {
+    .content {
+width: 100%;
+  grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 568px) {
+  .content {
+  grid-template-columns: auto;
+    }
+} 

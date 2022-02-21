@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import UserContext from "Context";
 // import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import style from "../style/shop.css";
 import '../style/shop.css'
 import "../style/product.css";
 import NavNew from '../components/NavNew'
@@ -13,13 +12,12 @@ import Footer from "components/Footer";
     const [price, setPrice] = useState(false)
     const [allArtwork, setAllArtwork] = useState(false)
   
-    const showCategory = () => setCategory(category)
-    const showPrice = () => setPrice(price)
+    const showCategory = () => setCategory(!category)
+    const showPrice = () => setPrice(!price)
     const showAllArtwork = () => setAllArtwork(!allArtwork)
     
     const { addToCart, product } = useContext(UserContext);
-  // console.log(product)
-  
+    
     return (
       <>
         <NavNew />
@@ -38,7 +36,7 @@ import Footer from "components/Footer";
                             <span className="item_name">category</span>
                             <span></span>
                           </button>
-                          <div className={category ? 'colapse_inner' : 'colapse_innerN'}>
+                          <div className={category ? 'colapse_innerN' : 'colapse_inner'}>
                             <ul>
                               <li className="sub_items">
                                 <button className="item_name">
@@ -69,7 +67,7 @@ import Footer from "components/Footer";
                             <span className="item_name">price</span>
                             <span></span>
                           </button>
-                          <div className={price ? 'colapse_inner' : 'colapse_innerN'}>
+                          <div className={price ? 'colapse_innerN' : 'colapse_inner'}>
                             <ul className="items_input">
                               <li>
                                 <input type="checkbox" />
@@ -93,7 +91,7 @@ import Footer from "components/Footer";
                             <span className="item_name">artwork medium</span>
                             <span></span>
                           </button>
-                          <div className={allArtwork ? 'colapse_inner' : 'colapse_innerN'}>
+                          <div className={allArtwork ? 'colapse_innerN' : 'colapse_inner'}>
                             <ul className="items_input">
                               <li>
                                 <input type="radio" />

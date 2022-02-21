@@ -190,7 +190,7 @@ const Cart = () => {
                   </span>
                 </div> */}
                 <div className="deliveries">
-                  <Link to="/checkout" className="checkout-link">
+                  <Link to="/checkoutform" className="checkout-link">
                     <span className="checkout-link-text">{`Checkout ${
                       state.loading ? (
                         <Skeleton />

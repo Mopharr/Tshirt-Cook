@@ -2,7 +2,7 @@ import Nav from "../components/NavNew";
 import Section from "components/Section";
 import React from "react";
 import styled from "styled-components";
-import ClothExplore from "components/Clothing/ClothExplore";
+// import ClothExplore from "components/Clothing/ClothExplore";
 import Product from "components/product";
 import Learn from "components/Learn";
 import Footer from "components/Footer";
@@ -25,7 +25,6 @@ const Clothing = () => {
         </div>
       </div>
       <Grid />
-      <ClothExplore />
       <Product />
       <Learn />
       <div className="abt">
