@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useContext } from "react";
+import UserContext from "Context";
 import NavNew from "../components/NavNew";
 import Section from "components/Section";
 import styled from "styled-components";
@@ -6,7 +8,7 @@ import hero from "assets/bags.jpg";
 import hero1 from "assets/bag.jpg";
 import Footer from "components/Footer";
 import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
-import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 import Carousel from "react-elastic-carousel";
 
 const Details = () => {
@@ -17,6 +19,9 @@ const Details = () => {
     { width: 768, itemsToShow: 2 },
     { width: 1200, itemsToShow: 5 },
   ];
+
+  const { singleProduct } = useContext(UserContext);
+  console.log("single product", singleProduct)
   return (
     <>
       <Overlay>
@@ -26,7 +31,7 @@ const Details = () => {
           <Content>
             <Items>
               <ItemImage>
-                <img src={img} alt="" />
+                <img src={singleProduct.image.url} alt="" />
               </ItemImage>
               <CarouselItem>
                 <Carousel breakPoints={breakPoints} itemsToShow={3}>
@@ -74,11 +79,11 @@ const Details = () => {
             </Items>
             <Right>
               <Name>
-                <h1>Black Hoodie</h1>
+                <h1>{singleProduct.name}</h1>
                 <AiOutlineHeart className="heartIcon" />
               </Name>
               <Price>
-                <h1>$5300</h1>
+                <h1>{singleProduct.price.formatted_with_symbol}</h1>
                 <span>
                   <s>$6490</s>
                   <button>-8%</button>

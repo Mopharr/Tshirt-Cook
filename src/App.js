@@ -19,6 +19,7 @@ import Shop from "Pages/Shop";
 
 function App() {
   const [product, setProduct] = useState([]);
+  const [singleProduct, setSingleProduct] = useState({});
   const [cart, setCart] = useState({});
   const [category, setCategory] = useState([]);
   const [order, setOrder] = useState({});
@@ -96,12 +97,19 @@ function App() {
     const response = await commerce.products.list();
     setProduct((response && response.data) || []);
   };
+
+  const fetchSingleProduct = async (id) => {
+    const response = await commerce.products.retrieve(id);
+    setSingleProduct((response && response) || []);
+  };
+
   const fetchProductsByCategory = async (cat_id) => {
     const response = await commerce.products.list({
       category_id: [cat_id]
     });
     setProduct((response && response.data) || []);
   };
+
   const fetchProductsByQuery = async (q) => {
     const response = await commerce.products.list({
       query: [q]
@@ -138,6 +146,8 @@ function App() {
         category,
         fetchProductsByCategory,
         fetchProductsByQuery,
+        fetchSingleProduct,
+        singleProduct,
       }}
     >
       <BrowserRouter>

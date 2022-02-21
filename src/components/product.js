@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -8,8 +10,9 @@ import UserContext from "Context";
 import "../style/product.css";
 
 const Product = () => {
-  const { addToCart, product } = useContext(UserContext);
+  const { addToCart, product, fetchSingleProduct } = useContext(UserContext);
 
+  const navigate = useNavigate();
   return (
     <div className="product">
       <h2 className="haha">Feature Product</h2>
@@ -25,17 +28,16 @@ const Product = () => {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            530:{
+            530: {
               slidesPerView: 2,
             },
-             900:{
+            900: {
               slidesPerView: 3,
-            }, 
+            },
             1024: {
-              slidesPerView: 3
-            }
+              slidesPerView: 3,
+            },
           }}
-         
           modules={[Autoplay]}
           className="mySwiper"
         >
@@ -44,7 +46,13 @@ const Product = () => {
             {console.log(product)}
             {product.map((item) => (
               <SwiperSlide>
-                <a href="/details" class="cards">
+                <a
+                  onClick={() => {
+                    fetchSingleProduct(item.id);
+                    navigate("/details");
+                  }}
+                  class="cards"
+                >
                   <div class="img-div">
                     <img src={item.image.url} alt="" />
                   </div>
