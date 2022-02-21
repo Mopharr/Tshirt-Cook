@@ -1,74 +1,31 @@
-import React from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useContext } from "react";
+import {useNavigate} from "react-router-dom"
 import styled from "styled-components";
+import UserContext from "Context";
 
 const Section = () => {
+  const { category, fetchProductsByCategory } = useContext(UserContext);
+  console.log("section category", category);
+  const navigate = useNavigate();
   return (
     <>
       <Main>
         <ul>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="/mens"
-              className="
-            subnav-link"
-            >
-              Mens
-            </a>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Women
-            </a>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="/Clothing"
-              className="
-            subnav-link"
-            >
-              Clothing & Accessories
-            </a>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Stationaries & Paper Prints
-            </a>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Home & Living items
-            </a>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="gift"
-              className="
-            subnav-link"
-            >
-              Gifts
-            </a>
-          </li>
-          <li className="subnav-list-items dropdown">
-            <a
-              href="#cloth"
-              className="
-            subnav-link"
-            >
-              Explore
-            </a>
-          </li>
+          {category &&
+            category.map((item) => (
+              <li className="subnav-list-items dropdown">
+                <a
+                  onClick={() => {
+                    fetchProductsByCategory(item.id);
+                    navigate('/shop')
+                  }}
+                  className="subnav-link"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
         </ul>
       </Main>
     </>

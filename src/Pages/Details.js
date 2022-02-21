@@ -5,7 +5,6 @@ import styled from "styled-components";
 import hero from "assets/bags.jpg";
 import hero1 from "assets/bag.jpg";
 import Footer from "components/Footer";
-
 import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Carousel from "react-elastic-carousel";
