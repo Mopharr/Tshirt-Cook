@@ -16,7 +16,7 @@ import AddDesign from "components/Design/AddDesign";
 import Check from "Pages/Check";
 import Gift from "Pages/Gift";
 import Shop from "Pages/Shop";
-import CheckoutForm from 'Pages/CheckoutForm'
+import CheckoutForm from "Pages/CheckoutForm";
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -35,6 +35,7 @@ function App() {
 
   console.log(state.cart);
   console.log("categories", category);
+  console.log("single product", singleProduct);
 
   useEffect(() => {
     const auth = getAuth();
@@ -106,14 +107,14 @@ function App() {
 
   const fetchProductsByCategory = async (cat_id) => {
     const response = await commerce.products.list({
-      category_id: [cat_id]
+      category_id: [cat_id],
     });
     setProduct((response && response.data) || []);
   };
 
   const fetchProductsByQuery = async (q) => {
     const response = await commerce.products.list({
-      query: q
+      query: q,
     });
     setProduct((response && response.data) || []);
   };
@@ -127,6 +128,7 @@ function App() {
     fetchProducts();
     fetchCart();
     fetchCategory();
+    fetchSingleProduct("prod_G6kVw7KjQOw2eD");
   }, []);
 
   console.log(product);

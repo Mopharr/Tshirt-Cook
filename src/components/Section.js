@@ -13,7 +13,7 @@ const Section = () => {
       <Main>
         <ul>
           {category &&
-            category.map((item) => (
+            category.slice(0).reverse().map((item) => (
               <li className="subnav-list-items dropdown">
                 <a
                   onClick={() => {

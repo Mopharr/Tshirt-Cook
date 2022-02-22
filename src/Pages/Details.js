@@ -108,11 +108,7 @@ const Details = () => {
           <ProductDetails>
             <h1>Product Detils</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              eget ornare est. Praesent id hendrerit risus. Aliquam nulla
-              lectus, bibendum sed vulputate sit amet, suscipit sed est. Etiam
-              vulputate urna lacinia quam sodales varius. Nullam et mauris eget
-              turpis lacinia
+              {singleProduct.description}
             </p>
           </ProductDetails>
           <Features>

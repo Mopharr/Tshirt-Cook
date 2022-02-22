@@ -12,6 +12,8 @@ import "../style/product.css";
 const Product = () => {
   const { addToCart, product, fetchSingleProduct } = useContext(UserContext);
 
+  console.log(product)
+
   const navigate = useNavigate();
   return (
     <div className="product">
