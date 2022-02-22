@@ -112,7 +112,7 @@ function App() {
 
   const fetchProductsByQuery = async (q) => {
     const response = await commerce.products.list({
-      query: [q]
+      query: q
     });
     setProduct((response && response.data) || []);
   };

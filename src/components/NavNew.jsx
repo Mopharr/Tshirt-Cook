@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../style/nav.css";
 import logo from "../assets/ava.png";
 import styled from "styled-components";
@@ -12,9 +13,13 @@ import UserContext from "Context";
 import Sign from "./sign";
 
 const NavNew = () => {
-  const { cart } = useContext(UserContext);
+  const { cart, fetchProductsByQuery } = useContext(UserContext);
+  const [search, setSearch] = useState("");
   const [open, setOpen] = useState(null);
   const [modal, setModal] = useState(false);
+
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const openModal = () => {
     setModal((prev) => !prev);
@@ -50,10 +55,22 @@ const NavNew = () => {
         </div>
 
         <div className="third">
-          <div className="search">
-            <input type="text" placeholder="Find what you want" />
-            <BiSearchAlt className="icon" />
-          </div>
+          <form
+            onSubmit={() => {
+              fetchProductsByQuery(search);
+              pathname === "shop" ? console.log("route") : navigate("/shop");
+            }}
+          >
+            <div className="search">
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Find what you want"
+              />
+              <BiSearchAlt className="icon" />
+            </div>
+          </form>
           <Auth>
             <IconButton aria-label="Show cart item" color="inherit">
               <Badge badgeContent={cart.total_unique_items} color="secondary">
