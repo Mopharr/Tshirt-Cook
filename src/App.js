@@ -16,6 +16,7 @@ import AddDesign from "components/Design/AddDesign";
 import Check from "Pages/Check";
 import Gift from "Pages/Gift";
 import Shop from "Pages/Shop";
+import CheckoutForm from 'Pages/CheckoutForm'
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -163,6 +164,7 @@ function App() {
           <Route exact path="/check" element={<Check />} />
           <Route exact path="/gift" element={<Gift />} />
           <Route exact path="/shop" element={<Shop />} />
+          <Route exact path="/checkoutform" element={<CheckoutForm />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

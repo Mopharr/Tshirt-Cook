@@ -39,7 +39,52 @@ const Check = () => {
               <div className="delivery">
                 <div>How do you want your order delivered?</div>
                 <div className="delivery-content">
-                  <div>
+                <div className="delivery-content--1">
+                <div className="delivery-input">
+                  <input type="radio" />
+                  <label>Pickup station</label>
+                </div>
+                <div>
+                  Delivered by
+                  <span>Friday 21 Jan</span>
+                  for
+                  <b>
+                    <span data-currency-iso="NGN">₦</span>
+                    <span dir="ltr" data-price="450">
+                      450
+                    </span>
+                  </b>
+                </div>
+                <div>
+                  <div className="delivery-content-inner">
+                    <span>
+                      <BsFillCheckCircleFill />
+                    </span>
+                    <p>
+                      - Dear Customer, due to the 3 day sit at home order of
+                      the IPOB leader court hearing, orders will be delayed
+                      to the following affected state;
+                      Anambra/Enugu/Imo/Abia/Ebonyi. We apologize for the
+                      inconvenience.
+                      <br />
+                      - Receive free delivery on your Jumia Express orders
+                      above N4,999 in Lagos and Abuja
+                      <br />- Living in Lagos, Abuja or Ibadan,{" "}
+                      <a href="#link" title="please right click here">
+                        JUMIA PRIME
+                      </a>{" "}
+                      <a
+                        href="https://www.jumia.com.ng/sp-returns-refunds"
+                        title="please right click here"
+                      >
+                        {" "}
+                        right click here!
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+                  <div className="delivery-content--1">
                     <div className="delivery-input">
                       <input type="radio" />
                       <label>Door Delivery</label>
@@ -147,7 +192,7 @@ const Check = () => {
                 You will be able to add a voucher in the next step
               </div>
               <button className="save-btn">
-                <span className="label">Proceed to next step</span>
+                <span className="label">Proceed to payment</span>
               </button>
             </div>
           </div>
@@ -245,10 +290,20 @@ export default Check;
 const Main = styled.div`
   max-width: 950px;
   margin: 30px auto;
+  display: flex;
   align-items: flex-start;
   justify-content: space-around;
   border: none;
   padding: 0;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+
+    section, aside {
+      margin: 0 auto;
+    }
+  }
 
   section {
     width: 70.5%;
@@ -341,6 +396,10 @@ const Main = styled.div`
           border-bottom: 1px solid #f0f0f0;
           padding-bottom: 16px !important;
           padding-top: 16px !important;
+        }
+
+        .delivery-content--1 {
+          margin: 10px 0;
         }
 
         .delivery-input {

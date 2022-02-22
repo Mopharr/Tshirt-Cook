@@ -275,7 +275,7 @@ const Right = styled.div`
 const Name = styled.div`
   display: flex;
   justify-content: space-between;
-  align-item: center;
+  align-items: center;
   padding: 1em 0;
   h1 {
     font-size: 1.5em;

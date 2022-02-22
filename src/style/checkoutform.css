@@ -1,0 +1,96 @@
+.checkout-form {
+    background: rgba(0, 0, 0, .3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.c-form {
+    background: #fff;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.c-form-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.c-form-inputs {
+    display: block;
+    text-align: left;
+    margin-right: 5px;
+    width: inherit;
+}
+
+.c-form-inputs div {
+    display: flex;
+}
+
+.text-label {
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.text-input, .text-area {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    outline: none;
+}
+
+#code {
+    width: 15%;
+    margin-right: 5px;
+}
+
+#num {
+    width: 85%;
+}
+
+.submit-button {
+    width: 100%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .3);
+    padding: 10px 0;
+}
+
+.submit-button a {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media (max-width: 568px) {
+    .c-form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .c-form-inner {
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+
+    .c-form-inputs {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #code {
+        width: 25%;
+    }
+    
+    #num {
+        width: 75%;
+    }
+}

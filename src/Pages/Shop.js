@@ -40,7 +40,7 @@ const Shop = () => {
                           <span></span>
                         </button>
                         <div
-                          className={cat ? "colapse_inner" : "colapse_innerN"}
+                          className={cat ? "colapse_innerN" : "colapse_inner"}
                         >
                           <ul>
                             <li className="sub_items">
@@ -68,7 +68,7 @@ const Shop = () => {
                           <span></span>
                         </button>
                         <div
-                          className={price ? "colapse_inner" : "colapse_innerN"}
+                          className={price ? "colapse_innerN" : "colapse_inner"}
                         >
                           <ul className="items_input">
                             <li>
@@ -95,7 +95,7 @@ const Shop = () => {
                         </button>
                         <div
                           className={
-                            allArtwork ? "colapse_inner" : "colapse_innerN"
+                            allArtwork ? "colapse_innerN" : "colapse_inner"
                           }
                         >
                           <ul className="items_input">

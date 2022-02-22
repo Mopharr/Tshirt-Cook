@@ -58,7 +58,7 @@
     display: flex;
     flex-flow: row wrap;
     outline: none;
-    padding: 12px 8px;
+    padding: 10px 0;
     margin: 0;
     width: 100%;
     color: #19124f;
@@ -78,8 +78,6 @@
   
   .items ul li .colapse_inner ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0 0 8px;
     position: relative;
   }
   
@@ -193,11 +191,11 @@
     grid-template-columns: auto auto auto auto;
     grid-gap: 30px;
     width: 100%;
-    height: 100%;
+    height: inherit;
   }
   .shop-card {
     width: 250px;
-    height: 315px;
+    height: 320px;
     background-color: #f5f5f5;
   }
 
@@ -227,7 +225,45 @@
     object-fit: cover;
   }
 
+  .carousel-items {
+    overflow-x: scroll;
+    display: flex;
+    background: #f5f5f5;
+  }
+
+  .rec-item-wrapper {
+    width: 80px !important;
+  }
+
+  .rec-arrow {
+    margin: 0;
+    background: none;
+    transition: all 0.3s ease;
+    font-size: 1.6em;
+    color: #333;
+    box-shadow: 0 0 2px 0px #333;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    min-width: auto;
+    line-height: 0;
+    align-self: center;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+  }
+
+  .rec-pagination {
+    display: none;
+  }
+
   @media (max-width: 1024px) {
+    .shop_inner {
+      padding: 0 12px;
+    grid-gap: 0 12px;
+    }
     .card-container {
       grid-template-columns: auto auto auto;
       grid-gap: 20px;
@@ -242,10 +278,10 @@
     .card-container {
       grid-template-columns: auto auto;
     }
-    .shop-card {
-    width: 100%;
-    height: 100%;
-  }
+      .shop-card {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   @media (max-width: 568px) {
@@ -259,7 +295,17 @@
       height: inherit;
     }
     .shop-header {
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: auto auto;
+      width: 100%;
+      align-items: center;
+      margin: 20px auto;
+    }
+    .shop-header h4 {
+      font-size: 12px;
+      padding: 5px;
+      margin-right: 0;
+      width: 80px;
     }
     .shop-card {
       height: inherit;
