@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/hero.css";
 import con from 'assets/home.jpeg'
+
 const Hero = () => {
   return (
     <div className="main">

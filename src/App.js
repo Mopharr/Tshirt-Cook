@@ -17,6 +17,7 @@ import Check from "Pages/Check";
 import Gift from "Pages/Gift";
 import Shop from "Pages/Shop";
 import CheckoutForm from "Pages/CheckoutForm";
+import AdminLogin from 'Pages/AdminLogin'
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -167,6 +168,7 @@ function App() {
           <Route exact path="/gift" element={<Gift />} />
           <Route exact path="/shop" element={<Shop />} />
           <Route exact path="/checkoutform" element={<CheckoutForm />} />
+          <Route exact path='/admin' element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

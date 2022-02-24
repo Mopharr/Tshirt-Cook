@@ -23,21 +23,25 @@
   padding: 2em;
   width:450px;
   border-radius: 2rem 2rem 0 0;
-  height: 85%;
+  height: 80%;
   position: absolute;
   bottom: 0;
   text-align: center;
   right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 .upload h2 {
-margin: 1.7em auto .5em;
-  font-size: 2em;
+margin: 1.7em auto .9em;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.7;
   color: #333;
 }
 .upload h3{
-    font-size: 1.7em;
+  font-size: 18px;
     font-weight: 600;
     line-height: 1.3;
     color: #333;

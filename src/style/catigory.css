@@ -50,7 +50,7 @@
   border: none;
   outline: none;
   border-radius: 25px;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   font-weight: bold;
   transition: all 0.2s ease-out;
 }

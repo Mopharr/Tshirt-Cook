@@ -46,7 +46,7 @@ const Product = () => {
           {" "}
           <div className="proContentCap">
             {product.map((item) => (
-              <SwiperSlide>
+              <SwiperSlide className="swiper-cards">
                 <a
                   onClick={() => {
                     fetchSingleProduct(item.id);
@@ -58,7 +58,7 @@ const Product = () => {
                     <img src={item.image.url} alt="" />
                   </div>
                   <div class="text-container">
-                    <h2 class="item-name">{item.name}</h2>
+                    <h4 class="item-name">{item.name}</h4>
                     <div class="pricing-and-cart">
                       <div class="pricing">
                         <p className="price">
