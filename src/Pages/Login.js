@@ -43,7 +43,7 @@ const Login = () => {
       <Section />
       <div className="container" id="container">
       <div className="form-container sign-in-container">
-        <form onSubmit={handleSubmit}>
+        <form className="stupid" onSubmit={handleSubmit}>
           <h1>Sign in</h1>
           <div className="social-container">
             <a href="/" className="social">

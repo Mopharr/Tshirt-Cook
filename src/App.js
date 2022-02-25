@@ -18,6 +18,8 @@ import Gift from "Pages/Gift";
 import Shop from "Pages/Shop";
 import CheckoutForm from "Pages/CheckoutForm";
 import AdminLogin from 'Pages/AdminLogin'
+import Girl from 'components/GiftCom/girl'
+import Boy from 'components/GiftCom/boy'
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -168,7 +170,9 @@ function App() {
           <Route exact path="/gift" element={<Gift />} />
           <Route exact path="/shop" element={<Shop />} />
           <Route exact path="/checkoutform" element={<CheckoutForm />} />
-          <Route exact path='/admin' element={<AdminLogin />} />
+          <Route exact path="/girlGift" element={<Girl />} />
+          <Route exact path="/boy" element={<Boy />} />
+          <Route exact path="/admin" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

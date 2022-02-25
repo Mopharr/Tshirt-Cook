@@ -80,6 +80,7 @@ const Product = () => {
             ))}
           </div>
         </Swiper>
+        
       </div>
     </div>
   );

@@ -45,13 +45,14 @@ const Main = styled.div`
   }
   @media (max-width: 1024px) {
     padding: 0;
+    width: 100%;
+    overflow-x: scroll;
   }
   ul {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    @media (max-width: 1024px) {
-      flex-direction: column;
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -68,6 +69,9 @@ const Main = styled.div`
   .dropdown {
     display: block;
     position: relative;
+    @media (max-width: 1024px){
+      margin-right: 1em;
+    }
   }
 
   .subnav-list-items .dropdown-menu {

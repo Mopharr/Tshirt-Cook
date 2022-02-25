@@ -1,24 +1,21 @@
 import Footer from "components/Footer";
 import NavNew from "components/NavNew";
 import Section from "components/Section";
-import React,{ useContext } from "react";
+import React, { useContext } from "react";
 import UserContext from "Context";
-
 import con from "assets/gift.jpeg";
 import ava from "assets/men.jpeg";
 import ava1 from "assets/woman.jpeg";
 import ava2 from "assets/kid.jpeg";
 import ava3 from "assets/every.jpeg";
-import ava4 from "assets/flex.png";
-import ava5 from "assets/jug.png";
-import ava6 from "assets/kido.png";
 import ava7 from "assets/phone.png";
 import { BsSearch } from "react-icons/bs";
 import sub from "assets/sur.jpeg";
 import "../style/gift.css";
 
 const Gift = () => {
-  const { addToCart, product } = useContext(UserContext);
+  // addToCart,
+  const {  product } = useContext(UserContext);
 
   return (
     <div>
@@ -57,30 +54,6 @@ const Gift = () => {
               <img src={ava3} alt="" />
             </div>
             <button>Everybody </button>
-          </div>
-          <div className="giftcontentCap">
-            <div className="img-divv">
-              <img src={ava4} alt="" />
-            </div>
-            <button>For Developer</button>
-          </div>
-          <div className="giftcontentCap">
-            <div className="img-divv">
-              <img src={ava5} alt="" />
-            </div>
-            <button>For Gift</button>
-          </div>
-          <div className="giftcontentCap">
-            <div className="img-divv">
-              <img src={ava6} alt="" />
-            </div>
-            <button>For Guys</button>
-          </div>
-          <div className="giftcontentCap">
-            <div className="img-divv">
-              <img src={ava7} alt="" />
-            </div>
-            <button>For Girls</button>
           </div>
         </div>
       </div>
@@ -124,7 +97,7 @@ const Gift = () => {
             Order and get your gift at your own <br /> comfort zone{" "}
           </span>
           <p>Get yours Today </p>
-          <a href="">
+          <a href="/">
             <button>Order </button>
           </a>
         </div>

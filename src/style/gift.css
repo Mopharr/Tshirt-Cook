@@ -107,16 +107,17 @@
   margin: auto;
   text-align: center;
   border: 1px solid #000;
-  padding: 0;
+  padding: 1em .2em;
   cursor: pointer;
 }
 .inputSearch input {
-  border-bottom: none !important;
+  border: none !important;
   margin: 0;
-  width: calc(100% - 70px);
+  width: calc(100% - 50px);
+  outline: none;
 }
 .giftIcon {
-  width: 70px;
+  width: 50px;
   margin: auto;
 }
 
@@ -124,15 +125,13 @@
   border: 1px solid #ff4b2b;
   color: #ff4b2b;
 }
+.inputSearch:hover ~ .giftIcon{
+  background-color: #ff4b2b;
+}
 .inputSearch:focus {
   border: 1px solid #ff4b2b;
   color: #ff4b2b;
 }
-
-.giftIcon:focus {
-  background-color: #ff4b2b;
-}
-
 .package {
   width: 70%;
   margin: auto;
@@ -216,4 +215,33 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 2em;
+}
+
+
+/* Girls styleing */
+
+.features{
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+.picc{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.group{
+  margin-right: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.groupCap{
+  width: 300px;
+}
+.groupCap img{
+  width: 100%;
+}
+.single{
+  width: 50%;
 }
