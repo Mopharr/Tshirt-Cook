@@ -1,6 +1,6 @@
 import React from 'react'
 
-const sign = ({modal, setModal}) => {
+const sign = ({modal}) => {
   return (
     <div>
       {modal ? (

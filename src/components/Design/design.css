@@ -13,7 +13,7 @@
   object-fit: cover;
   position: relative;
 }
-.hero img{
+.hero img {
   height: 100%;
   width: 100%;
   position: relative;
@@ -21,7 +21,7 @@
 .upload {
   background-color: #fff;
   padding: 2em;
-  width:450px;
+  width: 450px;
   border-radius: 2rem 2rem 0 0;
   height: 80%;
   position: absolute;
@@ -34,31 +34,31 @@
   align-content: center;
 }
 .upload h2 {
-margin: 1.7em auto .9em;
+  margin: 1.7em auto 0.9em;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.7;
   color: #333;
 }
-.upload h3{
+.upload h3 {
   font-size: 18px;
-    font-weight: 600;
-    line-height: 1.3;
-    color: #333;
-    margin-bottom: .8em;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #333;
+  margin-bottom: 0.8em;
 }
-.upload button{
-    outline: none;
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    background-color: #ff4b2b;
-    padding: 1em 2em;
-    border-radius: 30px;
-    transition: all .3s ease-in-out;
+.upload button {
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  background-color: #ff4b2b;
+  padding: 1em 2em;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
 }
-.upload button:hover{
-    background-color: indianred;
+.upload button:hover {
+  background-color: indianred;
 }
 /* p {
   margin: 0 !important;
@@ -71,33 +71,212 @@ margin: 1.7em auto .9em;
   margin: 2em auto;
   border-radius: 10px;
 }
+.how {
+  margin: 2em auto;
+  width: 70%;
+}
+.how h2 {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.listO {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.order {
+  width: 200px;
+  margin-right: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.OIcon {
+  font-size: 50px;
+  color: gray;
+  margin: auto;
+  margin-bottom: 0.3em;
+}
+.order span {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 800;
+}
+.order p {
+  margin: 0;
+  text-align: center;
+}
+.add {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2em;
+}
+.add h2 {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.ms {
+  display: flex;
+  width: 100%;
+}
+.addCap {
+  width: 600px;
+  height: 300px;
+  margin-right: 1em;
+  position: relative;
+}
+.addCap img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.te {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  left: 0;
+  top: auto;
+  bottom: 1rem;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 25px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.te:hover {
+  color: #ff4b2b;
+}
+.cov {
+  background-color: #f2f2f2;
+}
+.lst {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2em;
+  display: flex;
+  align-self: center;
+
+  padding: 3em 0;
+}
+.lst img {
+  width: 70%;
+}
+.tee {
+  width: 30%;
+  background-color: #fff;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tee span {
+  background-color: #ff4b2b;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1em;
+  border-radius: 1em;
+  width: 10em;
+}
+.tee h3{
+  font-size: 25px;
+  font-weight: 800;
+  margin: 1em 0;
+}
+.tee p{
+  margin: 0 0 1em 0;
+  font-size: 18px;
+}
+.tee button{
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  background-color: #ff4b2b;
+  padding: 1em 2em;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  width: 15em;
+}
+.nnn{
+  background-color: red;
+}
+.mdal{
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1em;
+}
+
+@media (max-width: 1300px) {
+  .how{
+    width: 90%;
+
+  }
+  .add{
+    width: 90%;
+    
+  }
+  .lst{
+    width: 90%;
+  }
+}
 @media (max-width: 900px) {
-  .hero{
+  .hero {
     height: 100%;
   }
-  .hero img{
+  .hero img {
     height: 300px;
     width: 100%;
     object-fit: cover;
   }
-  .upload{
-    text-align: center;
-    position: relative;
-    width: 100vw;
-    height: 53%;
-    right: 0;
-    left: 0;
-    bottom: inherit;
+  .lst img{
+    width: 60%;
+  }
+  .tee{
+    width: 40%;
+  }
+  .tee button{
+    width: 12em;
   }
 }
-@media (max-width: 425px) {
-  .upload h2{
+@media (max-width: 550px) {
+  .upload h2 {
     font-size: 1.4em;
   }
-  .upload h3{
+  .upload h3 {
     font-size: 1.2em;
   }
-  .form{
-    width: 95%;
+  .add{
+    width: 100%;
   }
+  .addCap{
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  .ms{
+    flex-direction: column;
+
+  }
+  .lst{
+    width: 100%;
+    flex-direction: column;
+  }
+  .lst img{
+    width: 100%;
+  }
+  .tee{
+    width: 100%;
+    
+  }
+  
 }
