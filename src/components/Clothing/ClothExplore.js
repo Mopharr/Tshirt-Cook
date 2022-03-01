@@ -99,17 +99,16 @@ const Wrap = styled.div`
   margin: 1em;
   position: relative;
   @media (max-width: 1024px) {
-    margin: 1em 0; 
+    margin: 1em 0;
   }
   :hover {
     border-radius: 10px;
   }
-  .image-div{
+  .image-div {
     width: 100%;
     height: 100%;
-        overflow: hidden;
+    overflow: hidden;
     min-height: 200px;
-    
   }
   a {
     font-size: 20px;
