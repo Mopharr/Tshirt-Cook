@@ -7,7 +7,7 @@
 
 .hero {
   width: 100vw;
-  height: 500px;
+  height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -50,6 +50,8 @@
 .upload button {
   outline: none;
   border: none;
+  width: 150px;
+  margin: 0 auto;
   color: #fff;
   font-weight: 600;
   background-color: #ff4b2b;
@@ -184,16 +186,16 @@
   border-radius: 1em;
   width: 10em;
 }
-.tee h3{
+.tee h3 {
   font-size: 25px;
   font-weight: 800;
   margin: 1em 0;
 }
-.tee p{
+.tee p {
   margin: 0 0 1em 0;
   font-size: 18px;
 }
-.tee button{
+.tee button {
   outline: none;
   border: none;
   color: #fff;
@@ -204,10 +206,10 @@
   transition: all 0.3s ease-in-out;
   width: 15em;
 }
-.nnn{
+.nnn {
   background-color: red;
 }
-.mdal{
+.mdal {
   width: 80%;
   position: fixed;
   top: 50%;
@@ -218,15 +220,13 @@
 }
 
 @media (max-width: 1300px) {
-  .how{
+  .how {
     width: 90%;
-
   }
-  .add{
+  .add {
     width: 90%;
-    
   }
-  .lst{
+  .lst {
     width: 90%;
   }
 }
@@ -237,46 +237,52 @@
   .hero img {
     height: 300px;
     width: 100%;
-    object-fit: cover;
   }
-  .lst img{
+  .upload {
+    height: 300px;
+    position: relative;
+    right: 0;
+    width: 100vw;
+    padding-bottom: 0;
+  }
+  .lst img {
     width: 60%;
   }
-  .tee{
+  .tee {
     width: 40%;
   }
-  .tee button{
+  .tee button {
     width: 12em;
   }
 }
 @media (max-width: 550px) {
+  .upload {
+    width: 100%;
+  }
   .upload h2 {
     font-size: 1.4em;
   }
   .upload h3 {
     font-size: 1.2em;
   }
-  .add{
+  .add {
     width: 100%;
   }
-  .addCap{
+  .addCap {
     margin-bottom: 1em;
     width: 100%;
   }
-  .ms{
-    flex-direction: column;
-
-  }
-  .lst{
-    width: 100%;
+  .ms {
     flex-direction: column;
   }
-  .lst img{
+  .lst {
+    width: 100%;
+    flex-direction: column;
+  }
+  .lst img {
     width: 100%;
   }
-  .tee{
+  .tee {
     width: 100%;
-    
   }
-  
 }

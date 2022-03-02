@@ -5,7 +5,7 @@ import con from 'assets/home.jpeg'
 const Hero = () => {
   return (
     <div className="main">
-      <div className="hero" style={{height: '600px'}}>
+      <div className="hero">
         <img src={con} alt="" />
         <div className="upload">
           <h2>All the Koolest Custom items & Prints you need in one place!</h2>
