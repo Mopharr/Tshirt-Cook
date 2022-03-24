@@ -29,7 +29,7 @@ const girl = () => {
 
         <div className="features">
           <h2>What does she like</h2>
-          {/* <div className="picc">
+          <div className="picc">
             <div className="group">
               <a className="groCap">
                 <img src={hod} alt="" />
@@ -51,7 +51,7 @@ const girl = () => {
             <div className="single">
               <img src={gir} alt="" />
             </div>
-          </div> */}
+          </div>
         </div>
 
           <Product />

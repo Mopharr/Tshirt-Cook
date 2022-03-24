@@ -6,11 +6,11 @@ import Section from 'components/Section'
 import Option from 'components/option'
 import Social from 'components/social'
 import Footer from 'components/Footer'
-// import hod from './Asset/hod.jpeg'
-// import gir from './Asset/gir.jpeg'
-// import bag from './Asset/bag.jpeg'
-// import thr from './Asset/throw.jpeg'
-// import mug from './Asset/mug.jpeg'
+import hod from './Asset/hod.jpeg'
+import gir from './Asset/gir.jpeg'
+import bag from './Asset/bag.jpeg'
+import thr from './Asset/throw.jpeg'
+import mug from './Asset/mug.jpeg'
 
 const boy = () => {
   return (
@@ -30,7 +30,7 @@ const boy = () => {
 
         <div className="features">
           <h2>What does she like</h2>
-          {/* <div className="picc">
+          <div className="picc">
             <div className="group">
               <a className="groCap">
                 <img src={hod} alt="" />
@@ -52,7 +52,7 @@ const boy = () => {
             <div className="single">
               <img src={gir} alt="" />
             </div>
-          </div> */}
+          </div>
         </div>
 
           <Product />
