@@ -49,7 +49,6 @@
 .upload button {
   outline: none;
   border: none;
-  width: 150px;
   margin: 0 auto;
   color: #fff;
   font-weight: 600;
@@ -283,5 +282,8 @@
   }
   .tee {
     width: 100%;
+  }
+  .upload button {
+    padding: 1em;
   }
 }

@@ -11,6 +11,7 @@ import Product from 'components/product';
 import Option from 'components/option';
 import Social from 'components/social';
 import Footer from 'components/Footer';
+import "../../style/gift.css";
 
 const girl = () => {
   return (
@@ -29,28 +30,26 @@ const girl = () => {
 
         <div className="features">
           <h2>What does she like</h2>
-          <div className="picc">
-            <div className="group">
-              <a className="groCap">
-                <img src={hod} alt="" />
-                <p>Hoodie</p>
-              </a>
-              <a className="groCap">
-                <img src={mug} alt="" />
-                <p>Mug</p>
-              </a>
-              <a className="groCap">
-                <img src={bag} alt="" />
-                <p>Bag</p>
-              </a>
-              <a className="groCap">
-                <img src={thr} alt="" />
-                <p>Throw Pillow</p>
-              </a>
-            </div>
-            <div className="single">
-              <img src={gir} alt="" />
-            </div>
+          <div className="group-items">
+            <a className="groCap">
+              <img src={hod} alt="" className='img' />
+              <p>Hoodie</p>
+            </a>
+            <a className="groCap">
+              <img src={mug} alt=""  className='img' />
+              <p>Mug</p>
+            </a>
+            <a className="groCap">
+              <img src={bag} alt=""  className='img' />
+              <p>Bag</p>
+            </a>
+            <a className="groCap">
+              <img src={thr} alt=""  className='img' />
+              <p>Throw Pillow</p>
+            </a>
+            <a className="groCap">
+              <img src={gir} alt=""  className='img' />
+            </a>
           </div>
         </div>
 
