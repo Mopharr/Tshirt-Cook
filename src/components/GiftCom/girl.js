@@ -2,11 +2,11 @@ import NavNew from 'components/NavNew';
 import Section from 'components/Section';
 import React from 'react'
 import con from './Asset/old.jpeg'
-// import hod from './Asset/hod.jpeg'
-// import gir from './Asset/gir.jpeg'
-// import bag from './Asset/bag.jpeg'
-// import thr from './Asset/throw.jpeg'
-// import mug from './Asset/mug.jpeg'
+import hod from './Asset/hod.jpeg'
+import gir from './Asset/gir.jpeg'
+import bag from './Asset/bag.jpeg'
+import thr from './Asset/throw.jpeg'
+import mug from './Asset/mug.jpeg'
 import Product from 'components/product';
 import Option from 'components/option';
 import Social from 'components/social';
