@@ -39,6 +39,7 @@
   line-height: 1.7;
   color: #333;
 }
+
 .upload h3 {
   font-size: 18px;
   font-weight: 600;
@@ -205,7 +206,12 @@
   width: 15em;
 }
 .nnn {
-  background-color: red;
+    width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  z-index: 10;
 }
 .mdal {
   width: 80%;
@@ -215,6 +221,11 @@
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 1em;
+}
+.closee{
+  float: right;
+  font-size: 30px;
+  margin-top: -30px;
 }
 
 @media (max-width: 1300px) {
@@ -285,5 +296,8 @@
   }
   .upload button {
     padding: 1em;
+  }
+  .mdal{
+    width: 98%;
   }
 }

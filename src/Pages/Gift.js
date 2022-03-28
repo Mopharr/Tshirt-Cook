@@ -15,7 +15,7 @@ import "../style/gift.css";
 
 const Gift = () => {
   // addToCart,
-  const {  product } = useContext(UserContext);
+  const { product } = useContext(UserContext);
 
   return (
     <div>
@@ -35,25 +35,33 @@ const Gift = () => {
             <div className="img-divv">
               <img src={ava} alt="" />
             </div>
-            <button>For Men</button>
+            <a href="/boy">
+              <button>For Men</button>
+            </a>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava1} alt="" />
             </div>
-            <button>For Woman</button>
+            <a href="/girlGift">
+              <button>For Woman</button>
+            </a>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava2} alt="" />
             </div>
-            <button>For Kid</button>
+            <a href="/kid">
+              <button>For Kid</button>
+            </a>
           </div>
           <div className="giftcontentCap">
             <div className="img-divv">
               <img src={ava3} alt="" />
             </div>
-            <button>Everybody </button>
+            <a href="">
+              <button>Everybody </button>
+            </a>
           </div>
         </div>
       </div>

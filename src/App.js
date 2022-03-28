@@ -20,6 +20,7 @@ import CheckoutForm from "Pages/CheckoutForm";
 import AdminLogin from 'Pages/AdminLogin'
 import Girl from 'components/GiftCom/girl'
 import Boy from 'components/GiftCom/boy'
+import Kid from "components/GiftCom/kid";
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -171,6 +172,7 @@ function App() {
           <Route exact path="/shop" element={<Shop />} />
           <Route exact path="/checkoutform" element={<CheckoutForm />} />
           <Route exact path="/girlGift" element={<Girl />} />
+          <Route exact path= "/kid" element={<Kid />} />
           <Route exact path="/boy" element={<Boy />} />
           <Route exact path="/admin" element={<AdminLogin />} />
         </Routes>

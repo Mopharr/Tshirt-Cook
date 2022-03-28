@@ -13,19 +13,28 @@ const Section = () => {
       <Main>
         <ul>
           {category &&
-            category.slice(0).reverse().map((item) => (
-              <li className="subnav-list-items dropdown">
-                <a
-                  onClick={() => {
-                    fetchProductsByCategory(item.id);
-                    navigate('/shop')
-                  }}
-                  className="subnav-link"
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
+            category
+              .slice(0)
+              .reverse()
+              .map((item) => (
+                <li className="subnav-list-items dropdown">
+                  <a
+                    onClick={() => {
+                      fetchProductsByCategory(item.id);
+                      navigate("/shop");
+                    }}
+                    className="subnav-link"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+          <li>
+            <a href="/clothing">Clothing</a>
+          </li>
+          <li>
+            <a href="/gift">Gift</a>
+          </li>
         </ul>
       </Main>
     </>
